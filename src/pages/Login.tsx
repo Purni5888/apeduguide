@@ -49,7 +49,7 @@ const Login: React.FC = () => {
       await signup(signupForm.email, signupForm.password, signupForm.name);
       toast({
         title: t({ en: 'Account created!', te: 'ఖాతా సృష్టించబడింది!' }),
-        description: t({ en: 'Welcome to AP Learning Hub!', te: 'AP లెర్నింగ్ హబ్‌కు స్వాగతం!' })
+        description: t({ en: 'Welcome to EduGuide!', te: 'EduGuide కు స్వాగతం!' })
       });
       navigate('/');
     } catch (error) {
@@ -75,7 +75,7 @@ const Login: React.FC = () => {
           <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
             <BookOpen className="w-8 h-8 text-primary-foreground" />
           </div>
-          <CardTitle className="text-2xl">AP Learning Hub</CardTitle>
+          <CardTitle className="text-2xl">EduGuide</CardTitle>
           <CardDescription>
             {t({ en: 'Your gateway to academic excellence', te: 'విద్యా శ్రేష్ఠతకు మీ మార్గం' })}
           </CardDescription>
