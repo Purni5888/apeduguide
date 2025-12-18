@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import { Gamepad2, Atom, Swords, Brain, ChevronRight, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { games } from '@/data/content';
+
+const games = [
+  { id: 'math-maze', title: { en: 'Math Maze Challenge', te: 'గణిత చక్రవ్యూహం' }, description: { en: 'Race against time solving math puzzles!', te: 'గణిత పజిల్స్ సాధించి సమయంతో పోటీ పడండి!' }, icon: 'Gamepad2', color: 'game-blue', path: '/games/math-maze' },
+  { id: 'science-quest', title: { en: 'Science Quest', te: 'సైన్స్ క్వెస్ట్' }, description: { en: 'Explore elements and solve riddles!', te: 'మూలకాలను అన్వేషించి చిక్కులు సాధించండి!' }, icon: 'Atom', color: 'game-green', path: '/games/science-quest' },
+  { id: 'word-warrior', title: { en: 'Word Warrior', te: 'పద యోధుడు' }, description: { en: 'Battle with vocabulary power!', te: 'పదజాల శక్తితో పోరాడండి!' }, icon: 'Swords', color: 'game-pink', path: '/games/word-warrior' },
+  { id: 'logic-legends', title: { en: 'Logic Legends', te: 'తర్క పురాణాలు' }, description: { en: 'Solve puzzles, become a legend!', te: 'పజిల్స్ సాధించి పురాణం అవ్వండి!' }, icon: 'Brain', color: 'game-purple', path: '/games/logic-legends' }
+];
 
 const iconMap: Record<string, React.FC<{ className?: string }>> = {
   Gamepad2,
