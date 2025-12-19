@@ -141,20 +141,24 @@ const ChapterPage: React.FC = () => {
           </TabsContent>
 
           <TabsContent value="videos">
-            {chapter.videoUrl ? (
-              <Card>
-                <CardContent className="p-6">
-                  <div className="aspect-video rounded-xl overflow-hidden bg-muted">
-                    <iframe
-                      src={chapter.videoUrl}
-                      title={t(chapter.title)}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                </CardContent>
-              </Card>
+            {chapter.videoUrls && chapter.videoUrls.length > 0 ? (
+              <div className="space-y-4">
+                {chapter.videoUrls.map((url, index) => (
+                  <Card key={index}>
+                    <CardContent className="p-6">
+                      <div className="aspect-video rounded-xl overflow-hidden bg-muted">
+                        <iframe
+                          src={url}
+                          title={`${t(chapter.title)} - Video ${index + 1}`}
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             ) : (
               <Card>
                 <CardContent className="p-12 text-center">
