@@ -16,7 +16,7 @@ interface ChapterCardProps {
 export const ChapterCard: React.FC<ChapterCardProps> = ({ chapter, classId, subjectId, index }) => {
   const { t } = useLanguage();
 
-  const hasVideo = !!chapter.videoUrl;
+  const hasVideo = chapter.videoUrls && chapter.videoUrls.length > 0;
   const hasQuiz = chapter.quiz.length > 0;
   const hasPractice = chapter.practice.length > 0;
 

@@ -21,7 +21,7 @@ export interface Chapter {
   title: LocalizedString;
   description: LocalizedString;
   notes: LocalizedString;
-  videoUrl?: string;
+  videoUrls?: string[];
   quiz: QuizQuestion[];
   practice: PracticeQuestion[];
 }
@@ -467,6 +467,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Telugu Alphabet", te: "తెలుగు వర్ణమాల" },
         description: { en: "Learn Telugu letters and sounds", te: "తెలుగు అక్షరాలు మరియు ధ్వనులు నేర్చుకోండి" },
         notes: { en: "## Telugu Alphabet (Varnamala)\n\n### Vowels (అచ్చులు)\nఅ ఆ ఇ ఈ ఉ ఊ ఋ ౠ ఎ ఏ ఐ ఒ ఓ ఔ అం అః\n\n### Consonants (హల్లులు)\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ ళ", te: "## తెలుగు వర్ణమాల\n\n### అచ్చులు\nఅ ఆ ఇ ఈ ఉ ఊ ఋ ఎ ఏ ఐ ఒ ఓ ఔ అం అః\n\n### హల్లులు\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ ళ" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/Wq9Wd0gZbrU"] : undefined,
         quiz: generateTeluguQuiz(),
         practice: generateTeluguPractice()
       },
@@ -491,6 +492,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Hindi Alphabet", te: "హిందీ వర్ణమాల" },
         description: { en: "Learn Devanagari script", te: "దేవనాగరి లిపి నేర్చుకోండి" },
         notes: { en: "## Hindi Varnamala\n\n### Swar (स्वर)\nअ आ इ ई उ ऊ ऋ ए ऐ ओ औ अं अः\n\n### Vyanjan (व्यंजन)\nक ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह", te: "## హిందీ వర్ణమాల\n\n### స్వర్\nअ आ इ ई उ ऊ ऋ ए ऐ ओ औ अं अः\n\n### వ్యంజన్\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/bSVoOKDgM-E"] : undefined,
         quiz: generateHindiQuiz(),
         practice: generateHindiPractice()
       },
@@ -515,6 +517,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "English Grammar", te: "ఆంగ్ల వ్యాకరణం" },
         description: { en: "Parts of speech and sentence structure", te: "వాక్భాగాలు మరియు వాక్య నిర్మాణం" },
         notes: { en: "## English Grammar\n\n### Parts of Speech\n1. **Noun**: Naming words (book, Delhi)\n2. **Pronoun**: Replace nouns (he, she, it)\n3. **Verb**: Action words (run, eat, sleep)\n4. **Adjective**: Describe nouns (big, beautiful)\n5. **Adverb**: Describe verbs (quickly, slowly)\n6. **Preposition**: Show position (in, on, at)\n7. **Conjunction**: Join words (and, but, or)\n8. **Interjection**: Express emotions (Wow!, Oh!)", te: "## ఆంగ్ల వ్యాకరణం\n\n### వాక్భాగాలు\n1. **నామవాచకం**: పేరు పదాలు\n2. **సర్వనామం**: నామవాచకాలను భర్తీ చేస్తుంది\n3. **క్రియ**: చర్య పదాలు\n4. **విశేషణం**: నామవాచకాలను వర్ణిస్తుంది\n5. **క్రియా విశేషణం**: క్రియలను వర్ణిస్తుంది" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/E8JaPOnVz74"] : undefined,
         quiz: generateEnglishQuiz(),
         practice: generateEnglishPractice()
       },
@@ -539,6 +542,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Knowing Our Numbers", te: "మన సంఖ్యలను తెలుసుకోవడం" },
         description: { en: "Learn about large numbers and place values", te: "పెద్ద సంఖ్యలు మరియు స్థాన విలువల గురించి" },
         notes: { en: "## Knowing Our Numbers\n\n### Place Value System\nFrom right to left:\n- Ones (1)\n- Tens (10)\n- Hundreds (100)\n- Thousands (1,000)\n- Ten Thousands (10,000)\n- Lakhs (1,00,000)\n- Ten Lakhs (10,00,000)\n- Crores (1,00,00,000)\n\n### Indian vs International System\n**Indian System:** 1,00,00,000 = 1 Crore\n**International System:** 10,000,000 = 10 Million", te: "## మన సంఖ్యలను తెలుసుకోవడం\n\n### స్థాన విలువ వ్యవస్థ\nకుడి నుండి ఎడమకు:\n- ఒకట్లు (1)\n- పదులు (10)\n- వందలు (100)\n- వేలు (1,000)\n- పదివేలు (10,000)\n- లక్షలు (1,00,000)" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/cpe-fYHGCH4"] : undefined,
         quiz: generateMathQuiz('numbers', grade),
         practice: generateMathPractice('numbers', grade)
       },
@@ -571,6 +575,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Food: Where Does It Come From?", te: "ఆహారం: ఎక్కడ నుండి వస్తుంది?" },
         description: { en: "Learn about sources of food", te: "ఆహార వనరుల గురించి తెలుసుకోండి" },
         notes: { en: "## Food: Where Does It Come From?\n\n### Sources of Food\n**Plants:** Fruits, Vegetables, Grains, Pulses\n**Animals:** Milk, Eggs, Meat, Honey\n\n### Food Habits\n- **Herbivores**: Eat plants (cow, deer)\n- **Carnivores**: Eat meat (lion, tiger)\n- **Omnivores**: Eat both (humans, bear)", te: "## ఆహారం: ఎక్కడ నుండి వస్తుంది?\n\n### ఆహార వనరులు\n**మొక్కలు:** పండ్లు, కూరగాయలు, ధాన్యాలు\n**జంతువులు:** పాలు, గుడ్లు, మాంసం, తేనె" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/gvytBpZbcZs"] : undefined,
         quiz: generateScienceQuiz('food'),
         practice: generateSciencePractice('food')
       },
@@ -603,6 +608,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Introduction to History", te: "చరిత్ర పరిచయం" },
         description: { en: "Understanding our past", te: "మన గత కాలాన్ని అర్థం చేసుకోవడం" },
         notes: { en: "## Introduction to History\n\n### What is History?\nStudy of the past - how people lived, what they believed.\n\n### Sources of History\n1. **Archaeological**: Coins, monuments, pottery\n2. **Literary**: Books, manuscripts\n3. **Oral**: Stories passed through generations\n\n### Important Terms\n- BCE: Before Common Era\n- CE: Common Era", te: "## చరిత్ర పరిచయం\n\n### చరిత్ర అంటే ఏమిటి?\nగత కాలం యొక్క అధ్యయనం\n\n### చరిత్ర మూలాలు\n1. **పురావస్తు**: నాణేలు, కట్టడాలు\n2. **సాహిత్య**: పుస్తకాలు, రాతప్రతులు" },
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/Vq1PBtk19Lg"] : undefined,
         quiz: generateSocialQuiz(),
         practice: generateSocialPractice()
       },
