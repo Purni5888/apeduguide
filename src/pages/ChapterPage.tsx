@@ -68,11 +68,19 @@ const PracticeCard: React.FC<{ question: PracticeQuestion; index: number }> = ({
 
 const ChapterPage: React.FC = () => {
   const { classId, subjectId, chapterId } = useParams<{ classId: string; subjectId: string; chapterId: string }>();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const classData = classes.find(c => c.id === classId);
   const subject = classData?.subjects.find(s => s.id === subjectId);
   const chapter = subject?.chapters.find(ch => ch.id === chapterId);
+
+  // Custom translate function that respects forceLanguage
+  const tSubject = (text: { en: string; te: string } | string): string => {
+    if (typeof text === 'string') return text;
+    if (subject?.forceLanguage === 'te') return text.te || text.en;
+    if (subject?.forceLanguage === 'hi') return text.en; // Hindi content is stored in 'en' field for Hindi subjects
+    return text[language] || text.en;
+  };
 
   if (!classData || !subject || !chapter) {
     return (
@@ -96,16 +104,16 @@ const ChapterPage: React.FC = () => {
         <Link to={`/class/${classId}/${subjectId}`}>
           <Button variant="ghost" className="mb-6 gap-2">
             <ChevronLeft className="w-4 h-4" />
-            {t({ en: 'Back to', te: 'తిరిగి వెళ్ళండి' })} {t(subject.title)}
+            {t({ en: 'Back to', te: 'తిరిగి వెళ్ళండి' })} {tSubject(subject.title)}
           </Button>
         </Link>
 
         <div className="mb-8">
           <p className="text-sm text-muted-foreground mb-1">
-            {t(classData.title)} • {t(subject.title)}
+            {t(classData.title)} • {tSubject(subject.title)}
           </p>
-          <h1 className="text-3xl font-bold">{t(chapter.title)}</h1>
-          <p className="text-muted-foreground mt-1">{t(chapter.description)}</p>
+          <h1 className="text-3xl font-bold">{tSubject(chapter.title)}</h1>
+          <p className="text-muted-foreground mt-1">{tSubject(chapter.description)}</p>
         </div>
 
         <Tabs defaultValue="notes" className="w-full">
