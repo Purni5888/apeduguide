@@ -590,12 +590,35 @@ const createSubjects6_7 = (grade: number): Subject[] => [
       }
     ] : [
       {
-        id: `telugu-varnamala-${grade}`,
-        title: { en: "తెలుగు వర్ణమాల", te: "తెలుగు వర్ణమాల" },
-        description: { en: "తెలుగు అక్షరాలు మరియు ధ్వనులు నేర్చుకోండి", te: "తెలుగు అక్షరాలు మరియు ధ్వనులు నేర్చుకోండి" },
-        notes: { en: "## తెలుగు వర్ణమాల\n\n### అచ్చులు\nఅ ఆ ఇ ఈ ఉ ఊ ఋ ఎ ఏ ఐ ఒ ఓ ఔ అం అః\n\n### హల్లులు\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ ళ", te: "## తెలుగు వర్ణమాల\n\n### అచ్చులు\nఅ ఆ ఇ ఈ ఉ ఊ ఋ ఎ ఏ ఐ ఒ ఓ ఔ అం అః\n\n### హల్లులు\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ ళ" },
-        quiz: generateTeluguQuiz(),
-        practice: generateTeluguPractice()
+        id: `telugu-aksharam-${grade}`,
+        title: { en: "అక్షరం", te: "అక్షరం" },
+        description: { en: "అక్షరం యొక్క ప్రాముఖ్యత గురించి పాఠం", te: "అక్షరం యొక్క ప్రాముఖ్యత గురించి పాఠం" },
+        notes: { en: "## అక్షరం\n\n### పాఠ్య సారాంశం\nఈ పాఠం అక్షరం యొక్క ప్రాముఖ్యత, విద్య యొక్క విలువ గురించి వివరిస్తుంది.\n\n### ముఖ్య అంశాలు\n- అక్షరం జ్ఞానానికి మూలం\n- విద్య మానవుడికి చక్షువులు వంటిది\n- అక్షరాలు నేర్చుకోవడం జీవితంలో ముఖ్యం\n- చదువు వల్ల మనిషి అభివృద్ధి చెందుతాడు\n\n### పదజాలం\n- అక్షరం: వర్ణం, అక్షరమాల యొక్క అంశం\n- జ్ఞానం: తెలివి, విద్య\n- చదువు: విద్య\n- అభివృద్ధి: ముందుకు వెళ్ళడం", te: "## అక్షరం\n\n### పాఠ్య సారాంశం\nఈ పాఠం అక్షరం యొక్క ప్రాముఖ్యత, విద్య యొక్క విలువ గురించి వివరిస్తుంది.\n\n### ముఖ్య అంశాలు\n- అక్షరం జ్ఞానానికి మూలం\n- విద్య మానవుడికి చక్షువులు వంటిది\n- అక్షరాలు నేర్చుకోవడం జీవితంలో ముఖ్యం\n- చదువు వల్ల మనిషి అభివృద్ధి చెందుతాడు\n\n### పదజాలం\n- అక్షరం: వర్ణం, అక్షరమాల యొక్క అంశం\n- జ్ఞానం: తెలివి, విద్య\n- చదువు: విద్య\n- అభివృద్ధి: ముందుకు వెళ్ళడం" },
+        videoUrls: ["https://www.youtube.com/embed/nQBVzjznch0"],
+        quiz: [
+          { question: { en: "అక్షరం దేనికి మూలం?", te: "అక్షరం దేనికి మూలం?" }, options: [{ en: "జ్ఞానానికి", te: "జ్ఞానానికి" }, { en: "డబ్బుకు", te: "డబ్బుకు" }, { en: "ఆహారానికి", te: "ఆహారానికి" }, { en: "నిద్రకు", te: "నిద్రకు" }], correctIndex: 0 },
+          { question: { en: "విద్య మానవుడికి ఏమి వంటిది?", te: "విద్య మానవుడికి ఏమి వంటిది?" }, options: [{ en: "చక్షువులు", te: "చక్షువులు" }, { en: "చేతులు", te: "చేతులు" }, { en: "కాళ్ళు", te: "కాళ్ళు" }, { en: "చెవులు", te: "చెవులు" }], correctIndex: 0 },
+          { question: { en: "చదువు వల్ల మనిషి ఏమి చెందుతాడు?", te: "చదువు వల్ల మనిషి ఏమి చెందుతాడు?" }, options: [{ en: "అభివృద్ధి", te: "అభివృద్ధి" }, { en: "నష్టం", te: "నష్టం" }, { en: "బాధ", te: "బాధ" }, { en: "నిద్ర", te: "నిద్ర" }], correctIndex: 0 },
+          { question: { en: "జ్ఞానం అంటే ఏమిటి?", te: "జ్ఞానం అంటే ఏమిటి?" }, options: [{ en: "తెలివి, విద్య", te: "తెలివి, విద్య" }, { en: "డబ్బు", te: "డబ్బు" }, { en: "ఆహారం", te: "ఆహారం" }, { en: "నిద్ర", te: "నిద్ర" }], correctIndex: 0 },
+          { question: { en: "అక్షరాలు నేర్చుకోవడం ఎందుకు ముఖ్యం?", te: "అక్షరాలు నేర్చుకోవడం ఎందుకు ముఖ్యం?" }, options: [{ en: "జీవితంలో అభివృద్ధికి", te: "జీవితంలో అభివృద్ధికి" }, { en: "ఆడటానికి", te: "ఆడటానికి" }, { en: "నిద్రపోవడానికి", te: "నిద్రపోవడానికి" }, { en: "తినడానికి", te: "తినడానికి" }], correctIndex: 0 },
+          { question: { en: "ఈ పాఠం దేని గురించి?", te: "ఈ పాఠం దేని గురించి?" }, options: [{ en: "అక్షరం ప్రాముఖ్యత", te: "అక్షరం ప్రాముఖ్యత" }, { en: "ఆటలు", te: "ఆటలు" }, { en: "పండ్లు", te: "పండ్లు" }, { en: "జంతువులు", te: "జంతువులు" }], correctIndex: 0 },
+          { question: { en: "విద్య లేకపోతే మనిషి ఎలా ఉంటాడు?", te: "విద్య లేకపోతే మనిషి ఎలా ఉంటాడు?" }, options: [{ en: "అంధుడిలా", te: "అంధుడిలా" }, { en: "ధనవంతుడిలా", te: "ధనవంతుడిలా" }, { en: "బలవంతుడిలా", te: "బలవంతుడిలా" }, { en: "సంతోషంగా", te: "సంతోషంగా" }], correctIndex: 0 },
+          { question: { en: "అభివృద్ధి అంటే ఏమిటి?", te: "అభివృద్ధి అంటే ఏమిటి?" }, options: [{ en: "ముందుకు వెళ్ళడం", te: "ముందుకు వెళ్ళడం" }, { en: "వెనక్కి వెళ్ళడం", te: "వెనక్కి వెళ్ళడం" }, { en: "నిలబడటం", te: "నిలబడటం" }, { en: "కూర్చోవడం", te: "కూర్చోవడం" }], correctIndex: 0 },
+          { question: { en: "చక్షువులు అంటే ఏమిటి?", te: "చక్షువులు అంటే ఏమిటి?" }, options: [{ en: "కళ్ళు", te: "కళ్ళు" }, { en: "చెవులు", te: "చెవులు" }, { en: "చేతులు", te: "చేతులు" }, { en: "కాళ్ళు", te: "కాళ్ళు" }], correctIndex: 0 },
+          { question: { en: "అక్షరం ఏ తరగతికి సంబంధించినది?", te: "అక్షరం ఏ తరగతికి సంబంధించినది?" }, options: [{ en: "7వ తరగతి", te: "7వ తరగతి" }, { en: "6వ తరగతి", te: "6వ తరగతి" }, { en: "10వ తరగతి", te: "10వ తరగతి" }, { en: "1వ తరగతి", te: "1వ తరగతి" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "అక్షరం పాఠం సారాంశం రాయండి", te: "అక్షరం పాఠం సారాంశం రాయండి" }, answer: { en: "ఈ పాఠంలో అక్షరం యొక్క ప్రాముఖ్యత, విద్య యొక్క విలువ గురించి వివరించబడింది.", te: "ఈ పాఠంలో అక్షరం యొక్క ప్రాముఖ్యత, విద్య యొక్క విలువ గురించి వివరించబడింది." } },
+          { question: { en: "అక్షరం ఎందుకు ముఖ్యం?", te: "అక్షరం ఎందుకు ముఖ్యం?" }, answer: { en: "అక్షరం జ్ఞానానికి మూలం. అక్షరాలు నేర్చుకోవడం వల్ల చదవగలం, రాయగలం, జ్ఞానం పొందగలం.", te: "అక్షరం జ్ఞానానికి మూలం. అక్షరాలు నేర్చుకోవడం వల్ల చదవగలం, రాయగలం, జ్ఞానం పొందగలం." } },
+          { question: { en: "విద్య గురించి ఐదు వాక్యాలు రాయండి", te: "విద్య గురించి ఐదు వాక్యాలు రాయండి" }, answer: { en: "1. విద్య మానవుడికి చక్షువులు వంటిది. 2. విద్య వల్ల జ్ఞానం వస్తుంది. 3. చదువు మనిషిని అభివృద్ధి చేస్తుంది. 4. విద్య ధనం కంటే విలువైనది. 5. విద్యావంతుడు అందరికీ గౌరవం పొందుతాడు.", te: "1. విద్య మానవుడికి చక్షువులు వంటిది. 2. విద్య వల్ల జ్ఞానం వస్తుంది. 3. చదువు మనిషిని అభివృద్ధి చేస్తుంది. 4. విద్య ధనం కంటే విలువైనది. 5. విద్యావంతుడు అందరికీ గౌరవం పొందుతాడు." } },
+          { question: { en: "జ్ఞానం అంటే ఏమిటో వివరించండి", te: "జ్ఞానం అంటే ఏమిటో వివరించండి" }, answer: { en: "జ్ఞానం అంటే తెలివి, విద్య, అవగాహన. అక్షరాలు నేర్చుకోవడం వల్ల జ్ఞానం పెరుగుతుంది.", te: "జ్ఞానం అంటే తెలివి, విద్య, అవగాహన. అక్షరాలు నేర్చుకోవడం వల్ల జ్ఞానం పెరుగుతుంది." } },
+          { question: { en: "చదువు యొక్క ప్రయోజనాలు రాయండి", te: "చదువు యొక్క ప్రయోజనాలు రాయండి" }, answer: { en: "చదువు వల్ల జ్ఞానం పెరుగుతుంది, మంచి ఉద్యోగం వస్తుంది, సమాజంలో గౌరవం పొందుతాం.", te: "చదువు వల్ల జ్ఞానం పెరుగుతుంది, మంచి ఉద్యోగం వస్తుంది, సమాజంలో గౌరవం పొందుతాం." } },
+          { question: { en: "పాఠంలోని ముఖ్య పదాలు రాయండి", te: "పాఠంలోని ముఖ్య పదాలు రాయండి" }, answer: { en: "అక్షరం, జ్ఞానం, విద్య, చదువు, అభివృద్ధి, చక్షువులు", te: "అక్షరం, జ్ఞానం, విద్య, చదువు, అభివృద్ధి, చక్షువులు" } },
+          { question: { en: "విద్యావంతుడు అంటే ఎవరు?", te: "విద్యావంతుడు అంటే ఎవరు?" }, answer: { en: "విద్యావంతుడు అంటే చదువుకున్న వ్యక్తి, జ్ఞానం కలిగిన వ్యక్తి.", te: "విద్యావంతుడు అంటే చదువుకున్న వ్యక్తి, జ్ఞానం కలిగిన వ్యక్తి." } },
+          { question: { en: "అక్షరం పాఠం నుండి నేర్చుకున్న విషయాలు రాయండి", te: "అక్షరం పాఠం నుండి నేర్చుకున్న విషయాలు రాయండి" }, answer: { en: "అక్షరం ప్రాముఖ్యత, విద్య యొక్క విలువ, చదువు వల్ల అభివృద్ధి గురించి నేర్చుకున్నాను.", te: "అక్షరం ప్రాముఖ్యత, విద్య యొక్క విలువ, చదువు వల్ల అభివృద్ధి గురించి నేర్చుకున్నాను." } },
+          { question: { en: "అక్షరం మీద వ్యాసం రాయండి", te: "అక్షరం మీద వ్యాసం రాయండి" }, answer: { en: "అక్షరం జ్ఞానానికి మూలం. విద్య మానవుడికి చక్షువులు వంటిది. అక్షరాలు నేర్చుకోవడం వల్ల మనిషి అభివృద్ధి చెందుతాడు. చదువు లేని మనిషి అంధుడితో సమానం. అందుకే అందరూ అక్షరాలు నేర్చుకోవాలి.", te: "అక్షరం జ్ఞానానికి మూలం. విద్య మానవుడికి చక్షువులు వంటిది. అక్షరాలు నేర్చుకోవడం వల్ల మనిషి అభివృద్ధి చెందుతాడు. చదువు లేని మనిషి అంధుడితో సమానం. అందుకే అందరూ అక్షరాలు నేర్చుకోవాలి." } },
+          { question: { en: "తెలుగు భాష గురించి రాయండి", te: "తెలుగు భాష గురించి రాయండి" }, answer: { en: "తెలుగు మన మాతృభాష. ఇది మధురమైన భాష. తెలుగులో అనేక గొప్ప సాహిత్యం ఉంది.", te: "తెలుగు మన మాతృభాష. ఇది మధురమైన భాష. తెలుగులో అనేక గొప్ప సాహిత్యం ఉంది." } }
+        ]
       },
       {
         id: `telugu-grammar-${grade}`,
@@ -740,12 +763,35 @@ const createSubjects6_7 = (grade: number): Subject[] => [
       }
     ] : [
       {
-        id: `hindi-varnamala-${grade}`,
-        title: { en: "हिंदी वर्णमाला", te: "हिंदी वर्णमाला" },
-        description: { en: "देवनागरी लिपि सीखें", te: "దేవనాగరి లిపి నేర్చుకోండి" },
-        notes: { en: "## हिंदी वर्णमाला\n\n### स्वर\nअ आ इ ई उ ऊ ऋ ए ऐ ओ औ अं अः\n\n### व्यंजन\nक ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह", te: "## హిందీ వర్ణమాల\n\n### స్వర్\nఅ ఆ ఇ ఈ ఉ ఊ ఋ ఏ ఐ ఓ ఔ అం అః\n\n### వ్యంజన్\nక ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ శ ష స హ" },
-        quiz: generateHindiQuiz(),
-        practice: generateHindiPractice()
+        id: `hindi-gnan-hum-ko-dijiye-${grade}`,
+        title: { en: "ज्ञान हम को दीजिये", te: "ज्ञान हम को दीजिये" },
+        description: { en: "ज्ञान और शिक्षा के बारे में प्रार्थना", te: "జ్ఞానం మరియు విద్య గురించి ప్రార్థన" },
+        notes: { en: "## ज्ञान हम को दीजिये\n\n### पाठ सारांश\nयह एक प्रार्थना है जिसमें ईश्वर से ज्ञान और सद्बुद्धि माँगी गई है।\n\n### मुख्य बिंदु\n- ज्ञान जीवन की रोशनी है\n- सद्बुद्धि से सही निर्णय लेते हैं\n- शिक्षा मनुष्य को महान बनाती है\n- विनम्रता से ज्ञान प्राप्त होता है\n\n### शब्दावली\n- ज्ञान: जानकारी, विद्या\n- सद्बुद्धि: अच्छी बुद्धि\n- विनम्रता: विनयशीलता\n- प्रार्थना: भगवान से निवेदन", te: "## జ్ఞాన్ హమ్ కో దీజియే\n\n### పాఠ సారాంశం\nఇది భగవంతుని నుండి జ్ఞానం మరియు సద్బుద్ధి కోరే ప్రార్థన.\n\n### ముఖ్య అంశాలు\n- జ్ఞానం జీవితానికి వెలుగు\n- సద్బుద్ధితో సరైన నిర్ణయాలు తీసుకుంటాం\n- విద్య మనిషిని గొప్పవాడిగా చేస్తుంది\n- వినయంతో జ్ఞానం లభిస్తుంది" },
+        videoUrls: ["https://www.youtube.com/embed/FbhTT1oXt8A"],
+        quiz: [
+          { question: { en: "इस पाठ में किससे प्रार्थना की गई है?", te: "ఈ పాఠంలో ఎవరిని ప్రార్థించారు?" }, options: [{ en: "ईश्वर से", te: "భగవంతుని" }, { en: "मित्र से", te: "స్నేహితుడిని" }, { en: "शिक्षक से", te: "ఉపాధ్యాయుడిని" }, { en: "माता से", te: "తల్లిని" }], correctIndex: 0 },
+          { question: { en: "ज्ञान क्या है?", te: "జ్ఞానం ఏమిటి?" }, options: [{ en: "जीवन की रोशनी", te: "జీవితానికి వెలుగు" }, { en: "अंधेरा", te: "చీకటి" }, { en: "पानी", te: "నీరు" }, { en: "हवा", te: "గాలి" }], correctIndex: 0 },
+          { question: { en: "सद्बुद्धि का अर्थ क्या है?", te: "సద్బుద్ధి అర్థం ఏమిటి?" }, options: [{ en: "अच्छी बुद्धि", te: "మంచి బుద్ధి" }, { en: "बुरी बुद्धि", te: "చెడు బుద్ధి" }, { en: "कोई बुद्धि नहीं", te: "బుద్ధి లేదు" }, { en: "पागलपन", te: "పిచ్చితనం" }], correctIndex: 0 },
+          { question: { en: "ज्ञान से क्या होता है?", te: "జ్ఞానం వల్ల ఏమి జరుగుతుంది?" }, options: [{ en: "सही निर्णय लेते हैं", te: "సరైన నిర్ణయాలు తీసుకుంటాం" }, { en: "गलत काम करते हैं", te: "తప్పు పని చేస్తాం" }, { en: "सोते रहते हैं", te: "నిద్రపోతాం" }, { en: "लड़ते हैं", te: "పోట్లాడతాం" }], correctIndex: 0 },
+          { question: { en: "विनम्रता का अर्थ क्या है?", te: "వినయం అర్థం ఏమిటి?" }, options: [{ en: "विनयशीलता", te: "వినయశీలత" }, { en: "घमंड", te: "గర్వం" }, { en: "गुस्सा", te: "కోపం" }, { en: "डर", te: "భయం" }], correctIndex: 0 },
+          { question: { en: "शिक्षा मनुष्य को क्या बनाती है?", te: "విద్య మనిషిని ఏమి చేస్తుంది?" }, options: [{ en: "महान", te: "గొప్పవాడిగా" }, { en: "कमजोर", te: "బలహీనంగా" }, { en: "बुरा", te: "చెడ్డవాడిగా" }, { en: "आलसी", te: "సోమరిగా" }], correctIndex: 0 },
+          { question: { en: "प्रार्थना किसे कहते हैं?", te: "ప్రార్థన అంటే ఏమిటి?" }, options: [{ en: "भगवान से निवेदन", te: "భగవంతునికి విన్నపం" }, { en: "खेलना", te: "ఆడటం" }, { en: "सोना", te: "నిద్రపోవడం" }, { en: "खाना", te: "తినడం" }], correctIndex: 0 },
+          { question: { en: "ज्ञान कैसे प्राप्त होता है?", te: "జ్ఞానం ఎలా లభిస్తుంది?" }, options: [{ en: "विनम्रता से", te: "వినయంతో" }, { en: "घमंड से", te: "గర్వంతో" }, { en: "गुस्से से", te: "కోపంతో" }, { en: "नींद से", te: "నిద్రతో" }], correctIndex: 0 },
+          { question: { en: "यह पाठ किस कक्षा के लिए है?", te: "ఈ పాఠం ఏ తరగతికి?" }, options: [{ en: "7वीं कक्षा", te: "7వ తరగతి" }, { en: "6वीं कक्षा", te: "6వ తరగతి" }, { en: "10वीं कक्षा", te: "10వ తరగతి" }, { en: "1वीं कक्षा", te: "1వ తరగతి" }], correctIndex: 0 },
+          { question: { en: "इस पाठ में क्या माँगा गया है?", te: "ఈ పాఠంలో ఏమి కోరారు?" }, options: [{ en: "ज्ञान और सद्बुद्धि", te: "జ్ఞానం మరియు సద్బుద్ధి" }, { en: "धन", te: "ధనం" }, { en: "खेल", te: "ఆటలు" }, { en: "मिठाई", te: "మిఠాయిలు" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "ज्ञान हम को दीजिये पाठ का सारांश लिखिए", te: "జ్ఞాన్ హమ్ కో దీజియే పాఠం సారాంశం రాయండి" }, answer: { en: "यह एक प्रार्थना है जिसमें ईश्वर से ज्ञान और सद्बुद्धि माँगी गई है।", te: "ఇది భగవంతుని నుండి జ్ఞానం మరియు సద్బుద్ధి కోరే ప్రార్థన." } },
+          { question: { en: "ज्ञान क्यों जरूरी है?", te: "జ్ఞానం ఎందుకు అవసరం?" }, answer: { en: "ज्ञान जीवन की रोशनी है। इससे सही निर्णय लेने में मदद मिलती है।", te: "జ్ఞానం జీవితానికి వెలుగు. ఇది సరైన నిర్ణయాలు తీసుకోవడంలో సహాయపడుతుంది." } },
+          { question: { en: "सद्बुद्धि के बारे में लिखिए", te: "సద్బుద్ధి గురించి రాయండి" }, answer: { en: "सद्बुद्धि का अर्थ है अच्छी बुद्धि। इससे सही और गलत की पहचान होती है।", te: "సద్బుద్ధి అంటే మంచి బుద్ధి. దీని వల్ల సరైనది మరియు తప్పు గుర్తించగలం." } },
+          { question: { en: "विनम्रता क्यों जरूरी है?", te: "వినయం ఎందుకు అవసరం?" }, answer: { en: "विनम्रता से ज्ञान प्राप्त होता है। घमंडी व्यक्ति कुछ नहीं सीख पाता।", te: "వినయంతో జ్ఞానం లభిస్తుంది. గర్విష్ఠి ఏమీ నేర్చుకోలేడు." } },
+          { question: { en: "पाठ की मुख्य शिक्षा क्या है?", te: "పాఠం యొక్క ముఖ్య సందేశం ఏమిటి?" }, answer: { en: "ज्ञान और सद्बुद्धि जीवन में सबसे महत्वपूर्ण हैं।", te: "జ్ఞానం మరియు సద్బుద్ధి జీవితంలో అత్యంత ముఖ్యమైనవి." } },
+          { question: { en: "प्रार्थना का महत्व लिखिए", te: "ప్రార్థన ప్రాముఖ్యత రాయండి" }, answer: { en: "प्रार्थना से मन शांत होता है और ईश्वर की कृपा मिलती है।", te: "ప్రార్థన వల్ల మనసు శాంతిస్తుంది మరియు భగవంతుని కృప లభిస్తుంది." } },
+          { question: { en: "ज्ञान के बारे में पाँच वाक्य लिखिए", te: "జ్ఞానం గురించి ఐదు వాక్యాలు రాయండి" }, answer: { en: "1. ज्ञान जीवन की रोशनी है। 2. ज्ञान से सही निर्णय लेते हैं। 3. ज्ञान मनुष्य को महान बनाता है। 4. विनम्रता से ज्ञान मिलता है। 5. ज्ञान सबसे बड़ा धन है।", te: "1. జ్ఞానం జీవితానికి వెలుగు. 2. జ్ఞానంతో సరైన నిర్ణయాలు తీసుకుంటాం. 3. జ్ఞానం మనిషిని గొప్పవాడిగా చేస్తుంది. 4. వినయంతో జ్ఞానం లభిస్తుంది. 5. జ్ఞానం గొప్ప సంపద." } },
+          { question: { en: "पाठ के मुख्य शब्द लिखिए", te: "పాఠంలోని ముఖ్య పదాలు రాయండి" }, answer: { en: "ज्ञान, सद्बुद्धि, विनम्रता, प्रार्थना, शिक्षा", te: "జ్ఞానం, సద్బుద్ధి, వినయం, ప్రార్థన, విద్య" } },
+          { question: { en: "ईश्वर से हमें क्या माँगना चाहिए?", te: "భగవంతుని నుండి మనం ఏమి కోరాలి?" }, answer: { en: "ईश्वर से ज्ञान, सद्बुद्धि और सही राह दिखाने की प्रार्थना करनी चाहिए।", te: "భగవంతుని నుండి జ్ఞానం, సద్బుద్ధి మరియు సరైన మార్గం చూపించమని ప్రార్థించాలి." } },
+          { question: { en: "ज्ञान पर एक छोटा निबंध लिखिए", te: "జ్ఞానం మీద చిన్న వ్యాసం రాయండి" }, answer: { en: "ज्ञान मनुष्य का सबसे बड़ा धन है। ज्ञान से हम सही-गलत की पहचान करते हैं। ज्ञान जीवन में रोशनी की तरह है। विनम्रता से ज्ञान प्राप्त होता है। ज्ञानी व्यक्ति सबका सम्मान करता है।", te: "జ్ఞానం మనిషికి గొప్ప సంపద. జ్ఞానంతో మంచి చెడు గుర్తిస్తాం. జ్ఞానం జీవితంలో వెలుగు లాంటిది. వినయంతో జ్ఞానం లభిస్తుంది. జ్ఞాని అందరినీ గౌరవిస్తాడు." } }
+        ]
       },
       {
         id: `hindi-grammar-${grade}`,
@@ -889,12 +935,35 @@ const createSubjects6_7 = (grade: number): Subject[] => [
       }
     ] : [
       {
-        id: `english-grammar-${grade}`,
-        title: { en: "English Grammar", te: "ఆంగ్ల వ్యాకరణం" },
-        description: { en: "Parts of speech and sentence structure", te: "వాక్భాగాలు మరియు వాక్య నిర్మాణం" },
-        notes: { en: "## English Grammar\n\n### Parts of Speech\n1. **Noun**: Naming words (book, Delhi)\n2. **Pronoun**: Replace nouns (he, she, it)\n3. **Verb**: Action words (run, eat, sleep)\n4. **Adjective**: Describe nouns (big, beautiful)\n5. **Adverb**: Describe verbs (quickly, slowly)\n6. **Preposition**: Show position (in, on, at)\n7. **Conjunction**: Join words (and, but, or)\n8. **Interjection**: Express emotions (Wow!, Oh!)", te: "## ఆంగ్ల వ్యాకరణం\n\n### వాక్భాగాలు\n1. **నామవాచకం**: పేరు పదాలు\n2. **సర్వనామం**: నామవాచకాలను భర్తీ చేస్తుంది\n3. **క్రియ**: చర్య పదాలు\n4. **విశేషణం**: నామవాచకాలను వర్ణిస్తుంది\n5. **క్రియా విశేషణం**: క్రియలను వర్ణిస్తుంది" },
-        quiz: generateEnglishQuiz(),
-        practice: generateEnglishPractice()
+        id: `english-three-questions-${grade}`,
+        title: { en: "Three Questions", te: "మూడు ప్రశ్నలు" },
+        description: { en: "A story by Leo Tolstoy about wisdom", te: "లియో టాల్‌స్టాయ్ రాసిన జ్ఞానం గురించి కథ" },
+        notes: { en: "## Three Questions\n\n### Story Summary\nThis famous story by Leo Tolstoy is about a king who wanted answers to three questions: What is the right time to do something? Who are the most important people? What is the most important thing to do?\n\n### Key Points\n- The present moment is the most important time\n- The person you are with is the most important person\n- Doing good to that person is the most important thing\n\n### Vocabulary\n- Hermit: A person who lives alone in a simple way\n- Wisdom: Deep understanding and knowledge\n- Compassion: Feeling of caring for others\n- Present: The current time, now", te: "## మూడు ప్రశ్నలు\n\n### కథ సారాంశం\nలియో టాల్‌స్టాయ్ రాసిన ఈ ప్రసిద్ధ కథ ఒక రాజు గురించి, అతను మూడు ప్రశ్నలకు సమాధానాలు కోరుకున్నాడు.\n\n### ముఖ్య అంశాలు\n- ప్రస్తుత క్షణం అత్యంత ముఖ్యమైన సమయం\n- మీతో ఉన్న వ్యక్తి అత్యంత ముఖ్యమైన వ్యక్తి\n- ఆ వ్యక్తికి మంచి చేయడం అత్యంత ముఖ్యమైన పని" },
+        videoUrls: ["https://www.youtube.com/embed/IBsEStHX2E4"],
+        quiz: [
+          { question: { en: "Who wrote 'Three Questions'?", te: "'మూడు ప్రశ్నలు' ఎవరు రాశారు?" }, options: [{ en: "Leo Tolstoy", te: "లియో టాల్‌స్టాయ్" }, { en: "Shakespeare", te: "షేక్స్పియర్" }, { en: "Rabindranath Tagore", te: "రవీంద్రనాథ్ ఠాగూర్" }, { en: "R.K. Narayan", te: "ఆర్.కె. నారాయణ్" }], correctIndex: 0 },
+          { question: { en: "How many questions did the king have?", te: "రాజుకు ఎన్ని ప్రశ్నలు ఉన్నాయి?" }, options: [{ en: "Three", te: "మూడు" }, { en: "Two", te: "రెండు" }, { en: "Four", te: "నాలుగు" }, { en: "Five", te: "ఐదు" }], correctIndex: 0 },
+          { question: { en: "What is the most important time?", te: "అత్యంత ముఖ్యమైన సమయం ఏది?" }, options: [{ en: "The present moment", te: "ప్రస్తుత క్షణం" }, { en: "The past", te: "గతం" }, { en: "The future", te: "భవిష్యత్తు" }, { en: "Yesterday", te: "నిన్న" }], correctIndex: 0 },
+          { question: { en: "Who is the most important person?", te: "అత్యంత ముఖ్యమైన వ్యక్తి ఎవరు?" }, options: [{ en: "The person you are with now", te: "ఇప్పుడు మీతో ఉన్న వ్యక్తి" }, { en: "The king", te: "రాజు" }, { en: "The rich person", te: "ధనవంతుడు" }, { en: "The famous person", te: "ప్రసిద్ధ వ్యక్తి" }], correctIndex: 0 },
+          { question: { en: "What is the most important thing to do?", te: "చేయవలసిన అత్యంత ముఖ్యమైన పని ఏమిటి?" }, options: [{ en: "Doing good to the person with you", te: "మీతో ఉన్న వ్యక్తికి మంచి చేయడం" }, { en: "Making money", te: "డబ్బు సంపాదించడం" }, { en: "Sleeping", te: "నిద్రపోవడం" }, { en: "Playing games", te: "ఆటలు ఆడటం" }], correctIndex: 0 },
+          { question: { en: "What is a hermit?", te: "సన్యాసి అంటే ఏమిటి?" }, options: [{ en: "A person who lives alone simply", te: "ఒంటరిగా సింపుల్‌గా జీవించే వ్యక్తి" }, { en: "A king", te: "రాజు" }, { en: "A soldier", te: "సైనికుడు" }, { en: "A merchant", te: "వ్యాపారి" }], correctIndex: 0 },
+          { question: { en: "What does 'wisdom' mean?", te: "'విజ్డమ్' అంటే అర్థం ఏమిటి?" }, options: [{ en: "Deep understanding", te: "లోతైన అవగాహన" }, { en: "Strength", te: "బలం" }, { en: "Wealth", te: "సంపద" }, { en: "Speed", te: "వేగం" }], correctIndex: 0 },
+          { question: { en: "Who helped the king find answers?", te: "సమాధానాలు కనుగొనడంలో రాజుకు ఎవరు సహాయం చేశారు?" }, options: [{ en: "A hermit", te: "ఒక సన్యాసి" }, { en: "A soldier", te: "ఒక సైనికుడు" }, { en: "A teacher", te: "ఒక ఉపాధ్యాయుడు" }, { en: "A minister", te: "ఒక మంత్రి" }], correctIndex: 0 },
+          { question: { en: "What is 'compassion'?", te: "'కంపాషన్' అంటే ఏమిటి?" }, options: [{ en: "Caring for others", te: "ఇతరుల పట్ల శ్రద్ధ" }, { en: "Anger", te: "కోపం" }, { en: "Fear", te: "భయం" }, { en: "Jealousy", te: "అసూయ" }], correctIndex: 0 },
+          { question: { en: "What is the main message of the story?", te: "కథ యొక్క ప్రధాన సందేశం ఏమిటి?" }, options: [{ en: "Live in the present and be kind", te: "వర్తమానంలో జీవించండి మరియు దయగా ఉండండి" }, { en: "Be rich", te: "ధనవంతులు కండి" }, { en: "Be powerful", te: "శక్తివంతులు కండి" }, { en: "Be famous", te: "ప్రసిద్ధులు కండి" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "What were the three questions of the king?", te: "రాజు యొక్క మూడు ప్రశ్నలు ఏమిటి?" }, answer: { en: "1. What is the right time to do something? 2. Who are the most important people? 3. What is the most important thing to do?", te: "1. ఏదైనా చేయడానికి సరైన సమయం ఏది? 2. అత్యంత ముఖ్యమైన వ్యక్తులు ఎవరు? 3. చేయవలసిన అత్యంత ముఖ్యమైన పని ఏమిటి?" } },
+          { question: { en: "What answers did the hermit give?", te: "సన్యాసి ఏ సమాధానాలు ఇచ్చారు?" }, answer: { en: "The present moment is the most important time. The person with you is the most important. Doing good to that person is the most important thing.", te: "ప్రస్తుత క్షణం అత్యంత ముఖ్యమైన సమయం. మీతో ఉన్న వ్యక్తి అత్యంత ముఖ్యమైన వారు. ఆ వ్యక్తికి మంచి చేయడం అత్యంత ముఖ్యమైన పని." } },
+          { question: { en: "Write the meaning of: hermit, wisdom, compassion", te: "అర్థం రాయండి: hermit, wisdom, compassion" }, answer: { en: "Hermit: A person who lives alone simply. Wisdom: Deep understanding. Compassion: Caring for others.", te: "Hermit: ఒంటరిగా నిరాడంబరంగా జీవించే వ్యక్తి. Wisdom: లోతైన అవగాహన. Compassion: ఇతరుల పట్ల శ్రద్ధ." } },
+          { question: { en: "Why is the present moment important?", te: "ప్రస్తుత క్షణం ఎందుకు ముఖ్యం?" }, answer: { en: "The present moment is important because the past is gone and the future is uncertain. We can only act now.", te: "ప్రస్తుత క్షణం ముఖ్యం ఎందుకంటే గతం గడిచిపోయింది మరియు భవిష్యత్తు అనిశ్చితం. మనం ఇప్పుడు మాత్రమే చర్య తీసుకోగలం." } },
+          { question: { en: "Write the moral of the story", te: "కథ యొక్క నీతి రాయండి" }, answer: { en: "Live in the present, care for the person with you, and do good deeds.", te: "వర్తమానంలో జీవించండి, మీతో ఉన్న వ్యక్తిని శ్రద్ధగా చూడండి, మంచి పనులు చేయండి." } },
+          { question: { en: "Who was Leo Tolstoy?", te: "లియో టాల్‌స్టాయ్ ఎవరు?" }, answer: { en: "Leo Tolstoy was a famous Russian writer. He wrote many great stories and novels.", te: "లియో టాల్‌స్టాయ్ ప్రసిద్ధ రష్యన్ రచయిత. ఆయన అనేక గొప్ప కథలు మరియు నవలలు రాశారు." } },
+          { question: { en: "Write 5 new words from this lesson", te: "ఈ పాఠం నుండి 5 కొత్త పదాలు రాయండి" }, answer: { en: "Hermit, wisdom, compassion, present, important", te: "Hermit, wisdom, compassion, present, important" } },
+          { question: { en: "Write a sentence using 'wisdom'", te: "'wisdom' పదం ఉపయోగించి వాక్యం రాయండి" }, answer: { en: "The hermit shared his wisdom with the king.", te: "సన్యాసి తన జ్ఞానాన్ని రాజుతో పంచుకున్నారు." } },
+          { question: { en: "Why did the king go to the hermit?", te: "రాజు సన్యాసి వద్దకు ఎందుకు వెళ్ళారు?" }, answer: { en: "The king went to the hermit because he wanted answers to his three questions about life.", te: "రాజు సన్యాసి వద్దకు వెళ్ళారు ఎందుకంటే అతనికి జీవితం గురించి తన మూడు ప్రశ్నలకు సమాధానాలు కావాలి." } },
+          { question: { en: "Write a short summary of the story", te: "కథ యొక్క చిన్న సారాంశం రాయండి" }, answer: { en: "A king wanted answers to three questions. He went to a wise hermit who taught him that the present moment, the person with you, and doing good are the most important things in life.", te: "ఒక రాజుకు మూడు ప్రశ్నలకు సమాధానాలు కావాలి. అతను జ్ఞాని సన్యాసి వద్దకు వెళ్ళారు, అతను ప్రస్తుత క్షణం, మీతో ఉన్న వ్యక్తి మరియు మంచి చేయడం జీవితంలో అత్యంత ముఖ్యమైనవి అని నేర్పించారు." } }
+        ]
       },
       {
         id: `english-vocabulary-${grade}`,
@@ -1038,12 +1107,35 @@ const createSubjects6_7 = (grade: number): Subject[] => [
       }
     ] : [
       {
-        id: `numbers-${grade}`,
-        title: { en: "Knowing Our Numbers", te: "మన సంఖ్యలను తెలుసుకోవడం" },
-        description: { en: "Learn about large numbers and place values", te: "పెద్ద సంఖ్యలు మరియు స్థాన విలువల గురించి" },
-        notes: { en: "## Knowing Our Numbers\n\n### Place Value System\nFrom right to left:\n- Ones (1)\n- Tens (10)\n- Hundreds (100)\n- Thousands (1,000)\n- Ten Thousands (10,000)\n- Lakhs (1,00,000)\n- Ten Lakhs (10,00,000)\n- Crores (1,00,00,000)\n\n### Indian vs International System\n**Indian System:** 1,00,00,000 = 1 Crore\n**International System:** 10,000,000 = 10 Million", te: "## మన సంఖ్యలను తెలుసుకోవడం\n\n### స్థాన విలువ వ్యవస్థ\nకుడి నుండి ఎడమకు:\n- ఒకట్లు (1)\n- పదులు (10)\n- వందలు (100)\n- వేలు (1,000)\n- పదివేలు (10,000)\n- లక్షలు (1,00,000)" },
-        quiz: generateMathQuiz('numbers', grade),
-        practice: generateMathPractice('numbers', grade)
+        id: `integers-${grade}`,
+        title: { en: "Integers", te: "పూర్ణాంకాలు" },
+        description: { en: "Learn about positive and negative integers", te: "ధన మరియు రుణ పూర్ణాంకాల గురించి తెలుసుకోండి" },
+        notes: { en: "## Integers\n\n### Definition\nIntegers are whole numbers including positive, negative, and zero: ...-3, -2, -1, 0, 1, 2, 3...\n\n### Types of Integers\n- **Positive Integers**: 1, 2, 3, 4... (to the right of 0 on number line)\n- **Negative Integers**: -1, -2, -3, -4... (to the left of 0)\n- **Zero**: Neither positive nor negative\n\n### Operations with Integers\n- Adding two positive integers gives positive\n- Adding two negative integers gives negative\n- Multiplying two negatives gives positive\n- Multiplying positive and negative gives negative\n\n### Number Line\nIntegers can be represented on a number line with 0 in the center.", te: "## పూర్ణాంకాలు\n\n### నిర్వచనం\nపూర్ణాంకాలు ధన, రుణ మరియు సున్నా సహా పూర్ణ సంఖ్యలు: ...-3, -2, -1, 0, 1, 2, 3...\n\n### పూర్ణాంకాల రకాలు\n- **ధన పూర్ణాంకాలు**: 1, 2, 3, 4...\n- **రుణ పూర్ణాంకాలు**: -1, -2, -3, -4...\n- **సున్నా**: ధన లేదా రుణ కాదు\n\n### పూర్ణాంకాలతో కార్యకలాపాలు\n- రెండు ధన పూర్ణాంకాల మొత్తం ధన\n- రెండు రుణ పూర్ణాంకాల మొత్తం రుణ\n- రెండు రుణాల గుణకం ధన" },
+        videoUrls: ["https://www.youtube.com/embed/videoseries?list=PLzI2dBioyh2jQYJDwExv43-ChouayAw_f"],
+        quiz: [
+          { question: { en: "What are integers?", te: "పూర్ణాంకాలు అంటే ఏమిటి?" }, options: [{ en: "Whole numbers including negatives", te: "రుణాలతో సహా పూర్ణ సంఖ్యలు" }, { en: "Only positive numbers", te: "ధన సంఖ్యలు మాత్రమే" }, { en: "Only fractions", te: "భిన్నాలు మాత్రమే" }, { en: "Only decimals", te: "దశాంశాలు మాత్రమే" }], correctIndex: 0 },
+          { question: { en: "Which is a negative integer?", te: "ఏది రుణ పూర్ణాంకం?" }, options: [{ en: "-7", te: "-7" }, { en: "7", te: "7" }, { en: "0", te: "0" }, { en: "1/2", te: "1/2" }], correctIndex: 0 },
+          { question: { en: "Zero is?", te: "సున్నా ఏమిటి?" }, options: [{ en: "Neither positive nor negative", te: "ధన లేదా రుణ కాదు" }, { en: "Positive", te: "ధన" }, { en: "Negative", te: "రుణ" }, { en: "Not a number", te: "సంఖ్య కాదు" }], correctIndex: 0 },
+          { question: { en: "(-5) + (-3) = ?", te: "(-5) + (-3) = ?" }, options: [{ en: "-8", te: "-8" }, { en: "8", te: "8" }, { en: "-2", te: "-2" }, { en: "2", te: "2" }], correctIndex: 0 },
+          { question: { en: "(-4) × (-2) = ?", te: "(-4) × (-2) = ?" }, options: [{ en: "8", te: "8" }, { en: "-8", te: "-8" }, { en: "-6", te: "-6" }, { en: "6", te: "6" }], correctIndex: 0 },
+          { question: { en: "7 + (-3) = ?", te: "7 + (-3) = ?" }, options: [{ en: "4", te: "4" }, { en: "-4", te: "-4" }, { en: "10", te: "10" }, { en: "-10", te: "-10" }], correctIndex: 0 },
+          { question: { en: "On a number line, -5 is to the ___ of 0", te: "సంఖ్య రేఖపై, -5 సున్నాకు ___ ఉంది" }, options: [{ en: "Left", te: "ఎడమ" }, { en: "Right", te: "కుడి" }, { en: "Above", te: "పైన" }, { en: "Below", te: "క్రింద" }], correctIndex: 0 },
+          { question: { en: "Which is greater: -3 or -7?", te: "ఏది ఎక్కువ: -3 లేదా -7?" }, options: [{ en: "-3", te: "-3" }, { en: "-7", te: "-7" }, { en: "Both equal", te: "రెండూ సమానం" }, { en: "Cannot compare", te: "పోల్చలేము" }], correctIndex: 0 },
+          { question: { en: "Additive inverse of 5 is?", te: "5 యొక్క కూడిక విలోమం?" }, options: [{ en: "-5", te: "-5" }, { en: "5", te: "5" }, { en: "0", te: "0" }, { en: "1", te: "1" }], correctIndex: 0 },
+          { question: { en: "(-10) ÷ 2 = ?", te: "(-10) ÷ 2 = ?" }, options: [{ en: "-5", te: "-5" }, { en: "5", te: "5" }, { en: "-8", te: "-8" }, { en: "8", te: "8" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Define integers with examples", te: "పూర్ణాంకాలను ఉదాహరణలతో నిర్వచించండి" }, answer: { en: "Integers are whole numbers including positive, negative, and zero. Examples: -3, -2, -1, 0, 1, 2, 3", te: "పూర్ణాంకాలు ధన, రుణ మరియు సున్నా సహా పూర్ణ సంఖ్యలు. ఉదాహరణలు: -3, -2, -1, 0, 1, 2, 3" } },
+          { question: { en: "Calculate: (-6) + 9", te: "లెక్కించండి: (-6) + 9" }, answer: { en: "(-6) + 9 = 3", te: "(-6) + 9 = 3" } },
+          { question: { en: "Calculate: (-8) - (-4)", te: "లెక్కించండి: (-8) - (-4)" }, answer: { en: "(-8) - (-4) = (-8) + 4 = -4", te: "(-8) - (-4) = (-8) + 4 = -4" } },
+          { question: { en: "Calculate: (-5) × 3", te: "లెక్కించండి: (-5) × 3" }, answer: { en: "(-5) × 3 = -15", te: "(-5) × 3 = -15" } },
+          { question: { en: "Arrange in ascending order: 2, -4, 0, -1, 5", te: "ఆరోహణ క్రమంలో: 2, -4, 0, -1, 5" }, answer: { en: "-4 < -1 < 0 < 2 < 5", te: "-4 < -1 < 0 < 2 < 5" } },
+          { question: { en: "Find the additive inverse of -12", te: "-12 యొక్క కూడిక విలోమం కనుగొనండి" }, answer: { en: "Additive inverse of -12 is 12 (because -12 + 12 = 0)", te: "-12 యొక్క కూడిక విలోమం 12 (ఎందుకంటే -12 + 12 = 0)" } },
+          { question: { en: "The temperature was -5°C, it increased by 8°C. What is it now?", te: "ఉష్ణోగ్రత -5°C ఉంది, అది 8°C పెరిగింది. ఇప్పుడు ఏమిటి?" }, answer: { en: "-5 + 8 = 3°C", te: "-5 + 8 = 3°C" } },
+          { question: { en: "Calculate: (-15) ÷ (-5)", te: "లెక్కించండి: (-15) ÷ (-5)" }, answer: { en: "(-15) ÷ (-5) = 3", te: "(-15) ÷ (-5) = 3" } },
+          { question: { en: "Why is (-2) × (-4) = 8 (positive)?", te: "(-2) × (-4) = 8 (ధన) ఎందుకు?" }, answer: { en: "Because negative × negative = positive. The product of two negative numbers is always positive.", te: "ఎందుకంటే రుణ × రుణ = ధన. రెండు రుణ సంఖ్యల లబ్ధం ఎల్లప్పుడూ ధనాత్మకం." } },
+          { question: { en: "Draw a number line and mark: -3, 0, 2, -1, 4", te: "సంఖ్య రేఖ గీసి గుర్తించండి: -3, 0, 2, -1, 4" }, answer: { en: "Draw a horizontal line, mark 0 in center, negative numbers to left (-3, -1), positive to right (2, 4)", te: "క్షితిజ సమాంతర రేఖ గీయండి, మధ్యలో 0 గుర్తించండి, ఎడమకు రుణ సంఖ్యలు (-3, -1), కుడికి ధన (2, 4)" } }
+        ]
       },
       {
         id: `fractions-${grade}`,
@@ -1074,7 +1166,7 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         title: { en: "Food: Where Does It Come From?", te: "ఆహారం: ఎక్కడ నుండి వస్తుంది?" },
         description: { en: "Learn about sources of food", te: "ఆహార వనరుల గురించి తెలుసుకోండి" },
         notes: { en: "## Food: Where Does It Come From?\n\n### Sources of Food\n**Plants:** Fruits, Vegetables, Grains, Pulses\n**Animals:** Milk, Eggs, Meat, Honey\n\n### Food Habits\n- **Herbivores**: Eat plants (cow, deer)\n- **Carnivores**: Eat meat (lion, tiger)\n- **Omnivores**: Eat both (humans, bear)", te: "## ఆహారం: ఎక్కడ నుండి వస్తుంది?\n\n### ఆహార వనరులు\n**మొక్కలు:** పండ్లు, కూరగాయలు, ధాన్యాలు\n**జంతువులు:** పాలు, గుడ్లు, మాంసం, తేనె" },
-        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/gvytBpZbcZs"] : undefined,
+        videoUrls: grade === 6 ? ["https://www.youtube.com/embed/gvytBpZbcZs"] : ["https://www.youtube.com/embed/oP2sbq9G5PI"],
         quiz: generateScienceQuiz('food'),
         practice: generateSciencePractice('food')
       },
@@ -1228,12 +1320,35 @@ const createSubjects6_7 = (grade: number): Subject[] => [
       }
     ] : [
       {
-        id: `history-intro-${grade}`,
-        title: { en: "Introduction to History", te: "చరిత్ర పరిచయం" },
-        description: { en: "Understanding our past", te: "మన గత కాలాన్ని అర్థం చేసుకోవడం" },
-        notes: { en: "## Introduction to History\n\n### What is History?\nStudy of the past - how people lived, what they believed.\n\n### Sources of History\n1. **Archaeological**: Coins, monuments, pottery\n2. **Literary**: Books, manuscripts\n3. **Oral**: Stories passed through generations\n\n### Important Terms\n- BCE: Before Common Era\n- CE: Common Era", te: "## చరిత్ర పరిచయం\n\n### చరిత్ర అంటే ఏమిటి?\nగత కాలం యొక్క అధ్యయనం\n\n### చరిత్ర మూలాలు\n1. **పురావస్తు**: నాణేలు, కట్టడాలు\n2. **సాహిత్య**: పుస్తకాలు, రాతప్రతులు" },
-        quiz: generateSocialQuiz(),
-        practice: generateSocialPractice()
+        id: `universe-earth-${grade}`,
+        title: { en: "The Universe and the Earth", te: "విశ్వం మరియు భూమి" },
+        description: { en: "Learn about the universe and our planet Earth", te: "విశ్వం మరియు మన గ్రహం భూమి గురించి తెలుసుకోండి" },
+        notes: { en: "## The Universe and the Earth\n\n### What is the Universe?\nThe universe includes all matter, energy, space, and time that exist. It contains billions of galaxies.\n\n### Our Galaxy\n- **Milky Way**: Our galaxy containing the solar system\n- Contains billions of stars\n\n### Solar System\n- **Sun**: The star at the center\n- **8 Planets**: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune\n- **Moons, Asteroids, Comets**\n\n### Earth\n- 3rd planet from the Sun\n- Only planet with life\n- Has atmosphere, water\n- Rotates (day/night) and revolves (seasons)\n\n### Important Facts\n- Earth takes 24 hours to rotate once\n- Earth takes 365.25 days to revolve around Sun\n- Moon is Earth's natural satellite", te: "## విశ్వం మరియు భూమి\n\n### విశ్వం అంటే ఏమిటి?\nవిశ్వం అనేది ఉన్న అన్ని పదార్థం, శక్తి, స్థలం మరియు సమయాన్ని కలిగి ఉంటుంది. ఇది బిలియన్ల గెలాక్సీలను కలిగి ఉంది.\n\n### మన గెలాక్సీ\n- **పాలపుంత**: సౌర వ్యవస్థను కలిగి ఉన్న మన గెలాక్సీ\n\n### సౌర వ్యవస్థ\n- **సూర్యుడు**: కేంద్రంలో ఉన్న నక్షత్రం\n- **8 గ్రహాలు**: బుధుడు, శుక్రుడు, భూమి, కుజుడు, బృహస్పతి, శని, యురేనస్, నెప్ట్యూన్\n\n### భూమి\n- సూర్యుడి నుండి 3వ గ్రహం\n- జీవం ఉన్న ఏకైక గ్రహం" },
+        videoUrls: ["https://www.youtube.com/embed/Om4GgE9a1bM"],
+        quiz: [
+          { question: { en: "What is the universe?", te: "విశ్వం అంటే ఏమిటి?" }, options: [{ en: "All matter, energy, space, and time", te: "అన్ని పదార్థం, శక్తి, స్థలం మరియు సమయం" }, { en: "Just our solar system", te: "మన సౌర వ్యవస్థ మాత్రమే" }, { en: "Only Earth", te: "భూమి మాత్రమే" }, { en: "Only the Sun", te: "సూర్యుడు మాత్రమే" }], correctIndex: 0 },
+          { question: { en: "What is our galaxy called?", te: "మన గెలాక్సీని ఏమంటారు?" }, options: [{ en: "Milky Way", te: "పాలపుంత" }, { en: "Andromeda", te: "ఆండ్రోమెడా" }, { en: "Solar Galaxy", te: "సోలార్ గెలాక్సీ" }, { en: "Moon Galaxy", te: "మూన్ గెలాక్సీ" }], correctIndex: 0 },
+          { question: { en: "How many planets are in our solar system?", te: "మన సౌర వ్యవస్థలో ఎన్ని గ్రహాలు ఉన్నాయి?" }, options: [{ en: "8", te: "8" }, { en: "9", te: "9" }, { en: "7", te: "7" }, { en: "10", te: "10" }], correctIndex: 0 },
+          { question: { en: "Which is the only planet with life?", te: "జీవం ఉన్న ఏకైక గ్రహం ఏది?" }, options: [{ en: "Earth", te: "భూమి" }, { en: "Mars", te: "కుజుడు" }, { en: "Venus", te: "శుక్రుడు" }, { en: "Jupiter", te: "బృహస్పతి" }], correctIndex: 0 },
+          { question: { en: "How long does Earth take to rotate once?", te: "భూమి ఒకసారి తిరగడానికి ఎంత సమయం పడుతుంది?" }, options: [{ en: "24 hours", te: "24 గంటలు" }, { en: "12 hours", te: "12 గంటలు" }, { en: "365 days", te: "365 రోజులు" }, { en: "30 days", te: "30 రోజులు" }], correctIndex: 0 },
+          { question: { en: "What is at the center of our solar system?", te: "మన సౌర వ్యవస్థ కేంద్రంలో ఏమి ఉంది?" }, options: [{ en: "Sun", te: "సూర్యుడు" }, { en: "Earth", te: "భూమి" }, { en: "Moon", te: "చంద్రుడు" }, { en: "Jupiter", te: "బృహస్పతి" }], correctIndex: 0 },
+          { question: { en: "How long does Earth take to revolve around the Sun?", te: "భూమి సూర్యుడి చుట్టూ తిరగడానికి ఎంత సమయం పడుతుంది?" }, options: [{ en: "365.25 days", te: "365.25 రోజులు" }, { en: "24 hours", te: "24 గంటలు" }, { en: "30 days", te: "30 రోజులు" }, { en: "7 days", te: "7 రోజులు" }], correctIndex: 0 },
+          { question: { en: "What is Earth's natural satellite?", te: "భూమి యొక్క సహజ ఉపగ్రహం ఏది?" }, options: [{ en: "Moon", te: "చంద్రుడు" }, { en: "Sun", te: "సూర్యుడు" }, { en: "Mars", te: "కుజుడు" }, { en: "Venus", te: "శుక్రుడు" }], correctIndex: 0 },
+          { question: { en: "Earth is which planet from the Sun?", te: "భూమి సూర్యుడి నుండి ఏ గ్రహం?" }, options: [{ en: "3rd", te: "3వ" }, { en: "1st", te: "1వ" }, { en: "4th", te: "4వ" }, { en: "5th", te: "5వ" }], correctIndex: 0 },
+          { question: { en: "What causes day and night?", te: "పగలు మరియు రాత్రికి కారణం ఏమిటి?" }, options: [{ en: "Earth's rotation", te: "భూమి భ్రమణం" }, { en: "Earth's revolution", te: "భూమి పరిభ్రమణం" }, { en: "Moon's movement", te: "చంద్రుడి చలనం" }, { en: "Sun's movement", te: "సూర్యుడి చలనం" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "What is the universe? Explain.", te: "విశ్వం అంటే ఏమిటి? వివరించండి." }, answer: { en: "The universe includes all matter, energy, space, and time that exist. It contains billions of galaxies, each with billions of stars.", te: "విశ్వం అనేది ఉన్న అన్ని పదార్థం, శక్తి, స్థలం మరియు సమయాన్ని కలిగి ఉంటుంది. ఇది బిలియన్ల గెలాక్సీలను కలిగి ఉంది, ప్రతి ఒక్కటి బిలియన్ల నక్షత్రాలతో." } },
+          { question: { en: "What is the Milky Way?", te: "పాలపుంత అంటే ఏమిటి?" }, answer: { en: "Milky Way is our galaxy. It contains our solar system and billions of stars.", te: "పాలపుంత మన గెలాక్సీ. ఇది మన సౌర వ్యవస్థను మరియు బిలియన్ల నక్షత్రాలను కలిగి ఉంది." } },
+          { question: { en: "Name all 8 planets in order from the Sun", te: "సూర్యుడి నుండి క్రమంలో అన్ని 8 గ్రహాలను పేర్కొనండి" }, answer: { en: "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune", te: "బుధుడు, శుక్రుడు, భూమి, కుజుడు, బృహస్పతి, శని, యురేనస్, నెప్ట్యూన్" } },
+          { question: { en: "What is the difference between rotation and revolution?", te: "భ్రమణం మరియు పరిభ్రమణం మధ్య తేడా ఏమిటి?" }, answer: { en: "Rotation: Earth spinning on its axis (24 hrs, causes day/night). Revolution: Earth orbiting around the Sun (365.25 days, causes seasons).", te: "భ్రమణం: భూమి తన అక్షం మీద తిరగడం (24 గం, పగలు/రాత్రికి కారణం). పరిభ్రమణం: భూమి సూర్యుడి చుట్టూ తిరగడం (365.25 రోజులు, సీజన్లకు కారణం)." } },
+          { question: { en: "Why is Earth called the unique planet?", te: "భూమిని ఎందుకు ప్రత్యేక గ్రహం అంటారు?" }, answer: { en: "Earth is unique because it is the only planet with life. It has water, suitable temperature, oxygen, and atmosphere.", te: "భూమి ప్రత్యేకమైనది ఎందుకంటే ఇది జీవం ఉన్న ఏకైక గ్రహం. దీనికి నీరు, అనుకూల ఉష్ణోగ్రత, ఆక్సిజన్ మరియు వాతావరణం ఉంది." } },
+          { question: { en: "What is the Sun?", te: "సూర్యుడు అంటే ఏమిటి?" }, answer: { en: "The Sun is a star at the center of our solar system. It is a huge ball of hot gases (hydrogen and helium) that provides light and heat.", te: "సూర్యుడు మన సౌర వ్యవస్థ కేంద్రంలో ఉన్న నక్షత్రం. ఇది వేడి వాయువుల (హైడ్రోజన్ మరియు హీలియం) భారీ బంతి, కాంతి మరియు వేడిని అందిస్తుంది." } },
+          { question: { en: "What is a galaxy?", te: "గెలాక్సీ అంటే ఏమిటి?" }, answer: { en: "A galaxy is a huge collection of billions of stars, planets, gas, and dust held together by gravity.", te: "గెలాక్సీ అనేది గురుత్వాకర్షణ ద్వారా కలిసి ఉన్న బిలియన్ల నక్షత్రాలు, గ్రహాలు, వాయువు మరియు ధూళి యొక్క భారీ సమూహం." } },
+          { question: { en: "Why do we have seasons on Earth?", te: "భూమిపై మనకు ఋతువులు ఎందుకు ఉన్నాయి?" }, answer: { en: "Seasons occur because Earth's axis is tilted and as it revolves around the Sun, different parts receive different amounts of sunlight.", te: "భూమి అక్షం వంపుగా ఉన్నందున మరియు సూర్యుడి చుట్టూ తిరిగేటప్పుడు వివిధ భాగాలు వివిధ మొత్తాల సూర్యకాంతిని పొందుతాయి కాబట్టి ఋతువులు ఏర్పడతాయి." } },
+          { question: { en: "What is the Moon and why do we see it at night?", te: "చంద్రుడు అంటే ఏమిటి మరియు మనం రాత్రి ఎందుకు చూస్తాం?" }, answer: { en: "Moon is Earth's natural satellite. We see it because it reflects sunlight. It doesn't produce its own light.", te: "చంద్రుడు భూమి యొక్క సహజ ఉపగ్రహం. మనం దాన్ని చూస్తాం ఎందుకంటే అది సూర్యకాంతిని ప్రతిబింబిస్తుంది. అది సొంత కాంతిని ఉత్పత్తి చేయదు." } },
+          { question: { en: "Draw and label the solar system", te: "సౌర వ్యవస్థను గీసి లేబుల్ చేయండి" }, answer: { en: "Draw Sun at center, then 8 planets in order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. Show asteroid belt between Mars and Jupiter.", te: "కేంద్రంలో సూర్యుడిని గీయండి, తర్వాత క్రమంలో 8 గ్రహాలు: బుధుడు, శుక్రుడు, భూమి, కుజుడు, బృహస్పతి, శని, యురేనస్, నెప్ట్యూన్. కుజుడు మరియు బృహస్పతి మధ్య గ్రహశకల వలయం చూపించండి." } }
+        ]
       },
       {
         id: `geography-${grade}`,
