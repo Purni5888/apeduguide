@@ -1371,208 +1371,596 @@ const createSubjects6_7 = (grade: number): Subject[] => [
 ];
 
 // Create subject arrays for classes 8-10
-const createSubjects8_10 = (grade: number): Subject[] => [
-  {
-    id: `telugu-${grade}`,
-    title: { en: "Telugu", te: "తెలుగు" },
-    icon: "Languages",
-    color: "game-pink",
-    chapters: [
-      {
-        id: `telugu-literature-${grade}`,
-        title: { en: "Telugu Literature", te: "తెలుగు సాహిత్యం" },
-        description: { en: "Prose and poetry", te: "గద్యం మరియు పద్యం" },
-        notes: { en: "## Telugu Literature\n\n### Forms of Literature\n- **Gadyam (Prose)**: Stories, essays, novels\n- **Padyam (Poetry)**: Poems with rhythm and rhyme\n- **Natakam (Drama)**: Plays\n\n### Famous Telugu Poets\n- Nannaya\n- Tikkana\n- Errapragada\n- Vemana\n- Sri Sri", te: "## తెలుగు సాహిత్యం\n\n### సాహిత్య రూపాలు\n- **గద్యం**: కథలు, వ్యాసాలు\n- **పద్యం**: లయ మరియు ప్రాసతో కవితలు\n- **నాటకం**: నాటకాలు" },
-        quiz: generateTeluguQuiz(),
-        practice: generateTeluguPractice()
-      },
-      {
-        id: `telugu-advanced-grammar-${grade}`,
-        title: { en: "Advanced Grammar", te: "ఉన్నత వ్యాకరణం" },
-        description: { en: "Complex grammar rules", te: "సంక్లిష్ట వ్యాకరణ నియమాలు" },
-        notes: { en: "## Advanced Telugu Grammar\n\n### Sandhi (సంధి)\nJoining of words\n- Savarna Sandhi\n- Guna Sandhi\n- Vriddhi Sandhi\n\n### Samasa (సమాసం)\nCompound words\n- Dvandva\n- Tatpurusha\n- Bahuvrihi", te: "## ఉన్నత తెలుగు వ్యాకరణం\n\n### సంధి\nపదాల కలయిక\n\n### సమాసం\nసమ్మేళన పదాలు" },
-        quiz: generateTeluguQuiz(),
-        practice: generateTeluguPractice()
-      }
-    ]
-  },
-  {
-    id: `hindi-${grade}`,
-    title: { en: "Hindi", te: "హిందీ" },
-    icon: "BookText",
-    color: "game-orange",
-    chapters: [
-      {
-        id: `hindi-literature-${grade}`,
-        title: { en: "Hindi Literature", te: "హిందీ సాహిత్యం" },
-        description: { en: "Stories and poems", te: "కథలు మరియు కవితలు" },
-        notes: { en: "## Hindi Literature\n\n### Famous Hindi Writers\n- Premchand\n- Mahadevi Verma\n- Harivansh Rai Bachchan\n- Kabir Das\n- Tulsidas\n\n### Literary Forms\n- कहानी (Story)\n- कविता (Poetry)\n- निबंध (Essay)", te: "## హిందీ సాహిత్యం\n\n### ప్రసిద్ధ హిందీ రచయితలు\n- ప్రేమ్‌చంద్\n- మహాదేవి వర్మ\n- హరివంశ్ రాయ్ బచ్చన్" },
+const createSubjects8_10 = (grade: number): Subject[] => {
+  // Grade-specific content for chapter 1
+  const getTeluguChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `telugu-1-${grade}`,
+        title: { en: "Andhra Vaibhavam", te: "ఆంధ్ర వైభవం" },
+        description: { en: "Glory of Andhra", te: "ఆంధ్ర వైభవం" },
+        videoUrls: ["https://youtu.be/VMWT2Nhe85k?si=hNR11vQwdkBFarwd"],
+        notes: { 
+          en: "## Andhra Vaibhavam\n\n### Introduction\nThis lesson celebrates the rich cultural heritage and glory of Andhra Pradesh.\n\n### Key Themes\n- **Historical Significance**: The great kingdoms that ruled Andhra\n- **Cultural Heritage**: Art, literature, and traditions\n- **Famous Personalities**: Great poets, kings, and freedom fighters\n- **Natural Beauty**: Rivers, mountains, and landscapes\n\n### Literary Devices\n- Metaphors describing the land\n- Poetic expressions of pride\n- Historical references\n\n### Vocabulary\n- వైభవం (Vaibhavam) - Glory\n- సంస్కృతి (Samskruti) - Culture\n- వారసత్వం (Varasatvam) - Heritage", 
+          te: "## ఆంధ్ర వైభవం\n\n### పరిచయం\nఈ పాఠం ఆంధ్రప్రదేశ్ యొక్క గొప్ప సాంస్కృతిక వారసత్వం మరియు వైభవాన్ని ప్రశంసిస్తుంది.\n\n### ముఖ్య అంశాలు\n- **చారిత్రక ప్రాముఖ్యత**: ఆంధ్రను పాలించిన గొప్ప రాజ్యాలు\n- **సాంస్కృతిక వారసత్వం**: కళ, సాహిత్యం మరియు సంప్రదాయాలు\n- **ప్రసిద్ధ వ్యక్తులు**: గొప్ప కవులు, రాజులు, స్వాతంత్ర్య సమరయోధులు\n\n### పదజాలం\n- వైభవం - Glory\n- సంస్కృతి - Culture\n- వారసత్వం - Heritage" 
+        },
+        quiz: [
+          { question: { en: "What does 'Vaibhavam' mean?", te: "'వైభవం' అర్థం ఏమిటి?" }, options: [{ en: "Sadness", te: "విచారం" }, { en: "Glory", te: "వైభవం" }, { en: "Fear", te: "భయం" }, { en: "Anger", te: "కోపం" }], correctIndex: 1 },
+          { question: { en: "Which river is famous in Andhra Pradesh?", te: "ఆంధ్రప్రదేశ్‌లో ఏ నది ప్రసిద్ధి?" }, options: [{ en: "Ganga", te: "గంగ" }, { en: "Godavari", te: "గోదావరి" }, { en: "Yamuna", te: "యమునా" }, { en: "Narmada", te: "నర్మద" }], correctIndex: 1 },
+          { question: { en: "What type of literature form is this lesson?", te: "ఈ పాఠం ఏ సాహిత్య రూపం?" }, options: [{ en: "Poetry", te: "కవిత్వం" }, { en: "Prose", te: "గద్యం" }, { en: "Drama", te: "నాటకం" }, { en: "Novel", te: "నవల" }], correctIndex: 0 },
+          { question: { en: "Which kingdom ruled Andhra?", te: "ఆంధ్రను ఏ రాజ్యం పాలించింది?" }, options: [{ en: "Maurya", te: "మౌర్య" }, { en: "Satavahana", te: "శాతవాహన" }, { en: "Gupta", te: "గుప్త" }, { en: "Mughal", te: "మొఘల్" }], correctIndex: 1 },
+          { question: { en: "What is 'Samskruti' in English?", te: "'సంస్కృతి' ఆంగ్లంలో ఏమిటి?" }, options: [{ en: "History", te: "చరిత్ర" }, { en: "Culture", te: "సంస్కృతి" }, { en: "Science", te: "శాస్త్రం" }, { en: "Art", te: "కళ" }], correctIndex: 1 },
+          { question: { en: "Andhra is known for which dance form?", te: "ఆంధ్ర ఏ నృత్య రూపానికి ప్రసిద్ధి?" }, options: [{ en: "Bharatanatyam", te: "భరతనాట్యం" }, { en: "Kuchipudi", te: "కూచిపూడి" }, { en: "Kathak", te: "కథక్" }, { en: "Odissi", te: "ఒడిస్సి" }], correctIndex: 1 },
+          { question: { en: "What is the capital of Andhra Pradesh?", te: "ఆంధ్రప్రదేశ్ రాజధాని ఏది?" }, options: [{ en: "Hyderabad", te: "హైదరాబాద్" }, { en: "Amaravati", te: "అమరావతి" }, { en: "Vijayawada", te: "విజయవాడ" }, { en: "Visakhapatnam", te: "విశాఖపట్నం" }], correctIndex: 1 },
+          { question: { en: "Which poet is called 'Kavibrahma'?", te: "ఏ కవిని 'కవిబ్రహ్మ' అంటారు?" }, options: [{ en: "Nannaya", te: "నన్నయ" }, { en: "Tikkana", te: "తిక్కన" }, { en: "Vemana", te: "వేమన" }, { en: "Sri Sri", te: "శ్రీశ్రీ" }], correctIndex: 0 },
+          { question: { en: "Andhra cuisine is famous for?", te: "ఆంధ్ర వంటకాలు దేనికి ప్రసిద్ధి?" }, options: [{ en: "Sweet dishes", te: "తీపి పదార్థాలు" }, { en: "Spicy food", te: "కారంగా ఉండే ఆహారం" }, { en: "Sour food", te: "పులుపు ఆహారం" }, { en: "Bland food", te: "రుచిలేని ఆహారం" }], correctIndex: 1 },
+          { question: { en: "Which temple is famous in Andhra?", te: "ఆంధ్రలో ఏ ఆలయం ప్రసిద్ధి?" }, options: [{ en: "Golden Temple", te: "స్వర్ణ మందిరం" }, { en: "Tirupati Balaji", te: "తిరుపతి బాలాజీ" }, { en: "Jagannath", te: "జగన్నాథ్" }, { en: "Kedarnath", te: "కేదార్‌నాథ్" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Write about the cultural heritage of Andhra Pradesh", te: "ఆంధ్రప్రదేశ్ సాంస్కృతిక వారసత్వం గురించి రాయండి" }, answer: { en: "Andhra Pradesh has a rich cultural heritage including Kuchipudi dance, Carnatic music, Kalamkari art, and traditional festivals like Ugadi and Sankranti.", te: "ఆంధ్రప్రదేశ్‌కు కూచిపూడి నృత్యం, కర్ణాటక సంగీతం, కలంకారీ కళ మరియు ఉగాది, సంక్రాంతి వంటి సంప్రదాయ పండుగలతో సహా గొప్ప సాంస్కృతిక వారసత్వం ఉంది." } },
+          { question: { en: "Name three famous Telugu poets", te: "మూడు ప్రసిద్ధ తెలుగు కవుల పేర్లు చెప్పండి" }, answer: { en: "Nannaya, Tikkana, and Errapragada (Kavitrayam)", te: "నన్నయ, తిక్కన మరియు ఎర్రప్రగడ (కవిత్రయం)" } },
+          { question: { en: "What is the significance of Godavari river?", te: "గోదావరి నది యొక్క ప్రాముఖ్యత ఏమిటి?" }, answer: { en: "Godavari is the second longest river in India and is considered sacred. It supports agriculture and is vital for Andhra Pradesh's economy.", te: "గోదావరి భారతదేశంలో రెండవ పొడవైన నది మరియు పవిత్రంగా పరిగణించబడుతుంది. ఇది వ్యవసాయానికి మద్దతు ఇస్తుంది." } },
+          { question: { en: "Describe Kuchipudi dance form", te: "కూచిపూడి నృత్య రూపం గురించి వివరించండి" }, answer: { en: "Kuchipudi is a classical Indian dance form originating from Andhra Pradesh. It combines graceful movements with dramatic expressions.", te: "కూచిపూడి ఆంధ్రప్రదేశ్‌లో ఉద్భవించిన భారతీయ శాస్త్రీయ నృత్య రూపం. ఇది సున్నితమైన కదలికలతో నాటకీయ భావ వ్యక్తీకరణలను కలుపుతుంది." } },
+          { question: { en: "Who were the Satavahanas?", te: "శాతవాహనులు ఎవరు?" }, answer: { en: "Satavahanas were an ancient Indian dynasty that ruled the Andhra region from 2nd century BCE to 3rd century CE.", te: "శాతవాహనులు క్రీ.పూ. 2వ శతాబ్దం నుండి క్రీ.శ. 3వ శతాబ్దం వరకు ఆంధ్ర ప్రాంతాన్ని పాలించిన ప్రాచీన భారతీయ రాజవంశం." } },
+          { question: { en: "What is Kalamkari art?", te: "కలంకారీ కళ అంటే ఏమిటి?" }, answer: { en: "Kalamkari is a traditional hand-painted or block-printed cotton textile art from Andhra Pradesh.", te: "కలంకారీ అనేది ఆంధ్రప్రదేశ్‌కు చెందిన సంప్రదాయ చేతితో చిత్రించిన లేదా బ్లాక్-ప్రింటెడ్ కాటన్ వస్త్ర కళ." } },
+          { question: { en: "Write about Telugu language importance", te: "తెలుగు భాష ప్రాముఖ్యత గురించి రాయండి" }, answer: { en: "Telugu is one of the classical languages of India with rich literary heritage spanning over 2000 years.", te: "తెలుగు 2000 సంవత్సరాలకు పైగా గొప్ప సాహిత్య వారసత్వంతో భారతదేశ శాస్త్రీయ భాషలలో ఒకటి." } },
+          { question: { en: "Name the famous temples in Andhra Pradesh", te: "ఆంధ్రప్రదేశ్‌లోని ప్రసిద్ధ ఆలయాల పేర్లు చెప్పండి" }, answer: { en: "Tirupati Balaji, Srikalahasti, Simhachalam, Kanaka Durga Temple", te: "తిరుపతి బాలాజీ, శ్రీకాళహస్తి, సింహాచలం, కనక దుర్గ ఆలయం" } },
+          { question: { en: "What is the meaning of 'Varasatvam'?", te: "'వారసత్వం' అర్థం ఏమిటి?" }, answer: { en: "Varasatvam means heritage or legacy", te: "వారసత్వం అంటే heritage లేదా legacy" } },
+          { question: { en: "Describe the traditional festivals of Andhra", te: "ఆంధ్ర సంప్రదాయ పండుగలను వివరించండి" }, answer: { en: "Major festivals include Ugadi (New Year), Sankranti (harvest), Vinayaka Chavithi, and Dasara.", te: "ముఖ్య పండుగలలో ఉగాది (నూతన సంవత్సరం), సంక్రాంతి (పంట), వినాయక చవితి మరియు దసరా ఉన్నాయి." } }
+        ]
+      };
+    } else if (grade === 9) {
+      return {
+        id: `telugu-1-${grade}`,
+        title: { en: "Santhikanksha", te: "శాంతికాంక్ష" },
+        description: { en: "Desire for Peace", te: "శాంతి కోసం కాంక్ష" },
+        videoUrls: ["https://youtu.be/ICfsYyb_iNA?si=T2P-Q2LnxKLJM12d"],
+        notes: { 
+          en: "## Santhikanksha (Desire for Peace)\n\n### Introduction\nThis poem expresses the universal desire for peace and harmony in the world.\n\n### Key Themes\n- **World Peace**: The longing for a peaceful world\n- **Non-violence**: Ahimsa as a way of life\n- **Unity**: Coming together for common good\n- **Love and Compassion**: Foundation of peace\n\n### Literary Elements\n- Metaphors for peace\n- Emotional appeal\n- Universal message\n\n### Vocabulary\n- శాంతి (Shanthi) - Peace\n- కాంక్ష (Kanksha) - Desire\n- సౌహార్దం (Sauhardam) - Harmony", 
+          te: "## శాంతికాంక్ష\n\n### పరిచయం\nఈ కవిత ప్రపంచంలో శాంతి మరియు సామరస్యం కోసం విశ్వవ్యాప్త కాంక్షను వ్యక్తం చేస్తుంది.\n\n### ముఖ్య అంశాలు\n- **ప్రపంచ శాంతి**: శాంతియుత ప్రపంచం కోసం కోరిక\n- **అహింస**: జీవన విధానంగా అహింస\n- **ఐక్యత**: ఉమ్మడి మంచి కోసం కలిసి రావడం\n\n### పదజాలం\n- శాంతి - Peace\n- కాంక్ష - Desire\n- సౌహార్దం - Harmony" 
+        },
+        quiz: [
+          { question: { en: "What does 'Santhikanksha' mean?", te: "'శాంతికాంక్ష' అర్థం ఏమిటి?" }, options: [{ en: "War", te: "యుద్ధం" }, { en: "Desire for peace", te: "శాంతి కోసం కాంక్ష" }, { en: "Anger", te: "కోపం" }, { en: "Fear", te: "భయం" }], correctIndex: 1 },
+          { question: { en: "What is 'Ahimsa'?", te: "'అహింస' అంటే ఏమిటి?" }, options: [{ en: "Violence", te: "హింస" }, { en: "Non-violence", te: "అహింస" }, { en: "War", te: "యుద్ధం" }, { en: "Anger", te: "కోపం" }], correctIndex: 1 },
+          { question: { en: "What is the central theme of the poem?", te: "కవిత యొక్క ప్రధాన అంశం ఏమిటి?" }, options: [{ en: "War", te: "యుద్ధం" }, { en: "Peace", te: "శాంతి" }, { en: "Money", te: "డబ్బు" }, { en: "Power", te: "అధికారం" }], correctIndex: 1 },
+          { question: { en: "What is 'Sauhardam' in English?", te: "'సౌహార్దం' ఆంగ్లంలో ఏమిటి?" }, options: [{ en: "Enmity", te: "శత్రుత్వం" }, { en: "Harmony", te: "సామరస్యం" }, { en: "Conflict", te: "సంఘర్షణ" }, { en: "War", te: "యుద్ధం" }], correctIndex: 1 },
+          { question: { en: "Who promotes world peace?", te: "ప్రపంచ శాంతిని ఎవరు ప్రోత్సహిస్తారు?" }, options: [{ en: "Warriors", te: "యోధులు" }, { en: "Peace lovers", te: "శాంతి ప్రేమికులు" }, { en: "Enemies", te: "శత్రువులు" }, { en: "None", te: "ఎవరూ కాదు" }], correctIndex: 1 },
+          { question: { en: "What literary form is this lesson?", te: "ఈ పాఠం ఏ సాహిత్య రూపం?" }, options: [{ en: "Story", te: "కథ" }, { en: "Poem", te: "కవిత" }, { en: "Drama", te: "నాటకం" }, { en: "Essay", te: "వ్యాసం" }], correctIndex: 1 },
+          { question: { en: "Foundation of peace according to the poem?", te: "కవిత ప్రకారం శాంతి పునాది ఏమిటి?" }, options: [{ en: "Weapons", te: "ఆయుధాలు" }, { en: "Love and compassion", te: "ప్రేమ మరియు కరుణ" }, { en: "Money", te: "డబ్బు" }, { en: "Power", te: "అధికారం" }], correctIndex: 1 },
+          { question: { en: "What brings unity?", te: "ఐక్యతను ఏది తెస్తుంది?" }, options: [{ en: "Fighting", te: "పోరాటం" }, { en: "Understanding", te: "అవగాహన" }, { en: "Hatred", te: "ద్వేషం" }, { en: "Jealousy", te: "అసూయ" }], correctIndex: 1 },
+          { question: { en: "Opposite of peace?", te: "శాంతికి వ్యతిరేకం?" }, options: [{ en: "Harmony", te: "సామరస్యం" }, { en: "War", te: "యుద్ధం" }, { en: "Love", te: "ప్రేమ" }, { en: "Unity", te: "ఐక్యత" }], correctIndex: 1 },
+          { question: { en: "Message of the poem?", te: "కవిత సందేశం ఏమిటి?" }, options: [{ en: "Spread hatred", te: "ద్వేషం వ్యాప్తి చేయండి" }, { en: "Promote peace", te: "శాంతిని ప్రోత్సహించండి" }, { en: "Start wars", te: "యుద్ధాలు ప్రారంభించండి" }, { en: "Ignore others", te: "ఇతరులను విస్మరించండి" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Write about the importance of peace", te: "శాంతి ప్రాముఖ్యత గురించి రాయండి" }, answer: { en: "Peace is essential for human progress, happiness, and development. Without peace, societies cannot flourish.", te: "మానవ పురోగతి, ఆనందం మరియు అభివృద్ధికి శాంతి అవసరం. శాంతి లేకుండా సమాజాలు వర్ధిల్లవు." } },
+          { question: { en: "What is the meaning of Ahimsa?", te: "అహింస అర్థం ఏమిటి?" }, answer: { en: "Ahimsa means non-violence, not causing harm to any living being through thought, word, or action.", te: "అహింస అంటే అహింస, ఆలోచన, మాట లేదా చర్య ద్వారా ఏ జీవికి హాని చేయకపోవడం." } },
+          { question: { en: "How can we promote peace?", te: "శాంతిని ఎలా ప్రోత్సహించగలము?" }, answer: { en: "Through understanding, dialogue, respect for others, and spreading love and compassion.", te: "అవగాహన, సంభాషణ, ఇతరుల పట్ల గౌరవం మరియు ప్రేమ మరియు కరుణను వ్యాప్తి చేయడం ద్వారా." } },
+          { question: { en: "Who was Mahatma Gandhi's approach to peace?", te: "మహాత్మా గాంధీ శాంతి విధానం ఏమిటి?" }, answer: { en: "Gandhi promoted Ahimsa and Satyagraha as tools for achieving peace and justice.", te: "గాంధీ శాంతి మరియు న్యాయాన్ని సాధించడానికి అహింస మరియు సత్యాగ్రహాన్ని ప్రోత్సహించారు." } },
+          { question: { en: "What destroys peace?", te: "శాంతిని ఏది నాశనం చేస్తుంది?" }, answer: { en: "Hatred, jealousy, greed, and violence destroy peace.", te: "ద్వేషం, అసూయ, అత్యాశ మరియు హింస శాంతిని నాశనం చేస్తాయి." } },
+          { question: { en: "Write a paragraph on world peace", te: "ప్రపంచ శాంతి గురించి ఒక పేరా రాయండి" }, answer: { en: "World peace is the ideal state where all nations live in harmony, respecting each other's rights and resolving conflicts through dialogue.", te: "ప్రపంచ శాంతి అనేది అన్ని దేశాలు సామరస్యంగా జీవించే, ఒకరి హక్కులను గౌరవించే మరియు సంభాషణ ద్వారా వివాదాలను పరిష్కరించే ఆదర్శ స్థితి." } },
+          { question: { en: "Name peace organizations", te: "శాంతి సంస్థల పేర్లు చెప్పండి" }, answer: { en: "United Nations, UNESCO, Red Cross, Peace Corps", te: "ఐక్యరాజ్యసమితి, యునెస్కో, రెడ్ క్రాస్, పీస్ కార్ప్స్" } },
+          { question: { en: "What is the role of youth in peace?", te: "శాంతిలో యువత పాత్ర ఏమిటి?" }, answer: { en: "Youth can spread awareness, participate in peace movements, and practice tolerance.", te: "యువత అవగాహన వ్యాప్తి చేయవచ్చు, శాంతి ఉద్యమాలలో పాల్గొనవచ్చు మరియు సహనాన్ని ఆచరించవచ్చు." } },
+          { question: { en: "Explain 'Kanksha'", te: "'కాంక్ష' వివరించండి" }, answer: { en: "Kanksha means desire or longing, here it refers to the deep desire for peace.", te: "కాంక్ష అంటే కోరిక లేదా ఆశ, ఇక్కడ ఇది శాంతి కోసం లోతైన కోరికను సూచిస్తుంది." } },
+          { question: { en: "How do we achieve harmony?", te: "సామరస్యాన్ని ఎలా సాధిస్తాము?" }, answer: { en: "Through mutual respect, understanding, and working together for common goals.", te: "పరస్పర గౌరవం, అవగాహన మరియు ఉమ్మడి లక్ష్యాల కోసం కలిసి పని చేయడం ద్వారా." } }
+        ]
+      };
+    } else {
+      return {
+        id: `telugu-1-${grade}`,
+        title: { en: "Mathrubhavana", te: "మాతృభావన" },
+        description: { en: "Mother's Love", te: "తల్లి ప్రేమ" },
+        videoUrls: ["https://youtu.be/EDsd2USn-c8?si=lNr5NAtJkY4hSQLz"],
+        notes: { 
+          en: "## Mathrubhavana (Mother's Love)\n\n### Introduction\nThis poem celebrates the unconditional love of a mother.\n\n### Key Themes\n- **Unconditional Love**: A mother's selfless love\n- **Sacrifice**: Mother's sacrifices for children\n- **Nurturing**: Care and protection\n- **Gratitude**: Being thankful to mothers\n\n### Literary Elements\n- Emotional expressions\n- Metaphors comparing mother to nature\n- Devotional tone\n\n### Vocabulary\n- మాతృ (Mathru) - Mother\n- భావన (Bhavana) - Feeling/Emotion\n- త్యాగం (Tyagam) - Sacrifice", 
+          te: "## మాతృభావన\n\n### పరిచయం\nఈ కవిత తల్లి యొక్క నిబంధనలు లేని ప్రేమను ప్రశంసిస్తుంది.\n\n### ముఖ్య అంశాలు\n- **నిబంధనలు లేని ప్రేమ**: తల్లి స్వార్థరహిత ప్రేమ\n- **త్యాగం**: పిల్లల కోసం తల్లి త్యాగాలు\n- **పోషణ**: సంరక్షణ మరియు రక్షణ\n\n### పదజాలం\n- మాతృ - Mother\n- భావన - Feeling\n- త్యాగం - Sacrifice" 
+        },
+        quiz: [
+          { question: { en: "What does 'Mathrubhavana' mean?", te: "'మాతృభావన' అర్థం ఏమిటి?" }, options: [{ en: "Father's love", te: "తండ్రి ప్రేమ" }, { en: "Mother's feeling", te: "తల్లి భావన" }, { en: "Friend's love", te: "స్నేహితుడి ప్రేమ" }, { en: "Teacher's love", te: "ఉపాధ్యాయుడి ప్రేమ" }], correctIndex: 1 },
+          { question: { en: "What is 'Tyagam'?", te: "'త్యాగం' అంటే ఏమిటి?" }, options: [{ en: "Selfishness", te: "స్వార్థం" }, { en: "Sacrifice", te: "త్యాగం" }, { en: "Greed", te: "అత్యాశ" }, { en: "Anger", te: "కోపం" }], correctIndex: 1 },
+          { question: { en: "What is the theme of this poem?", te: "ఈ కవిత అంశం ఏమిటి?" }, options: [{ en: "Nature", te: "ప్రకృతి" }, { en: "Mother's love", te: "తల్లి ప్రేమ" }, { en: "War", te: "యుద్ధం" }, { en: "Science", te: "శాస్త్రం" }], correctIndex: 1 },
+          { question: { en: "Mother's love is compared to?", te: "తల్లి ప్రేమను దేనితో పోలుస్తారు?" }, options: [{ en: "Stone", te: "రాయి" }, { en: "Ocean", te: "సముద్రం" }, { en: "Fire", te: "అగ్ని" }, { en: "Storm", te: "తుఫాను" }], correctIndex: 1 },
+          { question: { en: "What quality defines a mother?", te: "తల్లిని ఏ లక్షణం నిర్వచిస్తుంది?" }, options: [{ en: "Selfishness", te: "స్వార్థం" }, { en: "Selflessness", te: "నిస్వార్థత" }, { en: "Greed", te: "అత్యాశ" }, { en: "Pride", te: "గర్వం" }], correctIndex: 1 },
+          { question: { en: "What should we feel for mothers?", te: "తల్లుల పట్ల ఏమి అనుభవించాలి?" }, options: [{ en: "Hatred", te: "ద్వేషం" }, { en: "Gratitude", te: "కృతజ్ఞత" }, { en: "Anger", te: "కోపం" }, { en: "Fear", te: "భయం" }], correctIndex: 1 },
+          { question: { en: "Literary form of this lesson?", te: "ఈ పాఠం సాహిత్య రూపం?" }, options: [{ en: "Story", te: "కథ" }, { en: "Poem", te: "కవిత" }, { en: "Essay", te: "వ్యాసం" }, { en: "Novel", te: "నవల" }], correctIndex: 1 },
+          { question: { en: "What does mother provide?", te: "తల్లి ఏమి అందిస్తుంది?" }, options: [{ en: "Only food", te: "ఆహారం మాత్రమే" }, { en: "Love and care", te: "ప్రేమ మరియు సంరక్షణ" }, { en: "Nothing", te: "ఏమీ లేదు" }, { en: "Only money", te: "డబ్బు మాత్రమే" }], correctIndex: 1 },
+          { question: { en: "What is 'Bhavana'?", te: "'భావన' అంటే ఏమిటి?" }, options: [{ en: "House", te: "ఇల్లు" }, { en: "Feeling", te: "భావన" }, { en: "Food", te: "ఆహారం" }, { en: "Water", te: "నీరు" }], correctIndex: 1 },
+          { question: { en: "Who is celebrated in this poem?", te: "ఈ కవితలో ఎవరిని ప్రశంసిస్తారు?" }, options: [{ en: "Father", te: "తండ్రి" }, { en: "Mother", te: "తల్లి" }, { en: "Teacher", te: "ఉపాధ్యాయుడు" }, { en: "Friend", te: "స్నేహితుడు" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Write about mother's love", te: "తల్లి ప్రేమ గురించి రాయండి" }, answer: { en: "A mother's love is unconditional, selfless, and eternal. She sacrifices everything for her children's happiness and well-being.", te: "తల్లి ప్రేమ నిబంధనలు లేనిది, నిస్వార్థమైనది మరియు శాశ్వతమైనది. ఆమె తన పిల్లల ఆనందం మరియు శ్రేయస్సు కోసం అన్నింటినీ త్యాగం చేస్తుంది." } },
+          { question: { en: "What sacrifices do mothers make?", te: "తల్లులు ఏ త్యాగాలు చేస్తారు?" }, answer: { en: "Mothers sacrifice their sleep, career, personal time, and often their own dreams for their children.", te: "తల్లులు తమ పిల్లల కోసం నిద్ర, వృత్తి, వ్యక్తిగత సమయం మరియు తరచుగా తమ స్వంత కలలను త్యాగం చేస్తారు." } },
+          { question: { en: "How can we show gratitude to mothers?", te: "తల్లులకు కృతజ్ఞత ఎలా చూపించగలము?" }, answer: { en: "Through respect, love, care, helping in household work, and being successful in life.", te: "గౌరవం, ప్రేమ, సంరక్షణ, ఇంటి పనిలో సహాయం మరియు జీవితంలో విజయవంతం కావడం ద్వారా." } },
+          { question: { en: "Why is mother compared to nature?", te: "తల్లిని ప్రకృతితో ఎందుకు పోలుస్తారు?" }, answer: { en: "Like nature provides everything selflessly, mothers also give without expecting anything in return.", te: "ప్రకృతి నిస్వార్థంగా అన్నింటినీ అందించినట్లే, తల్లులు కూడా ప్రతిఫలంగా ఏమీ ఆశించకుండా ఇస్తారు." } },
+          { question: { en: "Describe the meaning of 'Mathru'", te: "'మాతృ' అర్థం వివరించండి" }, answer: { en: "Mathru means mother, the one who gives birth and nurtures with love.", te: "మాతృ అంటే తల్లి, జన్మనిచ్చి ప్రేమతో పోషించేది." } },
+          { question: { en: "What is the poet's message?", te: "కవి సందేశం ఏమిటి?" }, answer: { en: "To recognize, appreciate, and be grateful for the unconditional love of mothers.", te: "తల్లుల నిబంధనలు లేని ప్రేమను గుర్తించడం, ప్రశంసించడం మరియు కృతజ్ఞతతో ఉండటం." } },
+          { question: { en: "Write about Mother's Day", te: "మదర్స్ డే గురించి రాయండి" }, answer: { en: "Mother's Day is celebrated to honor mothers and their contribution to family and society.", te: "తల్లులను మరియు కుటుంబం మరియు సమాజానికి వారి సహకారాన్ని గౌరవించడానికి మదర్స్ డే జరుపుకుంటారు." } },
+          { question: { en: "Compare mother's love with other forms of love", te: "తల్లి ప్రేమను ఇతర ప్రేమ రూపాలతో పోల్చండి" }, answer: { en: "Mother's love is purest and most selfless compared to any other form of love.", te: "తల్లి ప్రేమ ఏ ఇతర ప్రేమ రూపంతో పోలిస్తే అత్యంత స్వచ్ఛమైనది మరియు నిస్వార్థమైనది." } },
+          { question: { en: "What does 'Bhavana' signify in this context?", te: "ఈ సందర్భంలో 'భావన' ఏమి సూచిస్తుంది?" }, answer: { en: "Bhavana signifies the deep emotional connection and feelings of love.", te: "భావన లోతైన భావోద్వేగ సంబంధం మరియు ప్రేమ భావాలను సూచిస్తుంది." } },
+          { question: { en: "Write a poem on mother", te: "తల్లి గురించి కవిత రాయండి" }, answer: { en: "Create your own poem expressing love, gratitude, and respect for your mother.", te: "మీ తల్లి పట్ల ప్రేమ, కృతజ్ఞత మరియు గౌరవాన్ని వ్యక్తపరుస్తూ మీ స్వంత కవిత సృష్టించండి." } }
+        ]
+      };
+    }
+  };
+
+  const getHindiChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `hindi-1-${grade}`,
+        title: { en: "Subhah", te: "సుబహ్" },
+        description: { en: "The Morning", te: "ఉదయం" },
+        videoUrls: ["https://youtu.be/OcvRTsj73_c?si=skILX8YD3BthASp1"],
+        notes: { 
+          en: "## Subhah (The Morning)\n\n### Introduction\nThis poem beautifully describes the morning time and its significance in our lives.\n\n### Key Themes\n- **New Beginnings**: Morning symbolizes fresh starts\n- **Nature's Beauty**: Description of morning landscapes\n- **Hope and Energy**: New day brings new opportunities\n- **Routine and Discipline**: Importance of waking up early\n\n### Literary Devices\n- Imagery of sunrise\n- Personification of nature\n- Rhythmic verses\n\n### Vocabulary\n- सुबह (Subhah) - Morning\n- उषा (Usha) - Dawn\n- किरण (Kiran) - Ray of light", 
+          te: "## సుబహ్ (ఉదయం)\n\n### పరిచయం\nఈ కవిత ఉదయ సమయాన్ని మరియు మన జీవితాలలో దాని ప్రాముఖ్యతను అందంగా వర్ణిస్తుంది.\n\n### ముఖ్య అంశాలు\n- **కొత్త ప్రారంభాలు**: ఉదయం తాజా ప్రారంభాలను సూచిస్తుంది\n- **ప్రకృతి అందం**: ఉదయ దృశ్యాల వర్ణన\n- **ఆశ మరియు శక్తి**: కొత్త రోజు కొత్త అవకాశాలు తెస్తుంది" 
+        },
         quiz: generateHindiQuiz(),
         practice: generateHindiPractice()
-      },
-      {
-        id: `hindi-grammar-advanced-${grade}`,
-        title: { en: "Hindi Grammar", te: "హిందీ వ్యాకరణం" },
-        description: { en: "Advanced grammar concepts", te: "ఉన్నత వ్యాకరణ భావనలు" },
-        notes: { en: "## Hindi Grammar\n\n### Kaal (Tense)\n- भूतकाल (Past)\n- वर्तमान काल (Present)\n- भविष्यत् काल (Future)\n\n### Vachan (Number)\n- एकवचन (Singular)\n- बहुवचन (Plural)", te: "## హిందీ వ్యాకరణం\n\n### కాల్ (కాలం)\n- భూత్‌కాల్ (భూతం)\n- వర్తమాన్ కాల్ (వర్తమానం)\n- భవిష్యత్ కాల్ (భవిష్యత్తు)" },
+      };
+    } else if (grade === 9) {
+      return {
+        id: `hindi-1-${grade}`,
+        title: { en: "Jish Desh Me Ganga Bahathi Hei", te: "జిస్ దేశ్ మే గంగా బహతీ హై" },
+        description: { en: "The Land Where Ganga Flows", te: "గంగా ప్రవహించే భూమి" },
+        videoUrls: ["https://youtu.be/ktXR45C6InM?si=muwy7kOkaEryACDy"],
+        notes: { 
+          en: "## Jish Desh Me Ganga Bahathi Hei\n\n### Introduction\nThis patriotic poem celebrates India, the land where the sacred river Ganga flows.\n\n### Key Themes\n- **Patriotism**: Love for the motherland\n- **Cultural Heritage**: Rich traditions of India\n- **Unity in Diversity**: Various cultures united\n- **Spiritual Significance**: Sacred rivers and places\n\n### Literary Elements\n- Patriotic fervor\n- Cultural references\n- Emotional appeal\n\n### Vocabulary\n- देश (Desh) - Country\n- गंगा (Ganga) - River Ganges\n- भारत (Bharat) - India", 
+          te: "## జిస్ దేశ్ మే గంగా బహతీ హై\n\n### పరిచయం\nఈ దేశభక్తి కవిత పవిత్ర గంగా నది ప్రవహించే భారతదేశాన్ని ప్రశంసిస్తుంది.\n\n### ముఖ్య అంశాలు\n- **దేశభక్తి**: మాతృభూమి పట్ల ప్రేమ\n- **సాంస్కృతిక వారసత్వం**: భారతదేశ గొప్ప సంప్రదాయాలు\n- **వైవిధ్యంలో ఏకత్వం**: వివిధ సంస్కృతులు ఐక్యం" 
+        },
         quiz: generateHindiQuiz(),
         practice: generateHindiPractice()
-      }
-    ]
-  },
-  {
-    id: `english-${grade}`,
-    title: { en: "English", te: "ఆంగ్లం" },
-    icon: "BookOpen",
-    color: "game-purple",
-    chapters: [
-      {
-        id: `english-literature-${grade}`,
-        title: { en: "English Literature", te: "ఆంగ్ల సాహిత్యం" },
-        description: { en: "Stories, poems, and drama", te: "కథలు, కవితలు మరియు నాటకం" },
-        notes: { en: "## English Literature\n\n### Literary Forms\n- **Prose**: Stories, novels, essays\n- **Poetry**: Sonnets, ballads, free verse\n- **Drama**: Plays, one-act plays\n\n### Elements of Story\n- Setting\n- Characters\n- Plot\n- Theme\n- Conflict", te: "## ఆంగ్ల సాహిత్యం\n\n### సాహిత్య రూపాలు\n- **గద్యం**: కథలు, నవలలు\n- **పద్యం**: సొనెట్లు, బల్లాడ్లు\n- **నాటకం**: నాటకాలు" },
-        quiz: generateEnglishQuiz(),
-        practice: generateEnglishPractice()
-      },
-      {
-        id: `english-grammar-advanced-${grade}`,
-        title: { en: "Advanced Grammar", te: "ఉన్నత వ్యాకరణం" },
-        description: { en: "Complex sentence structures", te: "సంక్లిష్ట వాక్య నిర్మాణాలు" },
-        notes: { en: "## Advanced English Grammar\n\n### Tenses\n- Present (Simple, Continuous, Perfect)\n- Past (Simple, Continuous, Perfect)\n- Future (Simple, Continuous, Perfect)\n\n### Voice\n- Active Voice\n- Passive Voice\n\n### Speech\n- Direct Speech\n- Indirect Speech", te: "## ఉన్నత ఆంగ్ల వ్యాకరణం\n\n### కాలాలు\n- వర్తమాన కాలం\n- భూత కాలం\n- భవిష్యత్ కాలం" },
-        quiz: generateEnglishQuiz(),
-        practice: generateEnglishPractice()
-      }
-    ]
-  },
-  {
-    id: `maths-${grade}`,
-    title: { en: "Mathematics", te: "గణితం" },
-    icon: "Calculator",
-    color: "game-blue",
-    chapters: [
-      {
-        id: `algebra-${grade}`,
-        title: { en: "Algebra", te: "బీజగణితం" },
-        description: { en: "Algebraic expressions and equations", te: "బీజగణిత వ్యక్తీకరణలు మరియు సమీకరణాలు" },
-        notes: { en: "## Algebra\n\n### Algebraic Expressions\n- Variable: Unknown value (x, y)\n- Constant: Fixed value (5, -3)\n- Coefficient: Number with variable\n\n### Equations\n- Linear Equations: ax + b = 0\n- Quadratic Equations: ax² + bx + c = 0", te: "## బీజగణితం\n\n### బీజగణిత వ్యక్తీకరణలు\n- చరాశి: తెలియని విలువ\n- స్థిరాంకం: స్థిర విలువ\n- గుణకం: చరాశితో సంఖ్య" },
-        quiz: generateMathQuiz('algebra', grade),
-        practice: generateMathPractice('algebra', grade)
-      },
-      {
-        id: `geometry-advanced-${grade}`,
-        title: { en: "Geometry", te: "రేఖాగణితం" },
-        description: { en: "Triangles, circles, and theorems", te: "త్రిభుజాలు, వృత్తాలు మరియు సిద్ధాంతాలు" },
-        notes: { en: "## Geometry\n\n### Triangles\n- Sum of angles = 180°\n- Types: Equilateral, Isosceles, Scalene\n- Pythagoras Theorem: a² + b² = c²\n\n### Circles\n- Radius, Diameter, Circumference\n- Area = πr²\n- Circumference = 2πr", te: "## రేఖాగణితం\n\n### త్రిభుజాలు\n- కోణాల మొత్తం = 180°\n- రకాలు: సమబాహు, సమద్విబాహు, విషమ\n\n### వృత్తాలు\n- వ్యాసార్ధం, వ్యాసం, పరిధి" },
-        quiz: generateMathQuiz('geometry', grade),
-        practice: generateMathPractice('geometry', grade)
-      },
-      {
-        id: `numbers-advanced-${grade}`,
-        title: { en: "Number Systems", te: "సంఖ్యా వ్యవస్థలు" },
-        description: { en: "Real numbers and operations", te: "వాస్తవ సంఖ్యలు మరియు కార్యకలాపాలు" },
-        notes: { en: "## Number Systems\n\n### Types of Numbers\n- Natural Numbers: 1, 2, 3...\n- Whole Numbers: 0, 1, 2, 3...\n- Integers: ...-2, -1, 0, 1, 2...\n- Rational Numbers: p/q form\n- Irrational Numbers: √2, π\n- Real Numbers: All above", te: "## సంఖ్యా వ్యవస్థలు\n\n### సంఖ్యల రకాలు\n- సహజ సంఖ్యలు\n- పూర్ణ సంఖ్యలు\n- పూర్ణాంకాలు\n- అకరణీయ సంఖ్యలు\n- కరణీయ సంఖ్యలు" },
+      };
+    } else {
+      return {
+        id: `hindi-1-${grade}`,
+        title: { en: "Barsate Badhal", te: "బర్సాతే బాదల్" },
+        description: { en: "Rain Clouds", te: "వర్షపు మేఘాలు" },
+        videoUrls: ["https://youtu.be/l7Q5h2m55dQ?si=N0T1f8uSKhoncowK"],
+        notes: { 
+          en: "## Barsate Badhal (Rain Clouds)\n\n### Introduction\nThis poem describes the beauty of rain clouds and monsoon season.\n\n### Key Themes\n- **Nature's Beauty**: Rain clouds and their formation\n- **Monsoon Season**: Importance of rain in India\n- **Agricultural Significance**: Rain for crops\n- **Poetic Imagery**: Clouds as messengers\n\n### Literary Devices\n- Personification of clouds\n- Vivid imagery\n- Rhythmic patterns\n\n### Vocabulary\n- बादल (Badal) - Cloud\n- बारिश (Barish) - Rain\n- मानसून (Monsoon) - Rainy season", 
+          te: "## బర్సాతే బాదల్ (వర్షపు మేఘాలు)\n\n### పరిచయం\nఈ కవిత వర్షపు మేఘాలు మరియు వర్షాకాలం అందాన్ని వర్ణిస్తుంది.\n\n### ముఖ్య అంశాలు\n- **ప్రకృతి అందం**: వర్షపు మేఘాలు మరియు వాటి ఏర్పాటు\n- **వర్షాకాలం**: భారతదేశంలో వర్షం యొక్క ప్రాముఖ్యత\n- **వ్యవసాయ ప్రాముఖ్యత**: పంటలకు వర్షం" 
+        },
+        quiz: generateHindiQuiz(),
+        practice: generateHindiPractice()
+      };
+    }
+  };
+
+  const getEnglishChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `english-1-${grade}`,
+        title: { en: "The Best Christmas Present in the World", te: "ప్రపంచంలో అత్యుత్తమ క్రిస్మస్ బహుమతి" },
+        description: { en: "A touching story of love and peace", te: "ప్రేమ మరియు శాంతి గురించి హృదయస్పర్శి కథ" },
+        videoUrls: ["https://youtu.be/JiLis0KBQf0?si=d9q2RNPTf-7--m4J"],
+        notes: { 
+          en: "## The Best Christmas Present in the World\n\n### Summary\nThe story revolves around a letter found in an old desk, written by a World War I soldier to his wife. It describes the famous Christmas truce of 1914.\n\n### Key Characters\n- **Jim Macpherson**: British soldier\n- **Connie Macpherson**: Jim's wife\n- **The Narrator**: Finds the letter\n\n### Key Themes\n- **Peace and Humanity**: Even enemies can share moments of peace\n- **Love**: Eternal love between Jim and Connie\n- **Hope**: The hope for peace during war\n- **Christmas Spirit**: Unity and goodwill\n\n### Historical Context\nThe Christmas Truce of 1914 was a real event where British and German soldiers stopped fighting on Christmas Day.", 
+          te: "## ప్రపంచంలో అత్యుత్తమ క్రిస్మస్ బహుమతి\n\n### సారాంశం\nఈ కథ పాత డెస్క్‌లో కనుగొన్న లేఖ చుట్టూ తిరుగుతుంది, ఇది మొదటి ప్రపంచ యుద్ధ సైనికుడు తన భార్యకు రాసినది.\n\n### ముఖ్య పాత్రలు\n- **జిమ్ మాక్ఫెర్సన్**: బ్రిటిష్ సైనికుడు\n- **కానీ మాక్ఫెర్సన్**: జిమ్ భార్య\n\n### ముఖ్య అంశాలు\n- **శాంతి మరియు మానవత్వం**: శత్రువులు కూడా శాంతి క్షణాలను పంచుకోగలరు\n- **ప్రేమ**: జిమ్ మరియు కానీ మధ్య శాశ్వత ప్రేమ" 
+        },
+        quiz: [
+          { question: { en: "Where was the letter found?", te: "లేఖ ఎక్కడ కనుగొనబడింది?" }, options: [{ en: "In a box", te: "పెట్టెలో" }, { en: "In an old desk", te: "పాత డెస్క్‌లో" }, { en: "In a book", te: "పుస్తకంలో" }, { en: "In a drawer", te: "డ్రాయర్‌లో" }], correctIndex: 1 },
+          { question: { en: "Who wrote the letter?", te: "లేఖ ఎవరు రాశారు?" }, options: [{ en: "German soldier", te: "జర్మన్ సైనికుడు" }, { en: "Jim Macpherson", te: "జిమ్ మాక్ఫెర్సన్" }, { en: "Narrator", te: "కథకుడు" }, { en: "Connie", te: "కానీ" }], correctIndex: 1 },
+          { question: { en: "When did the Christmas truce happen?", te: "క్రిస్మస్ సంధి ఎప్పుడు జరిగింది?" }, options: [{ en: "1914", te: "1914" }, { en: "1918", te: "1918" }, { en: "1940", te: "1940" }, { en: "1945", te: "1945" }], correctIndex: 0 },
+          { question: { en: "Who was Connie?", te: "కానీ ఎవరు?" }, options: [{ en: "Jim's mother", te: "జిమ్ తల్లి" }, { en: "Jim's wife", te: "జిమ్ భార్య" }, { en: "Jim's sister", te: "జిమ్ సోదరి" }, { en: "Jim's daughter", te: "జిమ్ కూతురు" }], correctIndex: 1 },
+          { question: { en: "What game did soldiers play?", te: "సైనికులు ఏ ఆట ఆడారు?" }, options: [{ en: "Cricket", te: "క్రికెట్" }, { en: "Football", te: "ఫుట్‌బాల్" }, { en: "Chess", te: "చెస్" }, { en: "Cards", te: "కార్డ్స్" }], correctIndex: 1 },
+          { question: { en: "What is the main theme?", te: "ప్రధాన అంశం ఏమిటి?" }, options: [{ en: "War", te: "యుద్ధం" }, { en: "Peace and humanity", te: "శాంతి మరియు మానవత్వం" }, { en: "Money", te: "డబ్బు" }, { en: "Power", te: "అధికారం" }], correctIndex: 1 },
+          { question: { en: "Which war is mentioned?", te: "ఏ యుద్ధం ప్రస్తావించబడింది?" }, options: [{ en: "World War II", te: "రెండవ ప్రపంచ యుద్ధం" }, { en: "World War I", te: "మొదటి ప్రపంచ యుద్ధం" }, { en: "Civil War", te: "అంతర్యుద్ధం" }, { en: "Cold War", te: "ప్రచ్ఛన్న యుద్ధం" }], correctIndex: 1 },
+          { question: { en: "What did Jim promise Connie?", te: "జిమ్ కానీకి ఏమి వాగ్దానం చేశాడు?" }, options: [{ en: "Money", te: "డబ్బు" }, { en: "To return home", te: "ఇంటికి తిరిగి రావడం" }, { en: "A gift", te: "బహుమతి" }, { en: "A letter", te: "లేఖ" }], correctIndex: 1 },
+          { question: { en: "What is the best Christmas present?", te: "అత్యుత్తమ క్రిస్మస్ బహుమతి ఏమిటి?" }, options: [{ en: "Money", te: "డబ్బు" }, { en: "The letter and Jim's return", te: "లేఖ మరియు జిమ్ రాక" }, { en: "Toys", te: "బొమ్మలు" }, { en: "Food", te: "ఆహారం" }], correctIndex: 1 },
+          { question: { en: "Where was Connie living?", te: "కానీ ఎక్కడ నివసిస్తున్నది?" }, options: [{ en: "Hospital", te: "ఆసుపత్రి" }, { en: "Nursing home", te: "నర్సింగ్ హోమ్" }, { en: "Army camp", te: "సైన్య శిబిరం" }, { en: "Farm", te: "పొలం" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Describe the Christmas truce of 1914", te: "1914 క్రిస్మస్ సంధిని వర్ణించండి" }, answer: { en: "On Christmas Day 1914, British and German soldiers stopped fighting, exchanged greetings, shared food, and played football in No Man's Land.", te: "1914 క్రిస్మస్ రోజున, బ్రిటిష్ మరియు జర్మన్ సైనికులు పోరాటం ఆపారు, శుభాకాంక్షలు మార్చుకున్నారు, ఆహారం పంచుకున్నారు మరియు నో మ్యాన్స్ ల్యాండ్‌లో ఫుట్‌బాల్ ఆడారు." } },
+          { question: { en: "Who was Jim Macpherson?", te: "జిమ్ మాక్ఫెర్సన్ ఎవరు?" }, answer: { en: "Jim Macpherson was a British soldier who fought in World War I and wrote a letter to his wife Connie about the Christmas truce.", te: "జిమ్ మాక్ఫెర్సన్ మొదటి ప్రపంచ యుద్ధంలో పోరాడిన బ్రిటిష్ సైనికుడు, అతను క్రిస్మస్ సంధి గురించి తన భార్య కానీకి లేఖ రాశాడు." } },
+          { question: { en: "What message does the story convey?", te: "కథ ఏ సందేశాన్ని అందిస్తుంది?" }, answer: { en: "The story conveys that humanity and peace can prevail even in the darkest times of war.", te: "యుద్ధం యొక్క అత్యంత చీకటి సమయాలలో కూడా మానవత్వం మరియు శాంతి నెలకొనగలవని కథ తెలియజేస్తుంది." } },
+          { question: { en: "Describe the narrator's experience", te: "కథకుడి అనుభవాన్ని వర్ణించండి" }, answer: { en: "The narrator bought an old desk, found a secret drawer with Jim's letter, and decided to deliver it to Connie at the nursing home.", te: "కథకుడు పాత డెస్క్ కొన్నాడు, జిమ్ లేఖతో రహస్య డ్రాయర్ కనుగొన్నాడు మరియు నర్సింగ్ హోమ్‌లో కానీకి అందించాలని నిర్ణయించుకున్నాడు." } },
+          { question: { en: "What was special about the letter?", te: "లేఖలో ప్రత్యేకత ఏమిటి?" }, answer: { en: "The letter described the Christmas truce and Jim's love for Connie, promising to return home safely.", te: "లేఖ క్రిస్మస్ సంధిని మరియు కానీ పట్ల జిమ్ ప్రేమను వర్ణించింది, సురక్షితంగా ఇంటికి తిరిగి రావాలని వాగ్దానం చేసింది." } },
+          { question: { en: "Why is this called the best Christmas present?", te: "దీన్ని అత్యుత్తమ క్రిస్మస్ బహుమతి అని ఎందుకు పిలుస్తారు?" }, answer: { en: "For Connie, the letter and the hope of Jim's return was the best Christmas present she could ever receive.", te: "కానీకి, లేఖ మరియు జిమ్ తిరిగి వస్తాడనే ఆశ ఆమె పొందగల అత్యుత్తమ క్రిస్మస్ బహుమతి." } },
+          { question: { en: "What happened on Christmas Day?", te: "క్రిస్మస్ రోజున ఏమి జరిగింది?" }, answer: { en: "Soldiers from both sides stopped fighting, met in No Man's Land, exchanged gifts, and played football.", te: "రెండు వైపుల సైనికులు పోరాటం ఆపారు, నో మ్యాన్స్ ల్యాండ్‌లో కలిశారు, బహుమతులు మార్చుకున్నారు మరియు ఫుట్‌బాల్ ఆడారు." } },
+          { question: { en: "Describe Connie's character", te: "కానీ పాత్రను వర్ణించండి" }, answer: { en: "Connie is a devoted, loving wife who waited for Jim her whole life, showing eternal love and patience.", te: "కానీ తన జీవితమంతా జిమ్ కోసం ఎదురుచూసిన అంకితభావం గల, ప్రేమగల భార్య, శాశ్వత ప్రేమ మరియు సహనాన్ని చూపిస్తుంది." } },
+          { question: { en: "What is No Man's Land?", te: "నో మ్యాన్స్ ల్యాండ్ అంటే ఏమిటి?" }, answer: { en: "No Man's Land is the area between two opposing trenches in war, not controlled by either side.", te: "నో మ్యాన్స్ ల్యాండ్ అనేది యుద్ధంలో రెండు వ్యతిరేక కందకాల మధ్య ఉన్న ప్రాంతం, ఏ వైపు నియంత్రణలో లేదు." } },
+          { question: { en: "What lesson do we learn?", te: "మనం ఏ పాఠం నేర్చుకుంటాము?" }, answer: { en: "We learn that love, hope, and humanity can survive even in the worst circumstances.", te: "చెత్త పరిస్థితులలో కూడా ప్రేమ, ఆశ మరియు మానవత్వం మనుగడ సాగించగలవని మనం నేర్చుకుంటాము." } }
+        ]
+      };
+    } else if (grade === 9) {
+      return {
+        id: `english-1-${grade}`,
+        title: { en: "The Fun They Had", te: "వారికి ఉన్న ఆనందం" },
+        description: { en: "A futuristic story about education", te: "విద్య గురించి భవిష్యత్ కథ" },
+        videoUrls: ["https://youtu.be/rG_oD7UBTYE?si=OyearZ75XHPDzcUi"],
+        notes: { 
+          en: "## The Fun They Had\n\n### Summary\nSet in the year 2157, this story by Isaac Asimov compares futuristic education with traditional schools.\n\n### Key Characters\n- **Margie**: 11-year-old girl\n- **Tommy**: 13-year-old boy\n- **Mechanical Teacher**: Robot teacher\n\n### Key Themes\n- **Technology vs Traditional Learning**: Machines vs human teachers\n- **Isolation vs Community**: Learning alone vs with friends\n- **Past vs Future**: Old schools vs futuristic education\n- **Joy of Learning**: What makes learning enjoyable\n\n### Setting\nThe story is set in 2157 where children learn at home using mechanical teachers and computers.", 
+          te: "## వారికి ఉన్న ఆనందం\n\n### సారాంశం\n2157 సంవత్సరంలో సెట్ చేయబడిన, ఐజాక్ అసిమోవ్ ఈ కథ భవిష్యత్ విద్యను సంప్రదాయ పాఠశాలలతో పోలుస్తుంది.\n\n### ముఖ్య పాత్రలు\n- **మార్గీ**: 11 ఏళ్ల బాలిక\n- **టామీ**: 13 ఏళ్ల బాలుడు\n- **మెకానికల్ టీచర్**: రోబోట్ ఉపాధ్యాయుడు\n\n### ముఖ్య అంశాలు\n- **సాంకేతికత vs సంప్రదాయ అభ్యాసం**: యంత్రాలు vs మానవ ఉపాధ్యాయులు" 
+        },
+        quiz: [
+          { question: { en: "When is the story set?", te: "కథ ఎప్పుడు సెట్ చేయబడింది?" }, options: [{ en: "2050", te: "2050" }, { en: "2157", te: "2157" }, { en: "2000", te: "2000" }, { en: "2100", te: "2100" }], correctIndex: 1 },
+          { question: { en: "Who wrote this story?", te: "ఈ కథ ఎవరు రాశారు?" }, options: [{ en: "H.G. Wells", te: "H.G. వెల్స్" }, { en: "Isaac Asimov", te: "ఐజాక్ అసిమోవ్" }, { en: "Ray Bradbury", te: "రే బ్రాడ్‌బరీ" }, { en: "Arthur Clarke", te: "ఆర్థర్ క్లార్క్" }], correctIndex: 1 },
+          { question: { en: "How old is Margie?", te: "మార్గీ వయసు ఎంత?" }, options: [{ en: "10", te: "10" }, { en: "11", te: "11" }, { en: "12", te: "12" }, { en: "13", te: "13" }], correctIndex: 1 },
+          { question: { en: "What did Tommy find?", te: "టామీ ఏమి కనుగొన్నాడు?" }, options: [{ en: "Computer", te: "కంప్యూటర్" }, { en: "Real book", te: "నిజమైన పుస్తకం" }, { en: "Robot", te: "రోబోట్" }, { en: "Toy", te: "బొమ్మ" }], correctIndex: 1 },
+          { question: { en: "Who teaches Margie?", te: "మార్గీకి ఎవరు బోధిస్తారు?" }, options: [{ en: "Human teacher", te: "మానవ ఉపాధ్యాయుడు" }, { en: "Mechanical teacher", te: "యాంత్రిక ఉపాధ్యాయుడు" }, { en: "Her mother", te: "ఆమె తల్లి" }, { en: "Tommy", te: "టామీ" }], correctIndex: 1 },
+          { question: { en: "What did the old book talk about?", te: "పాత పుస్తకం దేని గురించి మాట్లాడింది?" }, options: [{ en: "Robots", te: "రోబోట్లు" }, { en: "Old schools", te: "పాత పాఠశాలలు" }, { en: "Space", te: "అంతరిక్షం" }, { en: "Animals", te: "జంతువులు" }], correctIndex: 1 },
+          { question: { en: "Where do children study in 2157?", te: "2157లో పిల్లలు ఎక్కడ చదువుతారు?" }, options: [{ en: "School", te: "పాఠశాల" }, { en: "Home", te: "ఇల్లు" }, { en: "Park", te: "పార్క్" }, { en: "Library", te: "గ్రంథాలయం" }], correctIndex: 1 },
+          { question: { en: "What subject did Margie hate?", te: "మార్గీ ఏ సబ్జెక్ట్ అసహ్యించుకుంది?" }, options: [{ en: "History", te: "చరిత్ర" }, { en: "Geography", te: "భూగోళశాస్త్రం" }, { en: "Mathematics", te: "గణితం" }, { en: "Science", te: "విజ్ఞానశాస్త్రం" }], correctIndex: 1 },
+          { question: { en: "What was printed on paper?", te: "కాగితంపై ఏమి ముద్రించబడింది?" }, options: [{ en: "Pictures", te: "చిత్రాలు" }, { en: "Words", te: "పదాలు" }, { en: "Numbers", te: "సంఖ్యలు" }, { en: "Nothing", te: "ఏమీ లేదు" }], correctIndex: 1 },
+          { question: { en: "What did Margie think about old schools?", te: "పాత పాఠశాలల గురించి మార్గీ ఏమి అనుకుంది?" }, options: [{ en: "They were boring", te: "అవి విసుగుగా ఉన్నాయి" }, { en: "They were fun", te: "అవి సరదాగా ఉన్నాయి" }, { en: "They were scary", te: "అవి భయంగా ఉన్నాయి" }, { en: "They were expensive", te: "అవి ఖరీదైనవి" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Describe education in 2157", te: "2157లో విద్యను వర్ణించండి" }, answer: { en: "In 2157, children study at home with mechanical teachers (computers) that adjust to their learning pace. Books are digital, displayed on screens.", te: "2157లో, పిల్లలు యాంత్రిక ఉపాధ్యాయులతో (కంప్యూటర్లు) ఇంట్లో చదువుతారు, ఇవి వారి నేర్చుకునే వేగానికి సర్దుబాటు అవుతాయి." } },
+          { question: { en: "Compare old schools with futuristic schools", te: "పాత పాఠశాలలను భవిష్యత్ పాఠశాలలతో పోల్చండి" }, answer: { en: "Old schools had human teachers and many students learning together in a building. Futuristic schools are at home with mechanical teachers and isolated learning.", te: "పాత పాఠశాలల్లో మానవ ఉపాధ్యాయులు మరియు అనేక విద్యార్థులు భవనంలో కలిసి నేర్చుకునేవారు. భవిష్యత్ పాఠశాలలు యాంత్రిక ఉపాధ్యాయులతో ఇంట్లో ఉంటాయి." } },
+          { question: { en: "Why did Margie hate school?", te: "మార్గీ పాఠశాలను ఎందుకు అసహ్యించుకుంది?" }, answer: { en: "Margie hated school because her mechanical teacher gave her too many tests in geography and she was performing poorly.", te: "మార్గీ తన యాంత్రిక ఉపాధ్యాయుడు భూగోళశాస్త్రంలో చాలా పరీక్షలు ఇచ్చాడు మరియు ఆమె పేలవంగా పని చేస్తున్నందున పాఠశాలను అసహ్యించుకుంది." } },
+          { question: { en: "What is a mechanical teacher?", te: "యాంత్రిక ఉపాధ్యాయుడు అంటే ఏమిటి?" }, answer: { en: "A mechanical teacher is a computer-based teaching machine that displays lessons, gives homework, and tests students individually.", te: "యాంత్రిక ఉపాధ్యాయుడు అనేది పాఠాలు ప్రదర్శించే, హోమ్‌వర్క్ ఇచ్చే మరియు విద్యార్థులను వ్యక్తిగతంగా పరీక్షించే కంప్యూటర్ ఆధారిత బోధన యంత్రం." } },
+          { question: { en: "What was special about Tommy's find?", te: "టామీ కనుగొన్నదానిలో ప్రత్యేకత ఏమిటి?" }, answer: { en: "Tommy found a real book printed on paper, which was very rare in 2157 when everything was digital.", te: "టామీ కాగితంపై ముద్రించిన నిజమైన పుస్తకాన్ని కనుగొన్నాడు, ఇది 2157లో అన్నీ డిజిటల్ అయినప్పుడు చాలా అరుదు." } },
+          { question: { en: "What fun did old schools have?", te: "పాత పాఠశాలల్లో ఏ సరదా ఉంది?" }, answer: { en: "Old schools had children learning together, playing with each other, and having a human teacher who could understand their feelings.", te: "పాత పాఠశాలల్లో పిల్లలు కలిసి నేర్చుకునేవారు, ఒకరితో ఒకరు ఆడుకునేవారు మరియు వారి భావాలను అర్థం చేసుకోగల మానవ ఉపాధ్యాయుడు ఉండేవాడు." } },
+          { question: { en: "Describe Margie's typical school day", te: "మార్గీ సాధారణ పాఠశాల రోజును వర్ణించండి" }, answer: { en: "Margie sits in her schoolroom at home, faces the mechanical teacher screen, submits homework in a slot, and takes tests.", te: "మార్గీ ఇంట్లో తన పాఠశాల గదిలో కూర్చుని, యాంత్రిక ఉపాధ్యాయ స్క్రీన్ ఎదుర్కొని, స్లాట్‌లో హోమ్‌వర్క్ సమర్పించి, పరీక్షలు రాస్తుంది." } },
+          { question: { en: "What is Isaac Asimov's message?", te: "ఐజాక్ అసిమోవ్ సందేశం ఏమిటి?" }, answer: { en: "Technology cannot replace the joy of human interaction and community learning that traditional schools provided.", te: "సాంకేతికత సంప్రదాయ పాఠశాలలు అందించిన మానవ పరస్పర చర్య మరియు సమాజ అభ్యాసం యొక్క ఆనందాన్ని భర్తీ చేయలేదు." } },
+          { question: { en: "Why was Margie fascinated by old schools?", te: "మార్గీ పాత పాఠశాలలతో ఎందుకు ఆకర్షితురాలైంది?" }, answer: { en: "She was fascinated because children went to a special building together and had human teachers.", te: "పిల్లలు కలిసి ప్రత్యేక భవనానికి వెళ్ళడం మరియు మానవ ఉపాధ్యాయులు ఉండటం వల్ల ఆమె ఆకర్షితురాలైంది." } },
+          { question: { en: "What does the title suggest?", te: "శీర్షిక ఏమి సూచిస్తుంది?" }, answer: { en: "The title suggests that old-style schools with human teachers and classmates were more fun than isolated learning with machines.", te: "మానవ ఉపాధ్యాయులు మరియు సహ విద్యార్థులతో పాత-శైలి పాఠశాలలు యంత్రాలతో ఒంటరి అభ్యాసం కంటే ఎక్కువ సరదాగా ఉన్నాయని శీర్షిక సూచిస్తుంది." } }
+        ]
+      };
+    } else {
+      return {
+        id: `english-1-${grade}`,
+        title: { en: "Attitude is Altitude", te: "వైఖరే ఎత్తు" },
+        description: { en: "Inspiring story of Nick Vujicic", te: "నిక్ వుజిసిక్ ప్రేరణాత్మక కథ" },
+        videoUrls: ["https://youtu.be/ZNI66TjkfgA?si=59x-YzeGT7ghHrg_"],
+        notes: { 
+          en: "## Attitude is Altitude\n\n### Introduction\nThis inspiring story is about Nick Vujicic, born without arms and legs, who became a motivational speaker.\n\n### About Nick Vujicic\n- Born on December 4, 1982, in Melbourne, Australia\n- Born with Tetra-amelia syndrome (no limbs)\n- Motivational speaker and author\n- Founded 'Life Without Limbs' organization\n\n### Key Themes\n- **Positive Attitude**: Overcoming challenges with optimism\n- **Determination**: Never giving up\n- **Self-belief**: Believing in oneself\n- **Inspiring Others**: Using experiences to motivate\n\n### Life Lessons\n- Our attitude determines our altitude in life\n- Physical limitations don't define our capabilities\n- With determination, anything is possible", 
+          te: "## వైఖరే ఎత్తు\n\n### పరిచయం\nఈ ప్రేరణాత్మక కథ చేతులు మరియు కాళ్ళు లేకుండా పుట్టిన నిక్ వుజిసిక్ గురించి, అతను ప్రేరణాత్మక వక్తగా మారాడు.\n\n### నిక్ వుజిసిక్ గురించి\n- 1982 డిసెంబర్ 4న ఆస్ట్రేలియాలోని మెల్‌బోర్న్‌లో జన్మించాడు\n- టెట్రా-అమెలియా సిండ్రోమ్‌తో జన్మించాడు (అవయవాలు లేవు)\n- ప్రేరణాత్మక వక్త మరియు రచయిత\n\n### ముఖ్య అంశాలు\n- **సానుకూల వైఖరి**: ఆశావాదంతో సవాళ్ళను అధిగమించడం\n- **సంకల్పం**: ఎప్పుడూ వదిలిపెట్టకపోవడం" 
+        },
+        quiz: [
+          { question: { en: "Where was Nick Vujicic born?", te: "నిక్ వుజిసిక్ ఎక్కడ పుట్టాడు?" }, options: [{ en: "USA", te: "అమెరికా" }, { en: "Australia", te: "ఆస్ట్రేలియా" }, { en: "UK", te: "యు.కె." }, { en: "Canada", te: "కెనడా" }], correctIndex: 1 },
+          { question: { en: "What is Nick's profession?", te: "నిక్ వృత్తి ఏమిటి?" }, options: [{ en: "Doctor", te: "వైద్యుడు" }, { en: "Motivational speaker", te: "ప్రేరణాత్మక వక్త" }, { en: "Engineer", te: "ఇంజనీర్" }, { en: "Teacher", te: "ఉపాధ్యాయుడు" }], correctIndex: 1 },
+          { question: { en: "What does 'Attitude is Altitude' mean?", te: "'వైఖరే ఎత్తు' అంటే ఏమిటి?" }, options: [{ en: "Height matters", te: "ఎత్తు ముఖ్యం" }, { en: "Positive thinking leads to success", te: "సానుకూల ఆలోచన విజయానికి దారితీస్తుంది" }, { en: "Mountains are tall", te: "పర్వతాలు ఎత్తుగా ఉంటాయి" }, { en: "Flying is fun", te: "ఎగరడం సరదా" }], correctIndex: 1 },
+          { question: { en: "What syndrome does Nick have?", te: "నిక్‌కు ఏ సిండ్రోమ్ ఉంది?" }, options: [{ en: "Down syndrome", te: "డౌన్ సిండ్రోమ్" }, { en: "Tetra-amelia syndrome", te: "టెట్రా-అమెలియా సిండ్రోమ్" }, { en: "Autism", te: "ఆటిజం" }, { en: "Dyslexia", te: "డిస్లెక్సియా" }], correctIndex: 1 },
+          { question: { en: "What organization did Nick found?", te: "నిక్ ఏ సంస్థను స్థాపించాడు?" }, options: [{ en: "Red Cross", te: "రెడ్ క్రాస్" }, { en: "Life Without Limbs", te: "లైఫ్ విత్‌అవుట్ లింబ్స్" }, { en: "UNICEF", te: "యునిసెఫ్" }, { en: "WHO", te: "WHO" }], correctIndex: 1 },
+          { question: { en: "What is Nick's key message?", te: "నిక్ ముఖ్య సందేశం ఏమిటి?" }, options: [{ en: "Give up", te: "వదిలిపెట్టు" }, { en: "Never give up", te: "ఎప్పుడూ వదిలిపెట్టకు" }, { en: "Stay sad", te: "విచారంగా ఉండు" }, { en: "Avoid challenges", te: "సవాళ్ళను నివారించు" }], correctIndex: 1 },
+          { question: { en: "When was Nick born?", te: "నిక్ ఎప్పుడు పుట్టాడు?" }, options: [{ en: "1980", te: "1980" }, { en: "1982", te: "1982" }, { en: "1985", te: "1985" }, { en: "1990", te: "1990" }], correctIndex: 1 },
+          { question: { en: "What can we learn from Nick?", te: "నిక్ నుండి మనం ఏమి నేర్చుకోగలము?" }, options: [{ en: "Complain about life", te: "జీవితం గురించి ఫిర్యాదు చేయడం" }, { en: "Positive attitude matters", te: "సానుకూల వైఖరి ముఖ్యం" }, { en: "Avoid people", te: "ప్రజలను నివారించడం" }, { en: "Stay alone", te: "ఒంటరిగా ఉండటం" }], correctIndex: 1 },
+          { question: { en: "What activities can Nick do?", te: "నిక్ ఏ కార్యకలాపాలు చేయగలడు?" }, options: [{ en: "Nothing", te: "ఏమీ లేదు" }, { en: "Swimming, typing, sports", te: "ఈత, టైపింగ్, క్రీడలు" }, { en: "Only sleeping", te: "నిద్రపోవడం మాత్రమే" }, { en: "Only eating", te: "తినడం మాత్రమే" }], correctIndex: 1 },
+          { question: { en: "Nick inspires people about?", te: "నిక్ ప్రజలను దేని గురించి ప్రేరేపిస్తాడు?" }, options: [{ en: "Making money", te: "డబ్బు సంపాదించడం" }, { en: "Overcoming challenges", te: "సవాళ్ళను అధిగమించడం" }, { en: "Sleeping more", te: "ఎక్కువ నిద్రపోవడం" }, { en: "Eating well", te: "బాగా తినడం" }], correctIndex: 1 }
+        ],
+        practice: [
+          { question: { en: "Write about Nick Vujicic's life", te: "నిక్ వుజిసిక్ జీవితం గురించి రాయండి" }, answer: { en: "Nick Vujicic was born without arms and legs but overcame all challenges through positive attitude. He became a motivational speaker inspiring millions worldwide.", te: "నిక్ వుజిసిక్ చేతులు మరియు కాళ్ళు లేకుండా పుట్టాడు కానీ సానుకూల వైఖరి ద్వారా అన్ని సవాళ్ళను అధిగమించాడు. అతను ప్రపంచవ్యాప్తంగా మిలియన్ల మందిని ప్రేరేపించే ప్రేరణాత్మక వక్తగా మారాడు." } },
+          { question: { en: "What does 'Attitude is Altitude' mean to you?", te: "'వైఖరే ఎత్తు' మీకు ఏమి అర్థం?" }, answer: { en: "It means our attitude and mindset determine how high we can reach in life, not our physical circumstances.", te: "మన శారీరక పరిస్థితులు కాదు, మన వైఖరి మరియు మానసికత జీవితంలో మనం ఎంత ఎత్తుకు చేరుకోగలమో నిర్ణయిస్తుంది అని దీని అర్థం." } },
+          { question: { en: "How did Nick overcome his challenges?", te: "నిక్ తన సవాళ్ళను ఎలా అధిగమించాడు?" }, answer: { en: "Nick overcame challenges through faith, positive attitude, determination, and support from family. He learned to do everyday tasks and became independent.", te: "నిక్ విశ్వాసం, సానుకూల వైఖరి, సంకల్పం మరియు కుటుంబ మద్దతు ద్వారా సవాళ్ళను అధిగమించాడు. అతను రోజువారీ పనులు చేయడం నేర్చుకున్నాడు మరియు స్వతంత్రంగా మారాడు." } },
+          { question: { en: "What can students learn from Nick?", te: "విద్యార్థులు నిక్ నుండి ఏమి నేర్చుకోగలరు?" }, answer: { en: "Students can learn to never give up, maintain positive attitude, believe in themselves, and turn challenges into opportunities.", te: "విద్యార్థులు ఎప్పుడూ వదిలిపెట్టకూడదని, సానుకూల వైఖరిని కొనసాగించాలని, తమలో తాము నమ్మకం ఉంచాలని మరియు సవాళ్ళను అవకాశాలుగా మార్చాలని నేర్చుకోగలరు." } },
+          { question: { en: "Describe Nick's achievements", te: "నిక్ విజయాలను వర్ణించండి" }, answer: { en: "Nick is a bestselling author, motivational speaker, has spoken to millions worldwide, founded 'Life Without Limbs', and is happily married with children.", te: "నిక్ బెస్ట్‌సెల్లింగ్ రచయిత, ప్రేరణాత్మక వక్త, ప్రపంచవ్యాప్తంగా మిలియన్ల మందితో మాట్లాడాడు, 'లైఫ్ విత్‌అవుట్ లింబ్స్' స్థాపించాడు మరియు పిల్లలతో సంతోషంగా వివాహం చేసుకున్నాడు." } },
+          { question: { en: "How does Nick inspire others?", te: "నిక్ ఇతరులను ఎలా ప్రేరేపిస్తాడు?" }, answer: { en: "Nick shares his story of overcoming challenges, shows practical demonstrations, and encourages people to embrace their uniqueness.", te: "నిక్ సవాళ్ళను అధిగమించిన తన కథను పంచుకుంటాడు, ఆచరణాత్మక ప్రదర్శనలు చూపిస్తాడు మరియు ప్రజలు తమ విశిష్టతను స్వీకరించమని ప్రోత్సహిస్తాడు." } },
+          { question: { en: "What challenges did Nick face in childhood?", te: "బాల్యంలో నిక్ ఏ సవాళ్ళను ఎదుర్కొన్నాడు?" }, answer: { en: "Nick faced bullying, depression, loneliness, and doubts about his purpose in life. He once considered ending his life.", te: "నిక్ బెదిరింపులు, నిరాశ, ఒంటరితనం మరియు జీవితంలో తన ఉద్దేశ్యం గురించి సందేహాలను ఎదుర్కొన్నాడు. అతను ఒకసారి తన జీవితాన్ని ముగించాలని అనుకున్నాడు." } },
+          { question: { en: "Write a paragraph on positive attitude", te: "సానుకూల వైఖరి గురించి ఒక పేరా రాయండి" }, answer: { en: "Positive attitude is the ability to see good in every situation. It helps us overcome challenges, stay motivated, and achieve success.", te: "సానుకూల వైఖరి అనేది ప్రతి పరిస్థితిలో మంచిని చూడగల సామర్థ్యం. ఇది సవాళ్ళను అధిగమించడానికి, ప్రేరణతో ఉండటానికి మరియు విజయం సాధించడానికి సహాయపడుతుంది." } },
+          { question: { en: "What is 'Life Without Limbs'?", te: "'లైఫ్ విత్‌అవుట్ లింబ్స్' అంటే ఏమిటి?" }, answer: { en: "Life Without Limbs is a non-profit organization founded by Nick to inspire and provide hope to people facing challenges.", te: "లైఫ్ విత్‌అవుట్ లింబ్స్ అనేది సవాళ్ళను ఎదుర్కొంటున్న ప్రజలకు ప్రేరణ మరియు ఆశను అందించడానికి నిక్ స్థాపించిన లాభాపేక్షలేని సంస్థ." } },
+          { question: { en: "How can we apply Nick's lessons in daily life?", te: "రోజువారీ జీవితంలో నిక్ పాఠాలను ఎలా వర్తింపజేయగలము?" }, answer: { en: "We can stay positive during difficulties, not give up on dreams, help others, and be grateful for what we have.", te: "కష్టాల సమయంలో సానుకూలంగా ఉండగలము, కలలను వదిలిపెట్టకూడదు, ఇతరులకు సహాయం చేయగలము మరియు మనకు ఉన్నదానికి కృతజ్ఞతతో ఉండగలము." } }
+        ]
+      };
+    }
+  };
+
+  const getMathsChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `maths-1-${grade}`,
+        title: { en: "Rational Numbers", te: "అకరణీయ సంఖ్యలు" },
+        description: { en: "Understanding rational numbers and operations", te: "అకరణీయ సంఖ్యలు మరియు కార్యకలాపాలను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtube.com/playlist?list=PLZq1hVH9b1baAtYFwfSN2WQa8TLixTOVZ&si=wQhC5B17tvRbk-u7"],
+        notes: { 
+          en: "## Rational Numbers\n\n### Definition\nA rational number is a number that can be expressed in the form p/q, where p and q are integers and q ≠ 0.\n\n### Properties\n- **Closure Property**: Addition, subtraction, multiplication are closed\n- **Commutative Property**: a + b = b + a, a × b = b × a\n- **Associative Property**: (a + b) + c = a + (b + c)\n- **Distributive Property**: a × (b + c) = a × b + a × c\n\n### Representation\n- Can be positive, negative, or zero\n- Represented on number line\n- Between any two rational numbers, infinite rational numbers exist\n\n### Operations\n- Addition, subtraction, multiplication, division\n- Finding reciprocal", 
+          te: "## అకరణీయ సంఖ్యలు\n\n### నిర్వచనం\nఅకరణీయ సంఖ్య అనేది p/q రూపంలో వ్యక్తీకరించగల సంఖ్య, ఇక్కడ p మరియు q పూర్ణాంకాలు మరియు q ≠ 0.\n\n### గుణాలు\n- **సంవృత ధర్మం**: కూడిక, తీసివేత, గుణకారం సంవృతం\n- **వినిమయ ధర్మం**: a + b = b + a\n- **సహచర ధర్మం**: (a + b) + c = a + (b + c)\n\n### నిరూపణ\n- ధనాత్మక, ఋణాత్మక లేదా సున్న కావచ్చు\n- సంఖ్యా రేఖపై నిరూపించబడుతుంది" 
+        },
         quiz: generateMathQuiz('numbers', grade),
         practice: generateMathPractice('numbers', grade)
-      }
-    ]
-  },
-  {
-    id: `physical-science-${grade}`,
-    title: { en: "Physical Science", te: "భౌతిక శాస్త్రం" },
-    icon: "Atom",
-    color: "game-cyan",
-    chapters: [
-      {
-        id: `motion-${grade}`,
-        title: { en: "Motion and Force", te: "చలనం మరియు బలం" },
-        description: { en: "Newton's laws and mechanics", te: "న్యూటన్ నియమాలు మరియు యాంత్రికశాస్త్రం" },
-        notes: { en: "## Motion and Force\n\n### Newton's Laws\n1. **First Law (Inertia)**: Object at rest stays at rest\n2. **Second Law**: F = ma\n3. **Third Law**: Action = Reaction\n\n### Formulas\n- Speed = Distance/Time\n- Acceleration = (v-u)/t\n- Force = Mass × Acceleration", te: "## చలనం మరియు బలం\n\n### న్యూటన్ నియమాలు\n1. **మొదటి నియమం**: విశ్రాంతిలో ఉన్న వస్తువు విశ్రాంతిలో ఉంటుంది\n2. **రెండవ నియమం**: F = ma\n3. **మూడవ నియమం**: చర్య = ప్రతిచర్య" },
+      };
+    } else if (grade === 9) {
+      return {
+        id: `maths-1-${grade}`,
+        title: { en: "Number System", te: "సంఖ్యా వ్యవస్థ" },
+        description: { en: "Real numbers and their properties", te: "వాస్తవ సంఖ్యలు మరియు వాటి గుణాలు" },
+        videoUrls: ["https://youtube.com/playlist?list=PLPFrvtzFBmvxv-O6yzYoqfbJoZf99XxVF&si=fHS08-Q2BeDsATlO"],
+        notes: { 
+          en: "## Number System\n\n### Types of Numbers\n- **Natural Numbers (N)**: 1, 2, 3, 4...\n- **Whole Numbers (W)**: 0, 1, 2, 3...\n- **Integers (Z)**: ...-2, -1, 0, 1, 2...\n- **Rational Numbers (Q)**: p/q form\n- **Irrational Numbers**: √2, π, e\n- **Real Numbers (R)**: All rational and irrational\n\n### Irrational Numbers\n- Cannot be expressed as p/q\n- Non-terminating, non-repeating decimals\n- Examples: √2, √3, π\n\n### Laws of Exponents\n- a^m × a^n = a^(m+n)\n- a^m ÷ a^n = a^(m-n)\n- (a^m)^n = a^(mn)", 
+          te: "## సంఖ్యా వ్యవస్థ\n\n### సంఖ్యల రకాలు\n- **సహజ సంఖ్యలు (N)**: 1, 2, 3, 4...\n- **పూర్ణ సంఖ్యలు (W)**: 0, 1, 2, 3...\n- **పూర్ణాంకాలు (Z)**: ...-2, -1, 0, 1, 2...\n- **అకరణీయ సంఖ్యలు (Q)**: p/q రూపం\n- **కరణీయ సంఖ్యలు**: √2, π, e\n- **వాస్తవ సంఖ్యలు (R)**: అన్ని అకరణీయ మరియు కరణీయ\n\n### ఘాతాంక నియమాలు\n- a^m × a^n = a^(m+n)" 
+        },
+        quiz: generateMathQuiz('numbers', grade),
+        practice: generateMathPractice('numbers', grade)
+      };
+    } else {
+      return {
+        id: `maths-1-${grade}`,
+        title: { en: "Real Numbers", te: "వాస్తవ సంఖ్యలు" },
+        description: { en: "Euclid's division and fundamental theorem", te: "యూక్లిడ్ విభజన మరియు ప్రాథమిక సిద్ధాంతం" },
+        videoUrls: ["https://youtube.com/playlist?list=PLhuT4NoSVEh9YnYPFlbYRSWOjqXJVBRTR&si=TP0bBfeifYL-zvf4"],
+        notes: { 
+          en: "## Real Numbers\n\n### Euclid's Division Lemma\nFor any positive integers a and b, there exist unique integers q and r such that:\na = bq + r, where 0 ≤ r < b\n\n### Fundamental Theorem of Arithmetic\nEvery composite number can be expressed as a product of primes uniquely (except order).\n\n### HCF and LCM\n- HCF × LCM = Product of two numbers\n- Prime factorization method\n- Division method\n\n### Irrational Numbers\n- √2, √3, √5 are irrational\n- Proof by contradiction\n\n### Decimal Expansions\n- Terminating decimals: rational\n- Non-terminating repeating: rational\n- Non-terminating non-repeating: irrational", 
+          te: "## వాస్తవ సంఖ్యలు\n\n### యూక్లిడ్ విభజన లెమ్మా\nఏదైనా ధనాత్మక పూర్ణాంకాలు a మరియు b కోసం, ఏకైక పూర్ణాంకాలు q మరియు r ఉన్నాయి:\na = bq + r, ఇక్కడ 0 ≤ r < b\n\n### అంకగణిత ప్రాథమిక సిద్ధాంతం\nప్రతి సంయుక్త సంఖ్యను ప్రత్యేకంగా అభాజ్యాల లబ్ధంగా వ్యక్తీకరించవచ్చు.\n\n### HCF మరియు LCM\n- HCF × LCM = రెండు సంఖ్యల లబ్ధం" 
+        },
+        quiz: generateMathQuiz('numbers', grade),
+        practice: generateMathPractice('numbers', grade)
+      };
+    }
+  };
+
+  const getPhysicalScienceChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `physical-science-1-${grade}`,
+        title: { en: "Force", te: "బలం" },
+        description: { en: "Understanding force and its effects", te: "బలం మరియు దాని ప్రభావాలను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/sqN1OTSSngk?si=rkhj-asB6fPubnc-"],
+        notes: { 
+          en: "## Force\n\n### Definition\nForce is a push or pull that can change the state of motion of an object.\n\n### Types of Forces\n- **Contact Forces**: Friction, tension, normal force\n- **Non-contact Forces**: Gravity, magnetic, electrostatic\n\n### Effects of Force\n- Changes speed of object\n- Changes direction of motion\n- Changes shape of object\n\n### Pressure\nPressure = Force / Area\n- SI unit: Pascal (Pa) or N/m²\n- Liquids exert pressure in all directions\n\n### Friction\n- Opposes motion\n- Types: Static, sliding, rolling\n- Advantages and disadvantages", 
+          te: "## బలం\n\n### నిర్వచనం\nబలం అనేది వస్తువు యొక్క చలన స్థితిని మార్చగల నెట్టడం లేదా లాగడం.\n\n### బలాల రకాలు\n- **స్పర్శ బలాలు**: ఘర్షణ, తీవ్రత, సాధారణ బలం\n- **అస్పర్శ బలాలు**: గురుత్వాకర్షణ, అయస్కాంత, స్థిర విద్యుత్\n\n### బలం ప్రభావాలు\n- వస్తువు వేగాన్ని మారుస్తుంది\n- చలన దిశను మారుస్తుంది\n\n### పీడనం\nపీడనం = బలం / వైశాల్యం\n- SI యూనిట్: పాస్కల్ (Pa)" 
+        },
         quiz: generatePhysicalScienceQuiz(),
         practice: generatePhysicalSciencePractice()
-      },
-      {
-        id: `electricity-${grade}`,
-        title: { en: "Electricity", te: "విద్యుత్" },
-        description: { en: "Current, voltage, and circuits", te: "ప్రవాహం, వోల్టేజ్ మరియు సర్క్యూట్లు" },
-        notes: { en: "## Electricity\n\n### Basic Concepts\n- Current (I): Flow of electrons (Ampere)\n- Voltage (V): Electric potential (Volt)\n- Resistance (R): Opposition to flow (Ohm)\n\n### Ohm's Law\nV = I × R\n\n### Power\nP = V × I = I²R = V²/R", te: "## విద్యుత్\n\n### ప్రాథమిక భావనలు\n- ప్రవాహం (I): ఎలక్ట్రాన్ల ప్రవాహం\n- వోల్టేజ్ (V): విద్యుత్ పొటెన్షియల్\n- నిరోధకత (R): ప్రవాహానికి వ్యతిరేకత" },
+      };
+    } else if (grade === 9) {
+      return {
+        id: `physical-science-1-${grade}`,
+        title: { en: "Motion", te: "చలనం" },
+        description: { en: "Understanding motion and its equations", te: "చలనం మరియు దాని సమీకరణాలను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/d_7bmj0Aiw4?si=wXOBeVTZKaEjhYTn"],
+        notes: { 
+          en: "## Motion\n\n### Basic Concepts\n- **Distance**: Total path covered\n- **Displacement**: Shortest distance between two points\n- **Speed**: Distance/Time\n- **Velocity**: Displacement/Time\n- **Acceleration**: Change in velocity/Time\n\n### Types of Motion\n- Uniform motion: Constant velocity\n- Non-uniform motion: Changing velocity\n- Circular motion\n\n### Equations of Motion\n- v = u + at\n- s = ut + ½at²\n- v² = u² + 2as\n\n### Graphical Representation\n- Distance-time graph\n- Velocity-time graph\n- Area under v-t graph = distance", 
+          te: "## చలనం\n\n### ప్రాథమిక భావనలు\n- **దూరం**: మొత్తం కవర్ చేసిన మార్గం\n- **స్థానభ్రంశం**: రెండు బిందువుల మధ్య అతి తక్కువ దూరం\n- **వేగం**: దూరం/సమయం\n- **ప్రవేగం**: స్థానభ్రంశం/సమయం\n- **త్వరణం**: ప్రవేగంలో మార్పు/సమయం\n\n### చలన సమీకరణాలు\n- v = u + at\n- s = ut + ½at²\n- v² = u² + 2as" 
+        },
         quiz: generatePhysicalScienceQuiz(),
         practice: generatePhysicalSciencePractice()
-      },
-      {
-        id: `light-${grade}`,
-        title: { en: "Light and Optics", te: "కాంతి మరియు కాంతిశాస్త్రం" },
-        description: { en: "Reflection, refraction, and lenses", te: "ప్రతిబింబం, వక్రీభవనం మరియు కటకాలు" },
-        notes: { en: "## Light and Optics\n\n### Reflection\n- Angle of incidence = Angle of reflection\n- Types: Regular, Diffused\n\n### Refraction\n- Bending of light\n- Snell's Law: n₁sinθ₁ = n₂sinθ₂\n\n### Lenses\n- Convex: Converging\n- Concave: Diverging", te: "## కాంతి మరియు కాంతిశాస్త్రం\n\n### ప్రతిబింబం\n- పతన కోణం = ప్రతిబింబ కోణం\n\n### వక్రీభవనం\n- కాంతి వంగడం" },
-        quiz: generateScienceQuiz('physics'),
-        practice: generateSciencePractice('physics')
-      }
-    ]
-  },
-  {
-    id: `biological-science-${grade}`,
-    title: { en: "Biological Science", te: "జీవ శాస్త్రం" },
-    icon: "Dna",
-    color: "game-green",
-    chapters: [
-      {
-        id: `cell-${grade}`,
-        title: { en: "Cell: The Unit of Life", te: "కణం: జీవ యూనిట్" },
-        description: { en: "Cell structure and functions", te: "కణ నిర్మాణం మరియు విధులు" },
-        notes: { en: "## Cell: The Unit of Life\n\n### Cell Theory\n- All living things are made of cells\n- Cell is the basic unit of life\n- New cells come from existing cells\n\n### Cell Organelles\n- Nucleus: Control center, DNA\n- Mitochondria: Powerhouse\n- Chloroplast: Photosynthesis (plants)\n- Ribosome: Protein synthesis", te: "## కణం: జీవ యూనిట్\n\n### కణ సిద్ధాంతం\n- అన్ని సజీవులు కణాలతో తయారవుతాయి\n- కణం జీవ ప్రాథమిక యూనిట్\n\n### కణ అవయవికలు\n- కేంద్రకం: నియంత్రణ కేంద్రం\n- మైటోకాండ్రియా: శక్తి కేంద్రం" },
+      };
+    } else {
+      return {
+        id: `physical-science-1-${grade}`,
+        title: { en: "Heat", te: "ఉష్ణం" },
+        description: { en: "Understanding heat and temperature", te: "ఉష్ణం మరియు ఉష్ణోగ్రతను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/B4hYCa8TMhM?si=kJmbkr1yluhBmhOL"],
+        notes: { 
+          en: "## Heat\n\n### Difference between Heat and Temperature\n- **Heat**: Form of energy, measured in Joules\n- **Temperature**: Degree of hotness, measured in °C or K\n\n### Heat Transfer\n- **Conduction**: Through solids\n- **Convection**: Through fluids\n- **Radiation**: Without medium\n\n### Specific Heat Capacity\nQ = mcΔT\nwhere m = mass, c = specific heat, ΔT = temperature change\n\n### Latent Heat\n- Latent heat of fusion\n- Latent heat of vaporization\n\n### Applications\n- Cooking utensils\n- Thermos flask\n- Heating systems", 
+          te: "## ఉష్ణం\n\n### ఉష్ణం మరియు ఉష్ణోగ్రత మధ్య తేడా\n- **ఉష్ణం**: శక్తి రూపం, జూల్స్‌లో కొలుస్తారు\n- **ఉష్ణోగ్రత**: వేడి డిగ్రీ, °C లేదా K లో కొలుస్తారు\n\n### ఉష్ణ బదిలీ\n- **వాహకత**: ఘనపదార్థాల ద్వారా\n- **సంవహనం**: ద్రవాల ద్వారా\n- **వికిరణం**: మాధ్యమం లేకుండా\n\n### విశిష్ట ఉష్ణ సామర్థ్యం\nQ = mcΔT" 
+        },
+        quiz: generatePhysicalScienceQuiz(),
+        practice: generatePhysicalSciencePractice()
+      };
+    }
+  };
+
+  const getBiologicalScienceChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `biological-science-1-${grade}`,
+        title: { en: "Cell - Structure and Functions", te: "కణం - నిర్మాణం మరియు విధులు" },
+        description: { en: "Understanding cell structure", te: "కణ నిర్మాణాన్ని అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/DSUsN2t8EW8?si=xqYF1aZmXkH7GiCe"],
+        notes: { 
+          en: "## Cell - Structure and Functions\n\n### Discovery of Cell\n- Robert Hooke discovered cells in 1665\n- Observed cork cells under microscope\n\n### Cell Theory\n- All living things are made of cells\n- Cell is the basic unit of life\n- All cells come from pre-existing cells\n\n### Parts of Cell\n- **Cell Membrane**: Outer boundary, selectively permeable\n- **Cytoplasm**: Jelly-like substance\n- **Nucleus**: Control center, contains DNA\n- **Mitochondria**: Powerhouse of cell\n- **Chloroplast**: For photosynthesis (plants)\n- **Vacuoles**: Storage\n- **Endoplasmic Reticulum**: Transport system\n\n### Types of Cells\n- Prokaryotic: No nucleus (bacteria)\n- Eukaryotic: Has nucleus (plants, animals)", 
+          te: "## కణం - నిర్మాణం మరియు విధులు\n\n### కణ ఆవిష్కరణ\n- రాబర్ట్ హూక్ 1665లో కణాలను కనుగొన్నాడు\n\n### కణ సిద్ధాంతం\n- అన్ని సజీవులు కణాలతో తయారవుతాయి\n- కణం జీవ ప్రాథమిక యూనిట్\n\n### కణ భాగాలు\n- **కణ త్వచం**: బాహ్య సరిహద్దు\n- **సైటోప్లాజం**: జెల్లీ లాంటి పదార్థం\n- **కేంద్రకం**: నియంత్రణ కేంద్రం, DNA కలిగి ఉంటుంది\n- **మైటోకాండ్రియా**: కణ శక్తి కేంద్రం" 
+        },
         quiz: generateBiologicalScienceQuiz(),
         practice: generateBiologicalSciencePractice()
-      },
-      {
-        id: `human-body-${grade}`,
-        title: { en: "Human Body Systems", te: "మానవ శరీర వ్యవస్థలు" },
-        description: { en: "Digestive, respiratory, circulatory systems", te: "జీర్ణ, శ్వాసకోశ, రక్త ప్రసరణ వ్యవస్థలు" },
-        notes: { en: "## Human Body Systems\n\n### Digestive System\nMouth → Esophagus → Stomach → Small Intestine → Large Intestine\n\n### Respiratory System\nNose → Trachea → Bronchi → Lungs\n\n### Circulatory System\nHeart → Arteries → Capillaries → Veins → Heart", te: "## మానవ శరీర వ్యవస్థలు\n\n### జీర్ణ వ్యవస్థ\nనోరు → అన్నవాహిక → జఠరం → చిన్న ప్రేగు → పెద్ద ప్రేగు" },
+      };
+    } else if (grade === 9) {
+      return {
+        id: `biological-science-1-${grade}`,
+        title: { en: "Cell - Its Structure and Functions", te: "కణం - దాని నిర్మాణం మరియు విధులు" },
+        description: { en: "Advanced cell biology", te: "అధునాతన కణ జీవశాస్త్రం" },
+        videoUrls: ["https://youtu.be/HprSN1kLfZ8?si=XuPxBbGNR7-ypaM5"],
+        notes: { 
+          en: "## Cell - Its Structure and Functions\n\n### Cell Organization\n- Cells → Tissues → Organs → Organ Systems → Organism\n\n### Plasma Membrane\n- Composed of lipid bilayer with proteins\n- Functions: Protection, transport, communication\n\n### Nucleus\n- Nuclear membrane with pores\n- Nucleolus: Makes ribosomes\n- Chromatin → Chromosomes during division\n- DNA: Genetic material\n\n### Cell Organelles\n- **Endoplasmic Reticulum**: Rough (ribosomes) and Smooth\n- **Golgi Apparatus**: Packaging and secretion\n- **Lysosomes**: Digestive enzymes\n- **Mitochondria**: ATP production\n- **Plastids**: Chloroplasts, chromoplasts, leucoplasts\n\n### Cell Division\n- Mitosis: Growth and repair\n- Meiosis: Reproductive cells", 
+          te: "## కణం - దాని నిర్మాణం మరియు విధులు\n\n### కణ సంస్థ\n- కణాలు → కణజాలాలు → అవయవాలు → అవయవ వ్యవస్థలు → జీవి\n\n### ప్లాస్మా మెంబ్రేన్\n- ప్రోటీన్లతో లిపిడ్ ద్విపొరతో తయారు\n\n### కేంద్రకం\n- రంధ్రాలతో కేంద్రక త్వచం\n- కేంద్రికం: రైబోజోమ్‌లను తయారు చేస్తుంది\n\n### కణ అవయవికలు\n- **ఎండోప్లాస్మిక్ రెటిక్యులం**: కఠినమైన మరియు మృదువైన\n- **గాల్జీ ఉపకరణం**: ప్యాకేజింగ్ మరియు స్రావం" 
+        },
         quiz: generateBiologicalScienceQuiz(),
         practice: generateBiologicalSciencePractice()
-      },
-      {
-        id: `reproduction-${grade}`,
-        title: { en: "Reproduction", te: "ప్రత్యుత్పత్తి" },
-        description: { en: "Asexual and sexual reproduction", te: "అలైంగిక మరియు లైంగిక ప్రత్యుత్పత్తి" },
-        notes: { en: "## Reproduction\n\n### Asexual Reproduction\n- Binary Fission: Amoeba\n- Budding: Yeast, Hydra\n- Vegetative Propagation: Plants\n\n### Sexual Reproduction\n- Involves two parents\n- Fusion of gametes\n- Genetic variation", te: "## ప్రత్యుత్పత్తి\n\n### అలైంగిక ప్రత్యుత్పత్తి\n- ద్వి విభజన: అమీబా\n- మొగ్గతొడగడం: ఈస్ట్, హైడ్రా" },
+      };
+    } else {
+      return {
+        id: `biological-science-1-${grade}`,
+        title: { en: "Nutrition", te: "పోషణ" },
+        description: { en: "Understanding nutrition in living organisms", te: "సజీవులలో పోషణను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/uMUiwvuXVa4?si=-Th9phjzsmjNQDF6"],
+        notes: { 
+          en: "## Nutrition\n\n### Types of Nutrition\n- **Autotrophic**: Making own food (plants)\n- **Heterotrophic**: Depending on others (animals)\n\n### Photosynthesis\n6CO₂ + 6H₂O + Light → C₆H₁₂O₆ + 6O₂\n- Occurs in chloroplasts\n- Light and dark reactions\n\n### Human Digestive System\n- Mouth → Esophagus → Stomach → Small Intestine → Large Intestine\n- Enzymes: Amylase, pepsin, lipase\n\n### Nutrition in Human Beings\n- Ingestion, digestion, absorption, assimilation, egestion\n\n### Nutrients\n- Carbohydrates: Energy\n- Proteins: Growth\n- Fats: Energy storage\n- Vitamins and Minerals: Regulation", 
+          te: "## పోషణ\n\n### పోషణ రకాలు\n- **స్వయంపోషకం**: స్వంత ఆహారం తయారు చేసుకోవడం (మొక్కలు)\n- **పరపోషకం**: ఇతరులపై ఆధారపడటం (జంతువులు)\n\n### కిరణజన్య సంయోగక్రియ\n6CO₂ + 6H₂O + కాంతి → C₆H₁₂O₆ + 6O₂\n\n### మానవ జీర్ణ వ్యవస్థ\n- నోరు → అన్నవాహిక → జఠరం → చిన్న ప్రేగు → పెద్ద ప్రేగు\n\n### పోషక పదార్థాలు\n- కార్బోహైడ్రేట్లు: శక్తి\n- ప్రోటీన్లు: పెరుగుదల" 
+        },
         quiz: generateBiologicalScienceQuiz(),
         practice: generateBiologicalSciencePractice()
-      }
-    ]
-  },
-  {
-    id: `social-${grade}`,
-    title: { en: "Social Studies", te: "సామాజిక శాస్త్రం" },
-    icon: "Globe",
-    color: "game-yellow",
-    chapters: [
-      {
-        id: `indian-history-${grade}`,
-        title: { en: "Indian History", te: "భారత చరిత్ర" },
-        description: { en: "Freedom struggle and modern India", te: "స్వాతంత్ర్య పోరాటం మరియు ఆధునిక భారతదేశం" },
-        notes: { en: "## Indian History\n\n### Freedom Struggle\n- 1857: First War of Independence\n- 1885: Indian National Congress founded\n- 1947: Independence\n\n### Freedom Fighters\n- Mahatma Gandhi\n- Jawaharlal Nehru\n- Subhash Chandra Bose\n- Bhagat Singh\n- Sardar Patel", te: "## భారత చరిత్ర\n\n### స్వాతంత్ర్య పోరాటం\n- 1857: మొదటి స్వాతంత్ర్య యుద్ధం\n- 1885: భారత జాతీయ కాంగ్రెస్ స్థాపన\n- 1947: స్వాతంత్ర్యం" },
+      };
+    }
+  };
+
+  const getSocialChapter1 = () => {
+    if (grade === 8) {
+      return {
+        id: `social-1-${grade}`,
+        title: { en: "Resources", te: "వనరులు" },
+        description: { en: "Understanding natural and human resources", te: "సహజ మరియు మానవ వనరులను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://www.youtube.com/live/56nG3Uwddww?si=km74UhtyTsdVFqbx"],
+        notes: { 
+          en: "## Resources\n\n### Definition\nResources are things that satisfy human needs and have utility.\n\n### Types of Resources\n- **Natural Resources**: Land, water, forests, minerals\n- **Human Resources**: Skills, knowledge, labor\n- **Human-made Resources**: Buildings, machines, technology\n\n### Classification by Exhaustibility\n- **Renewable**: Solar, wind, water, forests\n- **Non-renewable**: Coal, petroleum, minerals\n\n### Conservation of Resources\n- Sustainable development\n- 3R's: Reduce, Reuse, Recycle\n- Alternative energy sources\n\n### Resource Planning\n- Identification of resources\n- Development of resources\n- Sustainable use", 
+          te: "## వనరులు\n\n### నిర్వచనం\nవనరులు మానవ అవసరాలను తీర్చే మరియు ప్రయోజనం కలిగిన వస్తువులు.\n\n### వనరుల రకాలు\n- **సహజ వనరులు**: భూమి, నీరు, అడవులు, ఖనిజాలు\n- **మానవ వనరులు**: నైపుణ్యాలు, జ్ఞానం, శ్రమ\n- **మానవ నిర్మిత వనరులు**: భవనాలు, యంత్రాలు\n\n### వనరుల సంరక్షణ\n- సుస్థిర అభివృద్ధి\n- 3R's: తగ్గించు, తిరిగి వాడు, పునర్వినియోగించు" 
+        },
         quiz: generateSocialQuiz(),
         practice: generateSocialPractice()
-      },
-      {
-        id: `geography-advanced-${grade}`,
-        title: { en: "Geography of India", te: "భారతదేశ భూగోళశాస్త్రం" },
-        description: { en: "Physical features and climate", te: "భౌతిక లక్షణాలు మరియు వాతావరణం" },
-        notes: { en: "## Geography of India\n\n### Physical Features\n- Himalayas: Northern mountains\n- Indo-Gangetic Plain: Fertile plains\n- Deccan Plateau: Southern India\n- Coastal Plains: East and West\n\n### Rivers\n- Ganga, Yamuna, Brahmaputra\n- Godavari, Krishna, Kaveri", te: "## భారతదేశ భూగోళశాస్త్రం\n\n### భౌతిక లక్షణాలు\n- హిమాలయాలు: ఉత్తర పర్వతాలు\n- ఇండో-గంగా మైదానం\n- దక్కన్ పీఠభూమి" },
+      };
+    } else if (grade === 9) {
+      return {
+        id: `social-1-${grade}`,
+        title: { en: "Our Earth", te: "మన భూమి" },
+        description: { en: "Understanding Earth and its features", te: "భూమి మరియు దాని లక్షణాలను అర్థం చేసుకోవడం" },
+        videoUrls: ["https://youtu.be/FjD-pQXtCCg?si=IU7atT4ssH1k1k2V"],
+        notes: { 
+          en: "## Our Earth\n\n### Earth's Structure\n- **Crust**: Outermost layer, 5-70 km thick\n- **Mantle**: Middle layer, 2900 km thick\n- **Core**: Innermost, outer (liquid) and inner (solid)\n\n### Landforms\n- Mountains, plateaus, plains, valleys\n- Formed by internal and external forces\n\n### Earth's Movements\n- Rotation: Causes day and night\n- Revolution: Causes seasons\n\n### Latitudes and Longitudes\n- Latitude: 0° to 90° N/S\n- Longitude: 0° to 180° E/W\n- Prime Meridian: 0° longitude\n- International Date Line: 180°\n\n### Time Zones\n- Earth divided into 24 time zones\n- Each zone = 15° longitude", 
+          te: "## మన భూమి\n\n### భూమి నిర్మాణం\n- **భూపటలం**: బాహ్యతమ పొర, 5-70 కి.మీ. మందం\n- **ఆవరణం**: మధ్య పొర, 2900 కి.మీ. మందం\n- **అంతర్భాగం**: లోపలి, బాహ్య (ద్రవ) మరియు అంతర్ (ఘన)\n\n### భూ ఆకృతులు\n- పర్వతాలు, పీఠభూములు, మైదానాలు, లోయలు\n\n### భూమి చలనాలు\n- భ్రమణం: పగలు మరియు రాత్రికి కారణం\n- పరిభ్రమణం: ఋతువులకు కారణం" 
+        },
         quiz: generateSocialQuiz(),
         practice: generateSocialPractice()
-      },
-      {
-        id: `civics-advanced-${grade}`,
-        title: { en: "Indian Constitution", te: "భారత రాజ్యాంగం" },
-        description: { en: "Democracy and governance", te: "ప్రజాస్వామ్యం మరియు పరిపాలన" },
-        notes: { en: "## Indian Constitution\n\n### Key Features\n- Longest written constitution\n- Federal structure\n- Parliamentary democracy\n- Fundamental Rights\n- Directive Principles\n\n### Government Structure\n- Executive: President, PM\n- Legislature: Parliament\n- Judiciary: Supreme Court", te: "## భారత రాజ్యాంగం\n\n### ముఖ్య లక్షణాలు\n- అత్యంత పొడవైన వ్రాతపూర్వక రాజ్యాంగం\n- సమాఖ్య నిర్మాణం\n- పార్లమెంటరీ ప్రజాస్వామ్యం" },
+      };
+    } else {
+      return {
+        id: `social-1-${grade}`,
+        title: { en: "India: Relief Features", te: "భారతదేశం: భూ ఆకృతి లక్షణాలు" },
+        description: { en: "Physical features of India", te: "భారతదేశ భౌతిక లక్షణాలు" },
+        videoUrls: ["https://youtube.com/playlist?list=PLrn2lobWkqKmsAqxiUxmEt771XI1ZL-XO&si=WhPfyeu7d0AGIDPD"],
+        notes: { 
+          en: "## India: Relief Features\n\n### Major Physical Divisions\n1. **The Himalayan Mountains**: Young fold mountains\n2. **The Northern Plains**: Formed by rivers\n3. **The Peninsular Plateau**: Oldest landmass\n4. **The Coastal Plains**: Eastern and Western\n5. **The Islands**: Andaman & Nicobar, Lakshadweep\n\n### The Himalayas\n- Greater Himalayas (Himadri)\n- Lesser Himalayas (Himachal)\n- Outer Himalayas (Shiwaliks)\n- Important peaks: Everest, K2, Kanchenjunga\n\n### The Northern Plains\n- Indus Plain, Ganga Plain, Brahmaputra Plain\n- Very fertile, high population density\n\n### The Peninsular Plateau\n- Deccan Plateau\n- Central Highlands\n- Western Ghats and Eastern Ghats", 
+          te: "## భారతదేశం: భూ ఆకృతి లక్షణాలు\n\n### ముఖ్య భౌతిక విభాగాలు\n1. **హిమాలయ పర్వతాలు**: యువ మడత పర్వతాలు\n2. **ఉత్తర మైదానాలు**: నదుల ద్వారా ఏర్పడినవి\n3. **ద్వీపకల్ప పీఠభూమి**: పురాతన భూభాగం\n4. **తీర మైదానాలు**: తూర్పు మరియు పశ్చిమ\n5. **ద్వీపాలు**: అండమాన్ & నికోబార్, లక్షద్వీప్\n\n### హిమాలయాలు\n- మహా హిమాలయాలు (హిమాద్రి)\n- లఘు హిమాలయాలు (హిమాచల్)\n- బాహ్య హిమాలయాలు (శివాలిక్స్)" 
+        },
         quiz: generateSocialQuiz(),
         practice: generateSocialPractice()
-      }
-    ]
-  }
-];
+      };
+    }
+  };
+
+  return [
+    {
+      id: `telugu-${grade}`,
+      title: { en: "Telugu", te: "తెలుగు" },
+      icon: "Languages",
+      color: "game-pink",
+      chapters: [
+        getTeluguChapter1(),
+        {
+          id: `telugu-grammar-${grade}`,
+          title: { en: "Advanced Grammar", te: "ఉన్నత వ్యాకరణం" },
+          description: { en: "Complex grammar rules", te: "సంక్లిష్ట వ్యాకరణ నియమాలు" },
+          notes: { en: "## Advanced Telugu Grammar\n\n### Sandhi (సంధి)\nJoining of words\n- Savarna Sandhi\n- Guna Sandhi\n- Vriddhi Sandhi\n\n### Samasa (సమాసం)\nCompound words\n- Dvandva\n- Tatpurusha\n- Bahuvrihi", te: "## ఉన్నత తెలుగు వ్యాకరణం\n\n### సంధి\nపదాల కలయిక\n\n### సమాసం\nసమ్మేళన పదాలు" },
+          quiz: generateTeluguQuiz(),
+          practice: generateTeluguPractice()
+        }
+      ]
+    },
+    {
+      id: `hindi-${grade}`,
+      title: { en: "Hindi", te: "హిందీ" },
+      icon: "BookText",
+      color: "game-orange",
+      forceLanguage: 'hi' as const,
+      chapters: [
+        getHindiChapter1(),
+        {
+          id: `hindi-grammar-${grade}`,
+          title: { en: "Hindi Grammar", te: "హిందీ వ్యాకరణం" },
+          description: { en: "Advanced grammar concepts", te: "ఉన్నత వ్యాకరణ భావనలు" },
+          notes: { en: "## Hindi Grammar\n\n### Kaal (Tense)\n- भूतकाल (Past)\n- वर्तमान काल (Present)\n- भविष्यत् काल (Future)\n\n### Vachan (Number)\n- एकवचन (Singular)\n- बहुवचन (Plural)", te: "## హిందీ వ్యాకరణం\n\n### కాల్ (కాలం)\n- భూత్‌కాల్ (భూతం)\n- వర్తమాన్ కాల్ (వర్తమానం)\n- భవిష్యత్ కాల్ (భవిష్యత్తు)" },
+          quiz: generateHindiQuiz(),
+          practice: generateHindiPractice()
+        }
+      ]
+    },
+    {
+      id: `english-${grade}`,
+      title: { en: "English", te: "ఆంగ్లం" },
+      icon: "BookOpen",
+      color: "game-purple",
+      chapters: [
+        getEnglishChapter1(),
+        {
+          id: `english-grammar-${grade}`,
+          title: { en: "Advanced Grammar", te: "ఉన్నత వ్యాకరణం" },
+          description: { en: "Complex sentence structures", te: "సంక్లిష్ట వాక్య నిర్మాణాలు" },
+          notes: { en: "## Advanced English Grammar\n\n### Tenses\n- Present (Simple, Continuous, Perfect)\n- Past (Simple, Continuous, Perfect)\n- Future (Simple, Continuous, Perfect)\n\n### Voice\n- Active Voice\n- Passive Voice\n\n### Speech\n- Direct Speech\n- Indirect Speech", te: "## ఉన్నత ఆంగ్ల వ్యాకరణం\n\n### కాలాలు\n- వర్తమాన కాలం\n- భూత కాలం\n- భవిష్యత్ కాలం" },
+          quiz: generateEnglishQuiz(),
+          practice: generateEnglishPractice()
+        }
+      ]
+    },
+    {
+      id: `maths-${grade}`,
+      title: { en: "Mathematics", te: "గణితం" },
+      icon: "Calculator",
+      color: "game-blue",
+      chapters: [
+        getMathsChapter1(),
+        {
+          id: `geometry-${grade}`,
+          title: { en: "Geometry", te: "రేఖాగణితం" },
+          description: { en: "Triangles, circles, and theorems", te: "త్రిభుజాలు, వృత్తాలు మరియు సిద్ధాంతాలు" },
+          notes: { en: "## Geometry\n\n### Triangles\n- Sum of angles = 180°\n- Types: Equilateral, Isosceles, Scalene\n- Pythagoras Theorem: a² + b² = c²\n\n### Circles\n- Radius, Diameter, Circumference\n- Area = πr²\n- Circumference = 2πr", te: "## రేఖాగణితం\n\n### త్రిభుజాలు\n- కోణాల మొత్తం = 180°\n- రకాలు: సమబాహు, సమద్విబాహు, విషమ\n\n### వృత్తాలు\n- వ్యాసార్ధం, వ్యాసం, పరిధి" },
+          quiz: generateMathQuiz('geometry', grade),
+          practice: generateMathPractice('geometry', grade)
+        },
+        {
+          id: `algebra-${grade}`,
+          title: { en: "Algebra", te: "బీజగణితం" },
+          description: { en: "Algebraic expressions and equations", te: "బీజగణిత వ్యక్తీకరణలు మరియు సమీకరణాలు" },
+          notes: { en: "## Algebra\n\n### Algebraic Expressions\n- Variable: Unknown value (x, y)\n- Constant: Fixed value (5, -3)\n- Coefficient: Number with variable\n\n### Equations\n- Linear Equations: ax + b = 0\n- Quadratic Equations: ax² + bx + c = 0", te: "## బీజగణితం\n\n### బీజగణిత వ్యక్తీకరణలు\n- చరాశి: తెలియని విలువ\n- స్థిరాంకం: స్థిర విలువ\n- గుణకం: చరాశితో సంఖ్య" },
+          quiz: generateMathQuiz('algebra', grade),
+          practice: generateMathPractice('algebra', grade)
+        }
+      ]
+    },
+    {
+      id: `physical-science-${grade}`,
+      title: { en: "Physical Science", te: "భౌతిక శాస్త్రం" },
+      icon: "Atom",
+      color: "game-cyan",
+      chapters: [
+        getPhysicalScienceChapter1(),
+        {
+          id: `electricity-${grade}`,
+          title: { en: "Electricity", te: "విద్యుత్" },
+          description: { en: "Current, voltage, and circuits", te: "ప్రవాహం, వోల్టేజ్ మరియు సర్క్యూట్లు" },
+          notes: { en: "## Electricity\n\n### Basic Concepts\n- Current (I): Flow of electrons (Ampere)\n- Voltage (V): Electric potential (Volt)\n- Resistance (R): Opposition to flow (Ohm)\n\n### Ohm's Law\nV = I × R\n\n### Power\nP = V × I = I²R = V²/R", te: "## విద్యుత్\n\n### ప్రాథమిక భావనలు\n- ప్రవాహం (I): ఎలక్ట్రాన్ల ప్రవాహం\n- వోల్టేజ్ (V): విద్యుత్ పొటెన్షియల్\n- నిరోధకత (R): ప్రవాహానికి వ్యతిరేకత" },
+          quiz: generatePhysicalScienceQuiz(),
+          practice: generatePhysicalSciencePractice()
+        },
+        {
+          id: `light-${grade}`,
+          title: { en: "Light and Optics", te: "కాంతి మరియు కాంతిశాస్త్రం" },
+          description: { en: "Reflection, refraction, and lenses", te: "ప్రతిబింబం, వక్రీభవనం మరియు కటకాలు" },
+          notes: { en: "## Light and Optics\n\n### Reflection\n- Angle of incidence = Angle of reflection\n- Types: Regular, Diffused\n\n### Refraction\n- Bending of light\n- Snell's Law: n₁sinθ₁ = n₂sinθ₂\n\n### Lenses\n- Convex: Converging\n- Concave: Diverging", te: "## కాంతి మరియు కాంతిశాస్త్రం\n\n### ప్రతిబింబం\n- పతన కోణం = ప్రతిబింబ కోణం\n\n### వక్రీభవనం\n- కాంతి వంగడం" },
+          quiz: generateScienceQuiz('physics'),
+          practice: generateSciencePractice('physics')
+        }
+      ]
+    },
+    {
+      id: `biological-science-${grade}`,
+      title: { en: "Biological Science", te: "జీవ శాస్త్రం" },
+      icon: "Dna",
+      color: "game-green",
+      chapters: [
+        getBiologicalScienceChapter1(),
+        {
+          id: `human-body-${grade}`,
+          title: { en: "Human Body Systems", te: "మానవ శరీర వ్యవస్థలు" },
+          description: { en: "Digestive, respiratory, circulatory systems", te: "జీర్ణ, శ్వాసకోశ, రక్త ప్రసరణ వ్యవస్థలు" },
+          notes: { en: "## Human Body Systems\n\n### Digestive System\nMouth → Esophagus → Stomach → Small Intestine → Large Intestine\n\n### Respiratory System\nNose → Trachea → Bronchi → Lungs\n\n### Circulatory System\nHeart → Arteries → Capillaries → Veins → Heart", te: "## మానవ శరీర వ్యవస్థలు\n\n### జీర్ణ వ్యవస్థ\nనోరు → అన్నవాహిక → జఠరం → చిన్న ప్రేగు → పెద్ద ప్రేగు" },
+          quiz: generateBiologicalScienceQuiz(),
+          practice: generateBiologicalSciencePractice()
+        },
+        {
+          id: `reproduction-${grade}`,
+          title: { en: "Reproduction", te: "ప్రత్యుత్పత్తి" },
+          description: { en: "Asexual and sexual reproduction", te: "అలైంగిక మరియు లైంగిక ప్రత్యుత్పత్తి" },
+          notes: { en: "## Reproduction\n\n### Asexual Reproduction\n- Binary Fission: Amoeba\n- Budding: Yeast, Hydra\n- Vegetative Propagation: Plants\n\n### Sexual Reproduction\n- Involves two parents\n- Fusion of gametes\n- Genetic variation", te: "## ప్రత్యుత్పత్తి\n\n### అలైంగిక ప్రత్యుత్పత్తి\n- ద్వి విభజన: అమీబా\n- మొగ్గతొడగడం: ఈస్ట్, హైడ్రా" },
+          quiz: generateBiologicalScienceQuiz(),
+          practice: generateBiologicalSciencePractice()
+        }
+      ]
+    },
+    {
+      id: `social-${grade}`,
+      title: { en: "Social Studies", te: "సామాజిక శాస్త్రం" },
+      icon: "Globe",
+      color: "game-yellow",
+      chapters: [
+        getSocialChapter1(),
+        {
+          id: `indian-history-${grade}`,
+          title: { en: "Indian History", te: "భారత చరిత్ర" },
+          description: { en: "Freedom struggle and modern India", te: "స్వాతంత్ర్య పోరాటం మరియు ఆధునిక భారతదేశం" },
+          notes: { en: "## Indian History\n\n### Freedom Struggle\n- 1857: First War of Independence\n- 1885: Indian National Congress founded\n- 1947: Independence\n\n### Freedom Fighters\n- Mahatma Gandhi\n- Jawaharlal Nehru\n- Subhash Chandra Bose\n- Bhagat Singh\n- Sardar Patel", te: "## భారత చరిత్ర\n\n### స్వాతంత్ర్య పోరాటం\n- 1857: మొదటి స్వాతంత్ర్య యుద్ధం\n- 1885: భారత జాతీయ కాంగ్రెస్ స్థాపన\n- 1947: స్వాతంత్ర్యం" },
+          quiz: generateSocialQuiz(),
+          practice: generateSocialPractice()
+        },
+        {
+          id: `civics-${grade}`,
+          title: { en: "Indian Constitution", te: "భారత రాజ్యాంగం" },
+          description: { en: "Democracy and governance", te: "ప్రజాస్వామ్యం మరియు పరిపాలన" },
+          notes: { en: "## Indian Constitution\n\n### Key Features\n- Longest written constitution\n- Federal structure\n- Parliamentary democracy\n- Fundamental Rights\n- Directive Principles\n\n### Government Structure\n- Executive: President, PM\n- Legislature: Parliament\n- Judiciary: Supreme Court", te: "## భారత రాజ్యాంగం\n\n### ముఖ్య లక్షణాలు\n- అత్యంత పొడవైన వ్రాతపూర్వక రాజ్యాంగం\n- సమాఖ్య నిర్మాణం\n- పార్లమెంటరీ ప్రజాస్వామ్యం" },
+          quiz: generateSocialQuiz(),
+          practice: generateSocialPractice()
+        }
+      ]
+    }
+  ];
+};
 
 // Main classes array
 export const classes: ClassData[] = [
