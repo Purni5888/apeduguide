@@ -151,21 +151,49 @@ const ChapterPage: React.FC = () => {
           <TabsContent value="videos">
             {chapter.videoUrls && chapter.videoUrls.length > 0 ? (
               <div className="space-y-4">
-                {chapter.videoUrls.map((url, index) => (
-                  <Card key={index}>
-                    <CardContent className="p-6">
-                      <div className="aspect-video rounded-xl overflow-hidden bg-muted">
-                        <iframe
-                          src={url}
-                          title={`${t(chapter.title)} - Video ${index + 1}`}
-                          className="w-full h-full"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                {chapter.videoUrls.map((url, index) => {
+                  // Convert YouTube URLs to embed format
+                  const getEmbedUrl = (videoUrl: string): string => {
+                    // Handle youtu.be short links
+                    const shortMatch = videoUrl.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+                    if (shortMatch) {
+                      return `https://www.youtube.com/embed/${shortMatch[1]}`;
+                    }
+                    // Handle youtube.com/watch?v= links
+                    const watchMatch = videoUrl.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+                    if (watchMatch) {
+                      return `https://www.youtube.com/embed/${watchMatch[1]}`;
+                    }
+                    // Handle youtube.com/playlist links
+                    const playlistMatch = videoUrl.match(/youtube\.com\/playlist\?list=([a-zA-Z0-9_-]+)/);
+                    if (playlistMatch) {
+                      return `https://www.youtube.com/embed/videoseries?list=${playlistMatch[1]}`;
+                    }
+                    // Handle youtube.com/live links
+                    const liveMatch = videoUrl.match(/youtube\.com\/live\/([a-zA-Z0-9_-]+)/);
+                    if (liveMatch) {
+                      return `https://www.youtube.com/embed/${liveMatch[1]}`;
+                    }
+                    // Already an embed URL or other format
+                    return videoUrl;
+                  };
+                  
+                  return (
+                    <Card key={index}>
+                      <CardContent className="p-6">
+                        <div className="aspect-video rounded-xl overflow-hidden bg-muted">
+                          <iframe
+                            src={getEmbedUrl(url)}
+                            title={`${t(chapter.title)} - Video ${index + 1}`}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             ) : (
               <Card>
