@@ -1220,6 +1220,42 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         notes: { en: "## Vocabulary Building\n\n### Synonyms (Same Meaning)\n- Happy = Joyful, Glad\n- Big = Large, Huge\n- Fast = Quick, Rapid\n\n### Antonyms (Opposite Meaning)\n- Happy × Sad\n- Big × Small\n- Fast × Slow", te: "## పదజాలం నిర్మాణం\n\n### పర్యాయపదాలు\n- Happy = ఆనందం\n- Big = పెద్ద\n\n### వ్యతిరేక పదాలు\n- Happy × Sad\n- Big × Small" },
         quiz: generateEnglishQuiz(),
         practice: generateEnglishPractice()
+      },
+      {
+        id: `vegetable-shop-${grade}`,
+        title: { en: "At The Vegetable Shop", te: "కూరగాయల దుకాణంలో" },
+        description: { en: "Learn vocabulary and conversation at a vegetable shop", te: "కూరగాయల దుకాణంలో పదజాలం మరియు సంభాషణ నేర్చుకోండి" },
+        notes: { en: "## At The Vegetable Shop\n\n### Common Vegetables\n- Tomato, Potato, Onion, Carrot, Cabbage\n- Green leafy vegetables\n\n### Shopping Vocabulary\n- How much, kilogram, fresh, ripe\n- Bargaining, payment, change\n\n### Polite Expressions\n- Please give me...\n- How much does this cost?\n- Thank you", te: "## కూరగాయల దుకాణంలో\n\n### సాధారణ కూరగాయలు\n- టమాటా, బంగాళాదుంప, ఉల్లిపాయ, క్యారెట్, క్యాబేజీ\n\n### షాపింగ్ పదజాలం\n- ఎంత, కిలోగ్రాము, తాజా" },
+        videoUrls: ["https://youtu.be/7XhaEUxJI3w?si=hCOUp6Nf0g4VcORk"],
+        quiz: generateEnglishQuiz(),
+        practice: generateEnglishPractice()
+      },
+      {
+        id: `lesson-for-all-${grade}`,
+        title: { en: "A Lesson For All", te: "అందరికీ ఒక పాఠం" },
+        description: { en: "Learn moral values through stories", te: "కథల ద్వారా నైతిక విలువలు నేర్చుకోండి" },
+        notes: { en: "## A Lesson For All\n\n### Key Message\n- Importance of kindness and helping others\n- Unity and teamwork\n- Learning from mistakes\n\n### Moral Values\n- Honesty, integrity, compassion\n- Respecting elders and teachers", te: "## అందరికీ ఒక పాఠం\n\n### ముఖ్య సందేశం\n- దయ మరియు ఇతరులకు సహాయం చేయడం యొక్క ప్రాముఖ్యత\n- ఐక్యత మరియు సహకారం" },
+        videoUrls: ["https://youtu.be/khk_TmVFPL0?si=gF7c0mxlO2rlRsld"],
+        quiz: generateEnglishQuiz(),
+        practice: generateEnglishPractice()
+      },
+      {
+        id: `ambedkar-${grade}`,
+        title: { en: "Dr. B.R. Ambedkar", te: "డా. బి.ఆర్. అంబేద్కర్" },
+        description: { en: "Learn about the architect of Indian Constitution", te: "భారత రాజ్యాంగ నిర్మాత గురించి తెలుసుకోండి" },
+        notes: { en: "## Dr. B.R. Ambedkar\n\n### Early Life\n- Born on April 14, 1891 in Mhow\n- Faced discrimination but excelled in education\n\n### Achievements\n- Chairman of Constitution Drafting Committee\n- Father of Indian Constitution\n- Champion of Dalit rights\n- First Law Minister of India", te: "## డా. బి.ఆర్. అంబేద్కర్\n\n### ప్రారంభ జీవితం\n- 1891 ఏప్రిల్ 14న మౌలో జన్మించారు\n- వివక్షను ఎదుర్కొన్నారు కానీ విద్యలో రాణించారు\n\n### విజయాలు\n- రాజ్యాంగ ముసాయిదా కమిటీ అధ్యక్షుడు\n- భారత రాజ్యాంగ పితామహుడు" },
+        videoUrls: ["https://youtu.be/Q7x2IjxmuSs?si=AZQwLpsw-Om_fV5D"],
+        quiz: generateEnglishQuiz(),
+        practice: generateEnglishPractice()
+      },
+      {
+        id: `will-way-${grade}`,
+        title: { en: "Where there is a Will, there is a Way", te: "సంకల్పం ఉంటే మార్గం ఉంటుంది" },
+        description: { en: "Learn about determination and perseverance", te: "నిశ్చయం మరియు పట్టుదల గురించి తెలుసుకోండి" },
+        notes: { en: "## Where there is a Will, there is a Way\n\n### Main Theme\n- Determination leads to success\n- Never give up attitude\n- Overcoming obstacles\n\n### Examples\n- Stories of successful people\n- Learning from failures\n- Importance of hard work", te: "## సంకల్పం ఉంటే మార్గం ఉంటుంది\n\n### ప్రధాన అంశం\n- నిశ్చయం విజయానికి దారితీస్తుంది\n- ఎప్పటికీ వదిలిపెట్టవద్దు అనే వైఖరి\n- అడ్డంకులను అధిగమించడం" },
+        videoUrls: ["https://youtu.be/KnEzfAqjfWQ?si=M6cAsG6pWSDa7-Sd"],
+        quiz: generateEnglishQuiz(),
+        practice: generateEnglishPractice()
       }
     ]
   },
@@ -1352,6 +1388,254 @@ const createSubjects6_7 = (grade: number): Subject[] => [
           { question: { en: "Calculate: (-12) ÷ 4", te: "లెక్కించండి: (-12) ÷ 4" }, answer: { en: "(-12) ÷ 4 = -3", te: "(-12) ÷ 4 = -3" } },
           { question: { en: "Why is (-3) × (-3) = 9 (positive)?", te: "(-3) × (-3) = 9 (ధన) ఎందుకు?" }, answer: { en: "Because negative × negative = positive. The product of two negative numbers is always positive.", te: "ఎందుకంటే రుణ × రుణ = ధన. రెండు రుణ సంఖ్యల లబ్ధం ఎల్లప్పుడూ ధనాత్మకం." } }
         ]
+      },
+      {
+        id: `fractions-decimals-${grade}`,
+        title: { en: "Fractions and Decimals", te: "భిన్నాలు మరియు దశాంశాలు" },
+        description: { en: "Learn about fractions and decimal numbers", te: "భిన్నాలు మరియు దశాంశ సంఖ్యల గురించి తెలుసుకోండి" },
+        notes: { en: "## Fractions and Decimals\n\n### Fractions\nA fraction represents a part of a whole.\n- **Numerator**: Top number (parts we have)\n- **Denominator**: Bottom number (total equal parts)\n\n### Types of Fractions\n1. **Proper Fraction**: Numerator < Denominator (3/4)\n2. **Improper Fraction**: Numerator ≥ Denominator (5/3)\n3. **Mixed Number**: Whole number + Fraction (2½)\n\n### Converting to Decimals\n- 1/2 = 0.5\n- 1/4 = 0.25\n- 3/4 = 0.75\n\n### Decimal Place Values\n- Tenths (0.1)\n- Hundredths (0.01)\n- Thousandths (0.001)\n\n### Operations\n- Addition and subtraction of fractions\n- Multiplication and division of decimals", te: "## భిన్నాలు మరియు దశాంశాలు\n\n### భిన్నాలు\nభిన్నం మొత్తం యొక్క భాగాన్ని సూచిస్తుంది.\n- **లవం**: పై సంఖ్య (మనకు ఉన్న భాగాలు)\n- **హారం**: క్రింది సంఖ్య (మొత్తం సమాన భాగాలు)\n\n### భిన్నాల రకాలు\n1. **సరైన భిన్నం**: లవం < హారం (3/4)\n2. **అసరైన భిన్నం**: లవం ≥ హారం (5/3)\n3. **మిశ్రమ సంఖ్య**: పూర్ణ సంఖ్య + భిన్నం (2½)\n\n### దశాంశాలుగా మార్పు\n- 1/2 = 0.5\n- 1/4 = 0.25\n- 3/4 = 0.75" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_Rk5ilY8YPLRdBjWyB6cXgV&si=MvJj5FptGP56Vbz6"],
+        quiz: [
+          { question: { en: "What is 1/2 as a decimal?", te: "1/2 దశాంశంగా ఎంత?" }, options: [{ en: "0.5", te: "0.5" }, { en: "0.25", te: "0.25" }, { en: "0.2", te: "0.2" }, { en: "0.75", te: "0.75" }], correctIndex: 0 },
+          { question: { en: "What type of fraction is 7/4?", te: "7/4 ఏ రకమైన భిన్నం?" }, options: [{ en: "Improper", te: "అసరైన" }, { en: "Proper", te: "సరైన" }, { en: "Unit", te: "ఏకాంక" }, { en: "Mixed", te: "మిశ్రమ" }], correctIndex: 0 },
+          { question: { en: "Convert 3/4 to decimal", te: "3/4 ను దశాంశంగా మార్చండి" }, options: [{ en: "0.75", te: "0.75" }, { en: "0.34", te: "0.34" }, { en: "0.5", te: "0.5" }, { en: "0.25", te: "0.25" }], correctIndex: 0 },
+          { question: { en: "What is the numerator in 5/8?", te: "5/8 లో లవం ఏమిటి?" }, options: [{ en: "5", te: "5" }, { en: "8", te: "8" }, { en: "13", te: "13" }, { en: "40", te: "40" }], correctIndex: 0 },
+          { question: { en: "0.25 + 0.75 = ?", te: "0.25 + 0.75 = ?" }, options: [{ en: "1.00", te: "1.00" }, { en: "0.100", te: "0.100" }, { en: "1.75", te: "1.75" }, { en: "0.25", te: "0.25" }], correctIndex: 0 },
+          { question: { en: "Which is greater: 0.5 or 0.45?", te: "ఏది ఎక్కువ: 0.5 లేదా 0.45?" }, options: [{ en: "0.5", te: "0.5" }, { en: "0.45", te: "0.45" }, { en: "Both equal", te: "రెండూ సమానం" }, { en: "Cannot compare", te: "పోల్చలేము" }], correctIndex: 0 },
+          { question: { en: "1/4 + 2/4 = ?", te: "1/4 + 2/4 = ?" }, options: [{ en: "3/4", te: "3/4" }, { en: "3/8", te: "3/8" }, { en: "2/4", te: "2/4" }, { en: "1/2", te: "1/2" }], correctIndex: 0 },
+          { question: { en: "Place value of 5 in 0.05?", te: "0.05 లో 5 యొక్క స్థాన విలువ?" }, options: [{ en: "Hundredths", te: "వందల వంతులు" }, { en: "Tenths", te: "పది వంతులు" }, { en: "Ones", te: "ఒకట్లు" }, { en: "Thousandths", te: "వేల వంతులు" }], correctIndex: 0 },
+          { question: { en: "Convert 2.5 to fraction", te: "2.5 ను భిన్నంగా మార్చండి" }, options: [{ en: "5/2", te: "5/2" }, { en: "2/5", te: "2/5" }, { en: "25/100", te: "25/100" }, { en: "1/2", te: "1/2" }], correctIndex: 0 },
+          { question: { en: "0.1 × 10 = ?", te: "0.1 × 10 = ?" }, options: [{ en: "1", te: "1" }, { en: "0.01", te: "0.01" }, { en: "10", te: "10" }, { en: "0.1", te: "0.1" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Convert 3/5 to decimal", te: "3/5 ను దశాంశంగా మార్చండి" }, answer: { en: "3/5 = 3 ÷ 5 = 0.6", te: "3/5 = 3 ÷ 5 = 0.6" } },
+          { question: { en: "Add: 2/7 + 3/7", te: "కూడండి: 2/7 + 3/7" }, answer: { en: "2/7 + 3/7 = 5/7", te: "2/7 + 3/7 = 5/7" } },
+          { question: { en: "Convert 0.125 to fraction", te: "0.125 ను భిన్నంగా మార్చండి" }, answer: { en: "0.125 = 125/1000 = 1/8", te: "0.125 = 125/1000 = 1/8" } },
+          { question: { en: "Simplify: 12/18", te: "సరళీకరించండి: 12/18" }, answer: { en: "12/18 = 2/3", te: "12/18 = 2/3" } },
+          { question: { en: "Calculate: 3.5 + 2.75", te: "లెక్కించండి: 3.5 + 2.75" }, answer: { en: "3.5 + 2.75 = 6.25", te: "3.5 + 2.75 = 6.25" } },
+          { question: { en: "Convert 1¾ to improper fraction", te: "1¾ ను అసరైన భిన్నంగా మార్చండి" }, answer: { en: "1¾ = (4×1+3)/4 = 7/4", te: "1¾ = (4×1+3)/4 = 7/4" } },
+          { question: { en: "Calculate: 5.2 - 3.8", te: "లెక్కించండి: 5.2 - 3.8" }, answer: { en: "5.2 - 3.8 = 1.4", te: "5.2 - 3.8 = 1.4" } },
+          { question: { en: "Compare: 2/3 and 3/4", te: "పోల్చండి: 2/3 మరియు 3/4" }, answer: { en: "2/3 = 8/12, 3/4 = 9/12. So 3/4 > 2/3", te: "2/3 = 8/12, 3/4 = 9/12. కాబట్టి 3/4 > 2/3" } },
+          { question: { en: "Calculate: 0.5 × 0.4", te: "లెక్కించండి: 0.5 × 0.4" }, answer: { en: "0.5 × 0.4 = 0.20 = 0.2", te: "0.5 × 0.4 = 0.20 = 0.2" } },
+          { question: { en: "Arrange in ascending order: 0.3, 0.03, 0.33", te: "ఆరోహణ క్రమంలో: 0.3, 0.03, 0.33" }, answer: { en: "0.03 < 0.3 < 0.33", te: "0.03 < 0.3 < 0.33" } }
+        ]
+      },
+      {
+        id: `basic-arithmetic-${grade}`,
+        title: { en: "Basic Arithmetic", te: "ప్రాథమిక అంకగణితం" },
+        description: { en: "Learn basic arithmetic operations", te: "ప్రాథమిక అంకగణిత కార్యకలాపాలు నేర్చుకోండి" },
+        notes: { en: "## Basic Arithmetic\n\n### Four Basic Operations\n1. **Addition (+)**: Combining numbers\n2. **Subtraction (-)**: Finding the difference\n3. **Multiplication (×)**: Repeated addition\n4. **Division (÷)**: Splitting into equal parts\n\n### BODMAS Rule\nOrder of operations:\n- **B**rackets first\n- **O**rders (powers)\n- **D**ivision\n- **M**ultiplication\n- **A**ddition\n- **S**ubtraction\n\n### Properties\n- Commutative: a + b = b + a\n- Associative: (a + b) + c = a + (b + c)\n- Distributive: a × (b + c) = ab + ac", te: "## ప్రాథమిక అంకగణితం\n\n### నాలుగు ప్రాథమిక కార్యకలాపాలు\n1. **కూడిక (+)**: సంఖ్యలను కలపడం\n2. **తీసివేత (-)**: తేడా కనుగొనడం\n3. **గుణకారం (×)**: పునరావృత కూడిక\n4. **భాగహారం (÷)**: సమాన భాగాలుగా విభజించడం\n\n### BODMAS నియమం\nకార్యకలాపాల క్రమం:\n- బ్రాకెట్లు మొదట\n- ఆర్డర్లు (శక్తులు)\n- భాగహారం\n- గుణకారం\n- కూడిక\n- తీసివేత" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_S1UkencNaSeWgy66DZZgLP&si=DKMZNzhb0dplCat_"],
+        quiz: [
+          { question: { en: "What is 25 + 37?", te: "25 + 37 ఎంత?" }, options: [{ en: "62", te: "62" }, { en: "52", te: "52" }, { en: "72", te: "72" }, { en: "42", te: "42" }], correctIndex: 0 },
+          { question: { en: "What is 100 - 45?", te: "100 - 45 ఎంత?" }, options: [{ en: "55", te: "55" }, { en: "45", te: "45" }, { en: "65", te: "65" }, { en: "35", te: "35" }], correctIndex: 0 },
+          { question: { en: "What is 12 × 8?", te: "12 × 8 ఎంత?" }, options: [{ en: "96", te: "96" }, { en: "86", te: "86" }, { en: "106", te: "106" }, { en: "76", te: "76" }], correctIndex: 0 },
+          { question: { en: "What is 144 ÷ 12?", te: "144 ÷ 12 ఎంత?" }, options: [{ en: "12", te: "12" }, { en: "14", te: "14" }, { en: "10", te: "10" }, { en: "11", te: "11" }], correctIndex: 0 },
+          { question: { en: "Using BODMAS, solve: 5 + 3 × 2", te: "BODMAS ఉపయోగించి, సాధించండి: 5 + 3 × 2" }, options: [{ en: "11", te: "11" }, { en: "16", te: "16" }, { en: "13", te: "13" }, { en: "10", te: "10" }], correctIndex: 0 },
+          { question: { en: "What property is shown: 3 + 5 = 5 + 3?", te: "ఏ లక్షణం చూపించబడింది: 3 + 5 = 5 + 3?" }, options: [{ en: "Commutative", te: "మార్పిడి" }, { en: "Associative", te: "సంఘటిత" }, { en: "Distributive", te: "పంపిణీ" }, { en: "Identity", te: "తత్సమ" }], correctIndex: 0 },
+          { question: { en: "Solve: (8 + 4) × 3", te: "సాధించండి: (8 + 4) × 3" }, options: [{ en: "36", te: "36" }, { en: "20", te: "20" }, { en: "24", te: "24" }, { en: "32", te: "32" }], correctIndex: 0 },
+          { question: { en: "What is the product of 15 and 4?", te: "15 మరియు 4 యొక్క లబ్ధం ఏమిటి?" }, options: [{ en: "60", te: "60" }, { en: "50", te: "50" }, { en: "19", te: "19" }, { en: "11", te: "11" }], correctIndex: 0 },
+          { question: { en: "Solve: 48 ÷ (4 + 4)", te: "సాధించండి: 48 ÷ (4 + 4)" }, options: [{ en: "6", te: "6" }, { en: "8", te: "8" }, { en: "12", te: "12" }, { en: "16", te: "16" }], correctIndex: 0 },
+          { question: { en: "What is 0 × 999?", te: "0 × 999 ఎంత?" }, options: [{ en: "0", te: "0" }, { en: "999", te: "999" }, { en: "1", te: "1" }, { en: "9990", te: "9990" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Calculate: 256 + 378", te: "లెక్కించండి: 256 + 378" }, answer: { en: "256 + 378 = 634", te: "256 + 378 = 634" } },
+          { question: { en: "Calculate: 500 - 287", te: "లెక్కించండి: 500 - 287" }, answer: { en: "500 - 287 = 213", te: "500 - 287 = 213" } },
+          { question: { en: "Calculate: 23 × 15", te: "లెక్కించండి: 23 × 15" }, answer: { en: "23 × 15 = 345", te: "23 × 15 = 345" } },
+          { question: { en: "Calculate: 756 ÷ 6", te: "లెక్కించండి: 756 ÷ 6" }, answer: { en: "756 ÷ 6 = 126", te: "756 ÷ 6 = 126" } },
+          { question: { en: "Solve using BODMAS: 18 + 6 × 3 - 4", te: "BODMAS ఉపయోగించి సాధించండి: 18 + 6 × 3 - 4" }, answer: { en: "18 + 6 × 3 - 4 = 18 + 18 - 4 = 32", te: "18 + 6 × 3 - 4 = 18 + 18 - 4 = 32" } },
+          { question: { en: "Solve: (25 + 15) × 4 ÷ 8", te: "సాధించండి: (25 + 15) × 4 ÷ 8" }, answer: { en: "(25 + 15) × 4 ÷ 8 = 40 × 4 ÷ 8 = 160 ÷ 8 = 20", te: "(25 + 15) × 4 ÷ 8 = 40 × 4 ÷ 8 = 160 ÷ 8 = 20" } },
+          { question: { en: "Verify: 7 × (8 + 2) = (7 × 8) + (7 × 2)", te: "నిరూపించండి: 7 × (8 + 2) = (7 × 8) + (7 × 2)" }, answer: { en: "LHS = 7 × 10 = 70. RHS = 56 + 14 = 70. LHS = RHS. Verified.", te: "ఎడమ = 7 × 10 = 70. కుడి = 56 + 14 = 70. ఎడమ = కుడి. నిరూపించబడింది." } },
+          { question: { en: "Find the quotient and remainder: 157 ÷ 7", te: "భాగఫలం మరియు శేషం కనుగొనండి: 157 ÷ 7" }, answer: { en: "157 ÷ 7 = 22 remainder 3", te: "157 ÷ 7 = 22 శేషం 3" } },
+          { question: { en: "Solve: 100 - 25 × 3 + 5", te: "సాధించండి: 100 - 25 × 3 + 5" }, answer: { en: "100 - 25 × 3 + 5 = 100 - 75 + 5 = 30", te: "100 - 25 × 3 + 5 = 100 - 75 + 5 = 30" } },
+          { question: { en: "Simplify: (12 + 8) × (15 - 10)", te: "సరళీకరించండి: (12 + 8) × (15 - 10)" }, answer: { en: "(12 + 8) × (15 - 10) = 20 × 5 = 100", te: "(12 + 8) × (15 - 10) = 20 × 5 = 100" } }
+        ]
+      },
+      {
+        id: `intro-algebra-${grade}`,
+        title: { en: "Introduction to Algebra", te: "బీజగణిత పరిచయం" },
+        description: { en: "Learn the basics of algebra", te: "బీజగణిత ప్రాథమిక అంశాలు నేర్చుకోండి" },
+        notes: { en: "## Introduction to Algebra\n\n### What is Algebra?\nAlgebra uses letters (variables) to represent unknown numbers.\n\n### Variables and Constants\n- **Variable**: Unknown value (x, y, z)\n- **Constant**: Fixed value (3, 5, -2)\n- **Coefficient**: Number multiplied with variable (in 5x, 5 is coefficient)\n\n### Algebraic Expressions\nCombination of variables, constants, and operations.\nExamples: 3x + 5, 2a - 7, x² + 2x + 1\n\n### Terms\n- **Like Terms**: Same variable (3x and 5x)\n- **Unlike Terms**: Different variables (3x and 5y)\n\n### Simple Equations\nAn equation has equal sign (=)\nExample: x + 5 = 12, solve for x", te: "## బీజగణిత పరిచయం\n\n### బీజగణితం అంటే ఏమిటి?\nబీజగణితం తెలియని సంఖ్యలను సూచించడానికి అక్షరాలను (చరాశులు) ఉపయోగిస్తుంది.\n\n### చరాశులు మరియు స్థిరాంకాలు\n- **చరాశి**: తెలియని విలువ (x, y, z)\n- **స్థిరాంకం**: స్థిర విలువ (3, 5, -2)\n- **గుణకం**: చరాశితో గుణించిన సంఖ్య (5x లో 5 గుణకం)\n\n### బీజగణిత వ్యక్తీకరణలు\nచరాశులు, స్థిరాంకాలు మరియు కార్యకలాపాల కలయిక." },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_TNlLR-Yk--le1SMwBz2Acm&si=dD1WqvcJ73vQ4_Mz"],
+        quiz: [
+          { question: { en: "What is a variable?", te: "చరాశి అంటే ఏమిటి?" }, options: [{ en: "Unknown value", te: "తెలియని విలువ" }, { en: "Fixed value", te: "స్థిర విలువ" }, { en: "Fraction", te: "భిన్నం" }, { en: "Decimal", te: "దశాంశం" }], correctIndex: 0 },
+          { question: { en: "What is the coefficient of x in 7x?", te: "7x లో x యొక్క గుణకం?" }, options: [{ en: "7", te: "7" }, { en: "x", te: "x" }, { en: "7x", te: "7x" }, { en: "1", te: "1" }], correctIndex: 0 },
+          { question: { en: "If x + 5 = 12, what is x?", te: "x + 5 = 12 అయితే x ఎంత?" }, options: [{ en: "7", te: "7" }, { en: "17", te: "17" }, { en: "5", te: "5" }, { en: "12", te: "12" }], correctIndex: 0 },
+          { question: { en: "Simplify: 3x + 4x", te: "సరళీకరించండి: 3x + 4x" }, options: [{ en: "7x", te: "7x" }, { en: "12x", te: "12x" }, { en: "34x", te: "34x" }, { en: "x", te: "x" }], correctIndex: 0 },
+          { question: { en: "Which is an algebraic expression?", te: "ఏది బీజగణిత వ్యక్తీకరణ?" }, options: [{ en: "3x + 5", te: "3x + 5" }, { en: "3 + 5", te: "3 + 5" }, { en: "8", te: "8" }, { en: "15 - 7", te: "15 - 7" }], correctIndex: 0 },
+          { question: { en: "If 2y = 10, find y", te: "2y = 10 అయితే y కనుగొనండి" }, options: [{ en: "5", te: "5" }, { en: "20", te: "20" }, { en: "2", te: "2" }, { en: "10", te: "10" }], correctIndex: 0 },
+          { question: { en: "3x and 5y are called?", te: "3x మరియు 5y లను ఏమంటారు?" }, options: [{ en: "Unlike terms", te: "అసజాతీయ పదాలు" }, { en: "Like terms", te: "సజాతీయ పదాలు" }, { en: "Constants", te: "స్థిరాంకాలు" }, { en: "Variables", te: "చరాశులు" }], correctIndex: 0 },
+          { question: { en: "Find value of 2a + 3 when a = 5", te: "a = 5 అయినప్పుడు 2a + 3 విలువ కనుగొనండి" }, options: [{ en: "13", te: "13" }, { en: "10", te: "10" }, { en: "8", te: "8" }, { en: "15", te: "15" }], correctIndex: 0 },
+          { question: { en: "What is constant in 4x + 9?", te: "4x + 9 లో స్థిరాంకం ఏమిటి?" }, options: [{ en: "9", te: "9" }, { en: "4", te: "4" }, { en: "x", te: "x" }, { en: "4x", te: "4x" }], correctIndex: 0 },
+          { question: { en: "Solve: x/3 = 6", te: "సాధించండి: x/3 = 6" }, options: [{ en: "18", te: "18" }, { en: "2", te: "2" }, { en: "9", te: "9" }, { en: "3", te: "3" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Solve: x + 8 = 15", te: "సాధించండి: x + 8 = 15" }, answer: { en: "x = 15 - 8 = 7", te: "x = 15 - 8 = 7" } },
+          { question: { en: "Simplify: 5a + 3a - 2a", te: "సరళీకరించండి: 5a + 3a - 2a" }, answer: { en: "5a + 3a - 2a = 6a", te: "5a + 3a - 2a = 6a" } },
+          { question: { en: "Find value of 3x + 2y when x=2, y=3", te: "x=2, y=3 అయినప్పుడు 3x + 2y విలువ కనుగొనండి" }, answer: { en: "3(2) + 2(3) = 6 + 6 = 12", te: "3(2) + 2(3) = 6 + 6 = 12" } },
+          { question: { en: "Solve: 3x = 21", te: "సాధించండి: 3x = 21" }, answer: { en: "x = 21 ÷ 3 = 7", te: "x = 21 ÷ 3 = 7" } },
+          { question: { en: "Write expression: 5 more than twice a number", te: "వ్యక్తీకరణ రాయండి: ఒక సంఖ్య రెండింతల కంటే 5 ఎక్కువ" }, answer: { en: "2x + 5", te: "2x + 5" } },
+          { question: { en: "Solve: x - 7 = 12", te: "సాధించండి: x - 7 = 12" }, answer: { en: "x = 12 + 7 = 19", te: "x = 12 + 7 = 19" } },
+          { question: { en: "Find the perimeter of rectangle with length 2x and breadth x", te: "పొడవు 2x మరియు వెడల్పు x తో దీర్ఘచతురస్ర చుట్టుకొలత కనుగొనండి" }, answer: { en: "Perimeter = 2(2x + x) = 2(3x) = 6x", te: "చుట్టుకొలత = 2(2x + x) = 2(3x) = 6x" } },
+          { question: { en: "Solve: 2x + 5 = 17", te: "సాధించండి: 2x + 5 = 17" }, answer: { en: "2x = 17 - 5 = 12, x = 6", te: "2x = 17 - 5 = 12, x = 6" } },
+          { question: { en: "Identify terms in 3x + 5y - 7", te: "3x + 5y - 7 లో పదాలను గుర్తించండి" }, answer: { en: "Terms: 3x, 5y, -7", te: "పదాలు: 3x, 5y, -7" } },
+          { question: { en: "Solve: x/4 = 9", te: "సాధించండి: x/4 = 9" }, answer: { en: "x = 9 × 4 = 36", te: "x = 9 × 4 = 36" } }
+        ]
+      },
+      {
+        id: `basic-geometry-concepts-${grade}`,
+        title: { en: "Basic Geometry Concepts", te: "ప్రాథమిక రేఖాగణిత భావనలు" },
+        description: { en: "Learn fundamental geometry concepts", te: "ప్రాథమిక రేఖాగణిత భావనలు నేర్చుకోండి" },
+        notes: { en: "## Basic Geometry Concepts\n\n### Point, Line, and Plane\n- **Point**: Location with no size (represented by dot)\n- **Line**: Extends infinitely in both directions\n- **Line Segment**: Part of line with two endpoints\n- **Ray**: Starts at a point, extends infinitely in one direction\n- **Plane**: Flat surface extending infinitely\n\n### Angles\n- **Acute Angle**: Less than 90°\n- **Right Angle**: Exactly 90°\n- **Obtuse Angle**: Between 90° and 180°\n- **Straight Angle**: Exactly 180°\n\n### Types of Lines\n- **Parallel Lines**: Never meet\n- **Perpendicular Lines**: Meet at 90°\n- **Intersecting Lines**: Meet at a point", te: "## ప్రాథమిక రేఖాగణిత భావనలు\n\n### బిందువు, రేఖ మరియు తలం\n- **బిందువు**: పరిమాణం లేని స్థానం\n- **రేఖ**: రెండు దిశల్లో అనంతంగా విస్తరిస్తుంది\n- **రేఖాఖండం**: రెండు అంత్య బిందువులతో రేఖ భాగం\n- **కిరణం**: ఒక బిందువు వద్ద ప్రారంభమై ఒక దిశలో అనంతంగా విస్తరిస్తుంది\n\n### కోణాలు\n- **న్యూన కోణం**: 90° కంటే తక్కువ\n- **లంబ కోణం**: ఖచ్చితంగా 90°\n- **అధిక కోణం**: 90° మరియు 180° మధ్య" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_RaeI8jocPmSrFMqoSatPxD&si=BuAtK2zCJF0zrwED"],
+        quiz: [
+          { question: { en: "A right angle measures?", te: "లంబ కోణం కొలత?" }, options: [{ en: "90°", te: "90°" }, { en: "45°", te: "45°" }, { en: "180°", te: "180°" }, { en: "60°", te: "60°" }], correctIndex: 0 },
+          { question: { en: "Which angle is less than 90°?", te: "ఏ కోణం 90° కంటే తక్కువ?" }, options: [{ en: "Acute", te: "న్యూన" }, { en: "Obtuse", te: "అధిక" }, { en: "Right", te: "లంబ" }, { en: "Straight", te: "సరళ" }], correctIndex: 0 },
+          { question: { en: "Lines that never meet are called?", te: "ఎప్పుడూ కలవని రేఖలను ఏమంటారు?" }, options: [{ en: "Parallel", te: "సమాంతర" }, { en: "Perpendicular", te: "లంబ" }, { en: "Intersecting", te: "ఖండన" }, { en: "Curved", te: "వక్ర" }], correctIndex: 0 },
+          { question: { en: "A line segment has?", te: "రేఖాఖండానికి ఏమి ఉంది?" }, options: [{ en: "Two endpoints", te: "రెండు అంత్య బిందువులు" }, { en: "One endpoint", te: "ఒక అంత్య బిందువు" }, { en: "No endpoints", te: "అంత్య బిందువులు లేవు" }, { en: "Three endpoints", te: "మూడు అంత్య బిందువులు" }], correctIndex: 0 },
+          { question: { en: "Perpendicular lines meet at?", te: "లంబ రేఖలు ఎక్కడ కలుస్తాయి?" }, options: [{ en: "90°", te: "90°" }, { en: "45°", te: "45°" }, { en: "60°", te: "60°" }, { en: "180°", te: "180°" }], correctIndex: 0 },
+          { question: { en: "A straight angle measures?", te: "సరళ కోణం కొలత?" }, options: [{ en: "180°", te: "180°" }, { en: "90°", te: "90°" }, { en: "360°", te: "360°" }, { en: "45°", te: "45°" }], correctIndex: 0 },
+          { question: { en: "A ray has?", te: "కిరణానికి ఏమి ఉంది?" }, options: [{ en: "One endpoint", te: "ఒక అంత్య బిందువు" }, { en: "Two endpoints", te: "రెండు అంత్య బిందువులు" }, { en: "No endpoints", te: "అంత్య బిందువులు లేవు" }, { en: "Three endpoints", te: "మూడు అంత్య బిందువులు" }], correctIndex: 0 },
+          { question: { en: "An obtuse angle is between?", te: "అధిక కోణం మధ్య ఏమిటి?" }, options: [{ en: "90° and 180°", te: "90° మరియు 180°" }, { en: "0° and 90°", te: "0° మరియు 90°" }, { en: "180° and 360°", te: "180° మరియు 360°" }, { en: "45° and 90°", te: "45° మరియు 90°" }], correctIndex: 0 },
+          { question: { en: "A point has?", te: "బిందువుకు ఏమి ఉంది?" }, options: [{ en: "No size", te: "పరిమాణం లేదు" }, { en: "Length", te: "పొడవు" }, { en: "Width", te: "వెడల్పు" }, { en: "Height", te: "ఎత్తు" }], correctIndex: 0 },
+          { question: { en: "Lines meeting at a point are called?", te: "ఒక బిందువు వద్ద కలిసే రేఖలను ఏమంటారు?" }, options: [{ en: "Intersecting", te: "ఖండన" }, { en: "Parallel", te: "సమాంతర" }, { en: "Curved", te: "వక్ర" }, { en: "Broken", te: "విరిగిన" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Define a line segment", te: "రేఖాఖండాన్ని నిర్వచించండి" }, answer: { en: "A line segment is a part of a line with two endpoints.", te: "రేఖాఖండం రెండు అంత్య బిందువులతో రేఖ భాగం." } },
+          { question: { en: "Draw and label an acute angle", te: "న్యూన కోణం గీసి లేబుల్ చేయండి" }, answer: { en: "Draw two rays from a common point making an angle less than 90°", te: "ఒక సాధారణ బిందువు నుండి 90° కంటే తక్కువ కోణం చేసే రెండు కిరణాలు గీయండి" } },
+          { question: { en: "Give examples of parallel lines in daily life", te: "దైనందిన జీవితంలో సమాంతర రేఖల ఉదాహరణలు ఇవ్వండి" }, answer: { en: "Railway tracks, opposite edges of a book, ladder steps", te: "రైల్వే ట్రాక్‌లు, పుస్తకం యొక్క వ్యతిరేక అంచులు, నిచ్చెన మెట్లు" } },
+          { question: { en: "What is the difference between a line and a ray?", te: "రేఖ మరియు కిరణం మధ్య తేడా ఏమిటి?" }, answer: { en: "A line extends infinitely in both directions with no endpoints. A ray starts at one point and extends infinitely in one direction.", te: "రేఖ రెండు దిశల్లో అంత్య బిందువులు లేకుండా అనంతంగా విస్తరిస్తుంది. కిరణం ఒక బిందువు వద్ద ప్రారంభమై ఒక దిశలో అనంతంగా విస్తరిస్తుంది." } },
+          { question: { en: "Measure and classify: 75°", te: "కొలిచి వర్గీకరించండి: 75°" }, answer: { en: "75° is an acute angle (less than 90°)", te: "75° న్యూన కోణం (90° కంటే తక్కువ)" } },
+          { question: { en: "Draw perpendicular lines", te: "లంబ రేఖలు గీయండి" }, answer: { en: "Draw two lines meeting at 90° (right angle)", te: "90° (లంబ కోణం) వద్ద కలిసే రెండు రేఖలు గీయండి" } },
+          { question: { en: "Classify: 120°", te: "వర్గీకరించండి: 120°" }, answer: { en: "120° is an obtuse angle (between 90° and 180°)", te: "120° అధిక కోణం (90° మరియు 180° మధ్య)" } },
+          { question: { en: "What is a plane in geometry?", te: "రేఖాగణితంలో తలం అంటే ఏమిటి?" }, answer: { en: "A plane is a flat surface that extends infinitely in all directions.", te: "తలం అనేది అన్ని దిశలలో అనంతంగా విస్తరించే సమతల ఉపరితలం." } },
+          { question: { en: "Name three collinear points", te: "మూడు సరేఖీయ బిందువులు పేర్కొనండి" }, answer: { en: "Points A, B, C on the same line are collinear", te: "ఒకే రేఖపై ఉన్న బిందువులు A, B, C సరేఖీయం" } },
+          { question: { en: "What angle do hour and minute hands make at 3 o'clock?", te: "3 గంటలకు గంట మరియు నిమిష చేతులు ఏ కోణం చేస్తాయి?" }, answer: { en: "90° (right angle)", te: "90° (లంబ కోణం)" } }
+        ]
+      },
+      {
+        id: `2d-3d-shapes-${grade}`,
+        title: { en: "2D and 3D Shapes", te: "2D మరియు 3D ఆకారాలు" },
+        description: { en: "Learn about two and three dimensional shapes", te: "ద్విమితీయ మరియు త్రిమితీయ ఆకారాల గురించి తెలుసుకోండి" },
+        notes: { en: "## 2D and 3D Shapes\n\n### 2D Shapes (Flat Shapes)\n- **Triangle**: 3 sides, 3 angles\n- **Square**: 4 equal sides, 4 right angles\n- **Rectangle**: 4 sides (opposite equal), 4 right angles\n- **Circle**: No sides, curved boundary\n- **Pentagon**: 5 sides\n- **Hexagon**: 6 sides\n\n### 3D Shapes (Solid Shapes)\n- **Cube**: 6 square faces, 12 edges, 8 vertices\n- **Cuboid**: 6 rectangular faces\n- **Sphere**: Ball shape, no edges or vertices\n- **Cylinder**: 2 circular faces, 1 curved surface\n- **Cone**: 1 circular face, 1 vertex\n\n### Properties\n- Faces: Flat surfaces\n- Edges: Lines where faces meet\n- Vertices: Corner points", te: "## 2D మరియు 3D ఆకారాలు\n\n### 2D ఆకారాలు (సమతల ఆకారాలు)\n- **త్రిభుజం**: 3 భుజాలు, 3 కోణాలు\n- **చతురస్రం**: 4 సమాన భుజాలు, 4 లంబ కోణాలు\n- **దీర్ఘచతురస్రం**: 4 భుజాలు (ఎదురెదురు సమానం)\n- **వృత్తం**: భుజాలు లేవు, వక్ర సరిహద్దు\n\n### 3D ఆకారాలు (ఘన ఆకారాలు)\n- **ఘనం**: 6 చతురస్ర ముఖాలు, 12 అంచులు, 8 శీర్షాలు\n- **దీర్ఘఘనం**: 6 దీర్ఘచతురస్ర ముఖాలు\n- **గోళం**: బంతి ఆకారం\n- **స్థూపం**: 2 వృత్తాకార ముఖాలు" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_RknZB8cABQhvU7UwSRxgdj&si=1gjMavtbqy9j3xNE"],
+        quiz: [
+          { question: { en: "How many sides does a hexagon have?", te: "షట్కోణానికి ఎన్ని భుజాలు ఉన్నాయి?" }, options: [{ en: "6", te: "6" }, { en: "5", te: "5" }, { en: "8", te: "8" }, { en: "4", te: "4" }], correctIndex: 0 },
+          { question: { en: "A cube has how many faces?", te: "ఘనానికి ఎన్ని ముఖాలు ఉన్నాయి?" }, options: [{ en: "6", te: "6" }, { en: "4", te: "4" }, { en: "8", te: "8" }, { en: "12", te: "12" }], correctIndex: 0 },
+          { question: { en: "Which 3D shape is like a ball?", te: "ఏ 3D ఆకారం బంతి లాంటిది?" }, options: [{ en: "Sphere", te: "గోళం" }, { en: "Cube", te: "ఘనం" }, { en: "Cylinder", te: "స్థూపం" }, { en: "Cone", te: "శంకువు" }], correctIndex: 0 },
+          { question: { en: "A rectangle has how many right angles?", te: "దీర్ఘచతురస్రానికి ఎన్ని లంబ కోణాలు ఉన్నాయి?" }, options: [{ en: "4", te: "4" }, { en: "2", te: "2" }, { en: "3", te: "3" }, { en: "1", te: "1" }], correctIndex: 0 },
+          { question: { en: "How many vertices does a cube have?", te: "ఘనానికి ఎన్ని శీర్షాలు ఉన్నాయి?" }, options: [{ en: "8", te: "8" }, { en: "6", te: "6" }, { en: "12", te: "12" }, { en: "4", te: "4" }], correctIndex: 0 },
+          { question: { en: "A cone has how many vertices?", te: "శంకువుకు ఎన్ని శీర్షాలు ఉన్నాయి?" }, options: [{ en: "1", te: "1" }, { en: "0", te: "0" }, { en: "2", te: "2" }, { en: "3", te: "3" }], correctIndex: 0 },
+          { question: { en: "Pentagon has how many sides?", te: "పంచభుజికి ఎన్ని భుజాలు ఉన్నాయి?" }, options: [{ en: "5", te: "5" }, { en: "4", te: "4" }, { en: "6", te: "6" }, { en: "7", te: "7" }], correctIndex: 0 },
+          { question: { en: "Which shape has no edges?", te: "ఏ ఆకారానికి అంచులు లేవు?" }, options: [{ en: "Sphere", te: "గోళం" }, { en: "Cube", te: "ఘనం" }, { en: "Cone", te: "శంకువు" }, { en: "Cuboid", te: "దీర్ఘఘనం" }], correctIndex: 0 },
+          { question: { en: "A cylinder has how many curved surfaces?", te: "స్థూపానికి ఎన్ని వక్ర ఉపరితలాలు ఉన్నాయి?" }, options: [{ en: "1", te: "1" }, { en: "2", te: "2" }, { en: "0", te: "0" }, { en: "3", te: "3" }], correctIndex: 0 },
+          { question: { en: "How many edges does a cube have?", te: "ఘనానికి ఎన్ని అంచులు ఉన్నాయి?" }, options: [{ en: "12", te: "12" }, { en: "6", te: "6" }, { en: "8", te: "8" }, { en: "10", te: "10" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "List properties of a cube (faces, edges, vertices)", te: "ఘనం లక్షణాలు జాబితా చేయండి (ముఖాలు, అంచులు, శీర్షాలు)" }, answer: { en: "Faces: 6, Edges: 12, Vertices: 8", te: "ముఖాలు: 6, అంచులు: 12, శీర్షాలు: 8" } },
+          { question: { en: "Name 3 objects shaped like a cylinder", te: "స్థూపాకారంలో ఉన్న 3 వస్తువుల పేర్లు చెప్పండి" }, answer: { en: "Pipe, can, roller, glass", te: "పైపు, డబ్బా, రోలర్, గ్లాసు" } },
+          { question: { en: "How is a square different from a rectangle?", te: "చతురస్రం దీర్ఘచతురస్రం నుండి ఎలా భిన్నంగా ఉంటుంది?" }, answer: { en: "A square has all 4 sides equal, while a rectangle has only opposite sides equal.", te: "చతురస్రంలో 4 భుజాలు సమానం, దీర్ఘచతురస్రంలో ఎదురెదురు భుజాలు మాత్రమే సమానం." } },
+          { question: { en: "Draw and name a 3D shape with 1 vertex", te: "1 శీర్షం ఉన్న 3D ఆకారం గీసి పేరు పెట్టండి" }, answer: { en: "Cone - has 1 vertex (at the top)", te: "శంకువు - 1 శీర్షం ఉంది (పైన)" } },
+          { question: { en: "Compare sphere and cube", te: "గోళం మరియు ఘనాన్ని పోల్చండి" }, answer: { en: "Sphere: 0 faces, 0 edges, 0 vertices, curved. Cube: 6 faces, 12 edges, 8 vertices, flat surfaces.", te: "గోళం: 0 ముఖాలు, 0 అంచులు, 0 శీర్షాలు, వక్రం. ఘనం: 6 ముఖాలు, 12 అంచులు, 8 శీర్షాలు, సమతల ఉపరితలాలు." } },
+          { question: { en: "Name 2D shapes that make up a cuboid", te: "దీర్ఘఘనాన్ని తయారు చేసే 2D ఆకారాలను పేర్కొనండి" }, answer: { en: "Rectangles (6 rectangular faces)", te: "దీర్ఘచతురస్రాలు (6 దీర్ఘచతురస్ర ముఖాలు)" } },
+          { question: { en: "What is the difference between 2D and 3D shapes?", te: "2D మరియు 3D ఆకారాల మధ్య తేడా ఏమిటి?" }, answer: { en: "2D shapes are flat with length and width only. 3D shapes have length, width, and height (depth).", te: "2D ఆకారాలు పొడవు మరియు వెడల్పు మాత్రమే ఉండే సమతలాలు. 3D ఆకారాలకు పొడవు, వెడల్పు మరియు ఎత్తు (లోతు) ఉంటాయి." } },
+          { question: { en: "How many triangles make a pyramid with square base?", te: "చతురస్ర ఆధారంతో పిరమిడ్‌ను ఎన్ని త్రిభుజాలు తయారు చేస్తాయి?" }, answer: { en: "4 triangular faces + 1 square base", te: "4 త్రిభుజాకార ముఖాలు + 1 చతురస్ర ఆధారం" } },
+          { question: { en: "Name objects shaped like a cone", te: "శంకువు ఆకారంలో ఉన్న వస్తువుల పేర్లు చెప్పండి" }, answer: { en: "Ice cream cone, party hat, traffic cone, funnel", te: "ఐస్‌క్రీమ్ కోన్, పార్టీ టోపీ, ట్రాఫిక్ కోన్, గరాటు" } },
+          { question: { en: "How many faces does a triangular prism have?", te: "త్రిభుజాకార ప్రిజమ్‌కు ఎన్ని ముఖాలు ఉన్నాయి?" }, answer: { en: "5 faces (2 triangular + 3 rectangular)", te: "5 ముఖాలు (2 త్రిభుజాకార + 3 దీర్ఘచతురస్ర)" } }
+        ]
+      },
+      {
+        id: `practical-geometry-${grade}`,
+        title: { en: "Practical Geometry", te: "ఆచరణాత్మక రేఖాగణితం" },
+        description: { en: "Learn to construct geometric figures", te: "రేఖాగణిత పటాలను నిర్మించడం నేర్చుకోండి" },
+        notes: { en: "## Practical Geometry\n\n### Construction Tools\n- **Ruler**: For measuring and drawing straight lines\n- **Compass**: For drawing circles and arcs\n- **Protractor**: For measuring and drawing angles\n- **Set Squares**: For drawing perpendicular and parallel lines\n\n### Basic Constructions\n1. **Bisecting a Line Segment**: Dividing into two equal parts\n2. **Bisecting an Angle**: Dividing into two equal angles\n3. **Constructing Perpendicular**: 90° angle\n4. **Constructing Triangles**: Using SSS, SAS, ASA rules\n\n### Triangle Construction Methods\n- **SSS**: Three sides given\n- **SAS**: Two sides and included angle\n- **ASA**: Two angles and included side\n- **RHS**: Right angle, hypotenuse, side", te: "## ఆచరణాత్మక రేఖాగణితం\n\n### నిర్మాణ సాధనాలు\n- **రూలర్**: సరళ రేఖలను కొలవడానికి మరియు గీయడానికి\n- **కంపాస్**: వృత్తాలు మరియు చాపాలను గీయడానికి\n- **కోణమానిని**: కోణాలను కొలవడానికి మరియు గీయడానికి\n- **సెట్ స్క్వేర్లు**: లంబ మరియు సమాంతర రేఖలను గీయడానికి\n\n### ప్రాథమిక నిర్మాణాలు\n1. **రేఖాఖండం విభజన**: రెండు సమాన భాగాలుగా విభజించడం\n2. **కోణం విభజన**: రెండు సమాన కోణాలుగా విభజించడం" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_TSedEAbGeRDJ6U51JipWTx&si=alf3EvtaZzLH5c8J"],
+        quiz: [
+          { question: { en: "Which tool is used to draw circles?", te: "వృత్తాలు గీయడానికి ఏ సాధనం ఉపయోగిస్తారు?" }, options: [{ en: "Compass", te: "కంపాస్" }, { en: "Ruler", te: "రూలర్" }, { en: "Protractor", te: "కోణమానిని" }, { en: "Set square", te: "సెట్ స్క్వేర్" }], correctIndex: 0 },
+          { question: { en: "Which tool measures angles?", te: "కోణాలను ఏ సాధనం కొలుస్తుంది?" }, options: [{ en: "Protractor", te: "కోణమానిని" }, { en: "Compass", te: "కంపాస్" }, { en: "Ruler", te: "రూలర్" }, { en: "Divider", te: "విభాజకం" }], correctIndex: 0 },
+          { question: { en: "SSS means?", te: "SSS అంటే?" }, options: [{ en: "Three sides given", te: "మూడు భుజాలు ఇవ్వబడ్డాయి" }, { en: "Three angles given", te: "మూడు కోణాలు ఇవ్వబడ్డాయి" }, { en: "Two sides given", te: "రెండు భుజాలు ఇవ్వబడ్డాయి" }, { en: "One side given", te: "ఒక భుజం ఇవ్వబడింది" }], correctIndex: 0 },
+          { question: { en: "To bisect means to?", te: "విభజించడం అంటే?" }, options: [{ en: "Divide into two equal parts", te: "రెండు సమాన భాగాలుగా విభజించడం" }, { en: "Triple", te: "మూడింతలు చేయడం" }, { en: "Extend", te: "విస్తరించడం" }, { en: "Shorten", te: "తగ్గించడం" }], correctIndex: 0 },
+          { question: { en: "SAS stands for?", te: "SAS అంటే?" }, options: [{ en: "Side-Angle-Side", te: "భుజం-కోణం-భుజం" }, { en: "Side-Side-Angle", te: "భుజం-భుజం-కోణం" }, { en: "Angle-Side-Angle", te: "కోణం-భుజం-కోణం" }, { en: "Side-Side-Side", te: "భుజం-భుజం-భుజం" }], correctIndex: 0 },
+          { question: { en: "Perpendicular lines make what angle?", te: "లంబ రేఖలు ఏ కోణం చేస్తాయి?" }, options: [{ en: "90°", te: "90°" }, { en: "45°", te: "45°" }, { en: "60°", te: "60°" }, { en: "180°", te: "180°" }], correctIndex: 0 },
+          { question: { en: "Set square is used for?", te: "సెట్ స్క్వేర్ దేనికి ఉపయోగిస్తారు?" }, options: [{ en: "Drawing perpendicular lines", te: "లంబ రేఖలు గీయడానికి" }, { en: "Drawing circles", te: "వృత్తాలు గీయడానికి" }, { en: "Measuring length", te: "పొడవు కొలవడానికి" }, { en: "Drawing curved lines", te: "వక్ర రేఖలు గీయడానికి" }], correctIndex: 0 },
+          { question: { en: "RHS stands for?", te: "RHS అంటే?" }, options: [{ en: "Right angle-Hypotenuse-Side", te: "లంబకోణం-కర్ణం-భుజం" }, { en: "Right-Half-Side", te: "కుడి-సగం-భుజం" }, { en: "Rectangle-Height-Side", te: "దీర్ఘచతురస్రం-ఎత్తు-భుజం" }, { en: "Round-Heavy-Straight", te: "వృత్తాకారం-భారీ-సరళ" }], correctIndex: 0 },
+          { question: { en: "How many sides are needed to construct a triangle using SSS?", te: "SSS ఉపయోగించి త్రిభుజం నిర్మించడానికి ఎన్ని భుజాలు అవసరం?" }, options: [{ en: "3", te: "3" }, { en: "2", te: "2" }, { en: "1", te: "1" }, { en: "4", te: "4" }], correctIndex: 0 },
+          { question: { en: "A ruler is used to measure?", te: "రూలర్ దేన్ని కొలవడానికి ఉపయోగిస్తారు?" }, options: [{ en: "Length", te: "పొడవు" }, { en: "Angle", te: "కోణం" }, { en: "Weight", te: "బరువు" }, { en: "Volume", te: "ఘనపరిమాణం" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "List the tools needed for geometric construction", te: "రేఖాగణిత నిర్మాణానికి అవసరమైన సాధనాలను జాబితా చేయండి" }, answer: { en: "Ruler, compass, protractor, set squares, divider, pencil", te: "రూలర్, కంపాస్, కోణమానిని, సెట్ స్క్వేర్లు, విభాజకం, పెన్సిల్" } },
+          { question: { en: "Steps to bisect a line segment AB", te: "AB రేఖాఖండాన్ని విభజించే దశలు" }, answer: { en: "1. Draw arcs from A and B with same radius. 2. Arcs intersect at points P and Q. 3. Draw line PQ - it bisects AB at M.", te: "1. A మరియు B నుండి అదే వ్యాసార్ధంతో చాపాలు గీయండి. 2. చాపాలు P మరియు Q బిందువుల వద్ద ఖండించుకుంటాయి. 3. PQ రేఖ గీయండి - ఇది AB ను M వద్ద విభజిస్తుంది." } },
+          { question: { en: "Construct a triangle with sides 4cm, 5cm, 6cm", te: "4సెం.మీ, 5సెం.మీ, 6సెం.మీ భుజాలతో త్రిభుజం నిర్మించండి" }, answer: { en: "1. Draw base 6cm. 2. From one end, draw arc of 5cm. 3. From other end, draw arc of 4cm. 4. Connect intersection point to both ends.", te: "1. 6సెం.మీ ఆధారం గీయండి. 2. ఒక కొన నుండి 5సెం.మీ చాపం గీయండి. 3. మరొక కొన నుండి 4సెం.మీ చాపం గీయండి. 4. ఖండన బిందువును రెండు కొనలకు కలపండి." } },
+          { question: { en: "How to construct a 60° angle using compass?", te: "కంపాస్ ఉపయోగించి 60° కోణం ఎలా నిర్మించాలి?" }, answer: { en: "1. Draw a ray. 2. Draw an arc from the endpoint. 3. Without changing compass, draw arc from intersection. 4. Connect endpoint to second intersection.", te: "1. కిరణం గీయండి. 2. అంత్య బిందువు నుండి చాపం గీయండి. 3. కంపాస్ మార్చకుండా, ఖండన నుండి చాపం గీయండి. 4. అంత్య బిందువును రెండవ ఖండనకు కలపండి." } },
+          { question: { en: "What is SAS criterion for triangle construction?", te: "త్రిభుజ నిర్మాణానికి SAS నియమం ఏమిటి?" }, answer: { en: "Two sides and the included angle between them are given.", te: "రెండు భుజాలు మరియు వాటి మధ్య ఉన్న కోణం ఇవ్వబడతాయి." } },
+          { question: { en: "Steps to construct perpendicular bisector", te: "లంబ ద్విఖండన నిర్మించే దశలు" }, answer: { en: "1. Draw line segment. 2. From both endpoints draw arcs with radius > half length. 3. Connect the two intersection points. This line is perpendicular bisector.", te: "1. రేఖాఖండం గీయండి. 2. రెండు అంత్య బిందువుల నుండి సగం పొడవు కంటే ఎక్కువ వ్యాసార్ధంతో చాపాలు గీయండి. 3. రెండు ఖండన బిందువులను కలపండి. ఈ రేఖ లంబ ద్విఖండన." } },
+          { question: { en: "Construct angle of 90° using compass", te: "కంపాస్ ఉపయోగించి 90° కోణం నిర్మించండి" }, answer: { en: "First construct 60° angle, then bisect it to get 30°. Or construct perpendicular to a line using arcs method.", te: "మొదట 60° కోణం నిర్మించండి, తర్వాత 30° పొందడానికి విభజించండి. లేదా చాపాల పద్ధతి ఉపయోగించి రేఖకు లంబం నిర్మించండి." } },
+          { question: { en: "What tools are needed to draw parallel lines?", te: "సమాంతర రేఖలు గీయడానికి ఏ సాధనాలు అవసరం?" }, answer: { en: "Ruler and set squares (or compass)", te: "రూలర్ మరియు సెట్ స్క్వేర్లు (లేదా కంపాస్)" } },
+          { question: { en: "Construct triangle ABC with AB=5cm, angle A=60°, AC=4cm", te: "AB=5సెం.మీ, కోణం A=60°, AC=4సెం.మీ తో ABC త్రిభుజం నిర్మించండి" }, answer: { en: "1. Draw AB=5cm. 2. At A, construct 60° angle. 3. Mark C at 4cm on the angle arm. 4. Join BC.", te: "1. AB=5సెం.మీ గీయండి. 2. A వద్ద 60° కోణం నిర్మించండి. 3. కోణం భుజంపై 4సెం.మీ వద్ద C గుర్తించండి. 4. BC కలపండి." } },
+          { question: { en: "Why is RHS criterion used only for right triangles?", te: "RHS నియమం లంబకోణ త్రిభుజాలకు మాత్రమే ఎందుకు ఉపయోగిస్తారు?" }, answer: { en: "RHS requires a right angle (R), so it can only be applied when one angle is 90°.", te: "RHS కు లంబకోణం (R) అవసరం, కాబట్టి ఒక కోణం 90° అయినప్పుడు మాత్రమే వర్తిస్తుంది." } }
+        ]
+      },
+      {
+        id: `perimeter-area-${grade}`,
+        title: { en: "Perimeter and Area", te: "చుట్టుకొలత మరియు వైశాల్యం" },
+        description: { en: "Learn to calculate perimeter and area", te: "చుట్టుకొలత మరియు వైశాల్యం లెక్కించడం నేర్చుకోండి" },
+        notes: { en: "## Perimeter and Area\n\n### Perimeter\nPerimeter is the total distance around a shape (sum of all sides).\n\n### Formulas\n**Rectangle:**\n- Perimeter = 2(length + breadth)\n- Area = length × breadth\n\n**Square:**\n- Perimeter = 4 × side\n- Area = side × side = side²\n\n**Triangle:**\n- Perimeter = sum of all sides\n- Area = ½ × base × height\n\n**Circle:**\n- Circumference = 2πr\n- Area = πr²\n\n### Units\n- Perimeter: cm, m, km (linear)\n- Area: cm², m², km² (square units)", te: "## చుట్టుకొలత మరియు వైశాల్యం\n\n### చుట్టుకొలత\nచుట్టుకొలత అనేది ఆకారం చుట్టూ మొత్తం దూరం (అన్ని భుజాల మొత్తం).\n\n### సూత్రాలు\n**దీర్ఘచతురస్రం:**\n- చుట్టుకొలత = 2(పొడవు + వెడల్పు)\n- వైశాల్యం = పొడవు × వెడల్పు\n\n**చతురస్రం:**\n- చుట్టుకొలత = 4 × భుజం\n- వైశాల్యం = భుజం × భుజం = భుజం²\n\n**త్రిభుజం:**\n- చుట్టుకొలత = అన్ని భుజాల మొత్తం\n- వైశాల్యం = ½ × ఆధారం × ఎత్తు" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_RdSYgRaXY3Rv8zwXYPXo-P&si=PSWPokHjjT2FAgkh"],
+        quiz: [
+          { question: { en: "Perimeter of square with side 5cm?", te: "5సెం.మీ భుజంతో చతురస్ర చుట్టుకొలత?" }, options: [{ en: "20 cm", te: "20 సెం.మీ" }, { en: "25 cm", te: "25 సెం.మీ" }, { en: "10 cm", te: "10 సెం.మీ" }, { en: "15 cm", te: "15 సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "Area of rectangle with l=6cm, b=4cm?", te: "l=6సెం.మీ, b=4సెం.మీ తో దీర్ఘచతురస్ర వైశాల్యం?" }, options: [{ en: "24 sq.cm", te: "24 చ.సెం.మీ" }, { en: "20 sq.cm", te: "20 చ.సెం.మీ" }, { en: "10 sq.cm", te: "10 చ.సెం.మీ" }, { en: "30 sq.cm", te: "30 చ.సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "Area of square with side 7cm?", te: "7సెం.మీ భుజంతో చతురస్ర వైశాల్యం?" }, options: [{ en: "49 sq.cm", te: "49 చ.సెం.మీ" }, { en: "28 sq.cm", te: "28 సెం.మీ" }, { en: "14 sq.cm", te: "14 చ.సెం.మీ" }, { en: "21 sq.cm", te: "21 చ.సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "Formula for area of triangle?", te: "త్రిభుజ వైశాల్యం సూత్రం?" }, options: [{ en: "½ × base × height", te: "½ × ఆధారం × ఎత్తు" }, { en: "base × height", te: "ఆధారం × ఎత్తు" }, { en: "side × side", te: "భుజం × భుజం" }, { en: "2 × base × height", te: "2 × ఆధారం × ఎత్తు" }], correctIndex: 0 },
+          { question: { en: "Perimeter of rectangle with l=8cm, b=5cm?", te: "l=8సెం.మీ, b=5సెం.మీ తో దీర్ఘచతురస్ర చుట్టుకొలత?" }, options: [{ en: "26 cm", te: "26 సెం.మీ" }, { en: "40 cm", te: "40 సెం.మీ" }, { en: "13 cm", te: "13 సెం.మీ" }, { en: "20 cm", te: "20 సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "Unit of area is?", te: "వైశాల్యం యూనిట్?" }, options: [{ en: "Square units (cm², m²)", te: "చదరపు యూనిట్లు (సెం.మీ², మీ²)" }, { en: "cm, m", te: "సెం.మీ, మీ" }, { en: "kg", te: "కేజీ" }, { en: "liters", te: "లీటర్లు" }], correctIndex: 0 },
+          { question: { en: "Circumference of circle formula?", te: "వృత్త పరిధి సూత్రం?" }, options: [{ en: "2πr", te: "2πr" }, { en: "πr²", te: "πr²" }, { en: "πr", te: "πr" }, { en: "2πr²", te: "2πr²" }], correctIndex: 0 },
+          { question: { en: "Area of triangle with base 10cm, height 6cm?", te: "ఆధారం 10సెం.మీ, ఎత్తు 6సెం.మీ తో త్రిభుజ వైశాల్యం?" }, options: [{ en: "30 sq.cm", te: "30 చ.సెం.మీ" }, { en: "60 sq.cm", te: "60 చ.సెం.మీ" }, { en: "16 sq.cm", te: "16 చ.సెం.మీ" }, { en: "40 sq.cm", te: "40 చ.సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "If perimeter of square is 36cm, side is?", te: "చతురస్ర చుట్టుకొలత 36సెం.మీ అయితే భుజం?" }, options: [{ en: "9 cm", te: "9 సెం.మీ" }, { en: "12 cm", te: "12 సెం.మీ" }, { en: "6 cm", te: "6 సెం.మీ" }, { en: "18 cm", te: "18 సెం.మీ" }], correctIndex: 0 },
+          { question: { en: "Area of circle with radius 7cm (π=22/7)?", te: "వ్యాసార్ధం 7సెం.మీ తో వృత్త వైశాల్యం (π=22/7)?" }, options: [{ en: "154 sq.cm", te: "154 చ.సెం.మీ" }, { en: "44 sq.cm", te: "44 చ.సెం.మీ" }, { en: "49 sq.cm", te: "49 చ.సెం.మీ" }, { en: "22 sq.cm", te: "22 చ.సెం.మీ" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Find perimeter and area of rectangle: l=12cm, b=8cm", te: "దీర్ఘచతురస్ర చుట్టుకొలత మరియు వైశాల్యం కనుగొనండి: l=12సెం.మీ, b=8సెం.మీ" }, answer: { en: "Perimeter = 2(12+8) = 40cm. Area = 12×8 = 96 sq.cm", te: "చుట్టుకొలత = 2(12+8) = 40సెం.మీ. వైశాల్యం = 12×8 = 96 చ.సెం.మీ" } },
+          { question: { en: "A square garden has side 15m. Find fencing needed.", te: "చతురస్ర తోట భుజం 15మీ. అవసరమైన కంచె కనుగొనండి." }, answer: { en: "Fencing = Perimeter = 4 × 15 = 60m", te: "కంచె = చుట్టుకొలత = 4 × 15 = 60మీ" } },
+          { question: { en: "Find area of triangle: base 14cm, height 10cm", te: "త్రిభుజ వైశాల్యం కనుగొనండి: ఆధారం 14సెం.మీ, ఎత్తు 10సెం.మీ" }, answer: { en: "Area = ½ × 14 × 10 = 70 sq.cm", te: "వైశాల్యం = ½ × 14 × 10 = 70 చ.సెం.మీ" } },
+          { question: { en: "Find circumference of circle with radius 14cm", te: "వ్యాసార్ధం 14సెం.మీ తో వృత్త పరిధి కనుగొనండి" }, answer: { en: "Circumference = 2πr = 2 × 22/7 × 14 = 88cm", te: "పరిధి = 2πr = 2 × 22/7 × 14 = 88సెం.మీ" } },
+          { question: { en: "If area of square is 144 sq.cm, find its side", te: "చతురస్ర వైశాల్యం 144 చ.సెం.మీ అయితే భుజం కనుగొనండి" }, answer: { en: "Side = √144 = 12cm", te: "భుజం = √144 = 12సెం.మీ" } },
+          { question: { en: "A rectangular field is 100m × 60m. Find area in hectares", te: "దీర్ఘచతురస్ర పొలం 100మీ × 60మీ. హెక్టార్లలో వైశాల్యం కనుగొనండి" }, answer: { en: "Area = 100 × 60 = 6000 m² = 0.6 hectares", te: "వైశాల్యం = 100 × 60 = 6000 మీ² = 0.6 హెక్టార్లు" } },
+          { question: { en: "Find area of circle with diameter 28cm", te: "వ్యాసం 28సెం.మీ తో వృత్త వైశాల్యం కనుగొనండి" }, answer: { en: "Radius = 14cm. Area = πr² = 22/7 × 14 × 14 = 616 sq.cm", te: "వ్యాసార్ధం = 14సెం.మీ. వైశాల్యం = πr² = 22/7 × 14 × 14 = 616 చ.సెం.మీ" } },
+          { question: { en: "Cost to fence a plot at ₹50/m if l=30m, b=20m?", te: "l=30మీ, b=20మీ అయితే ₹50/మీ వద్ద ప్లాట్ కంచె ఖర్చు?" }, answer: { en: "Perimeter = 2(30+20) = 100m. Cost = 100 × 50 = ₹5000", te: "చుట్టుకొలత = 2(30+20) = 100మీ. ఖర్చు = 100 × 50 = ₹5000" } },
+          { question: { en: "Find area of path 2m wide around a 10m × 8m garden", te: "10మీ × 8మీ తోట చుట్టూ 2మీ వెడల్పు మార్గం వైశాల్యం కనుగొనండి" }, answer: { en: "Outer = 14 × 12 = 168m². Inner = 10 × 8 = 80m². Path = 168 - 80 = 88 m²", te: "బాహ్య = 14 × 12 = 168మీ². అంతర = 10 × 8 = 80మీ². మార్గం = 168 - 80 = 88 మీ²" } },
+          { question: { en: "Perimeter of triangle with sides 7cm, 8cm, 9cm", te: "7సెం.మీ, 8సెం.మీ, 9సెం.మీ భుజాలతో త్రిభుజ చుట్టుకొలత" }, answer: { en: "Perimeter = 7 + 8 + 9 = 24cm", te: "చుట్టుకొలత = 7 + 8 + 9 = 24సెం.మీ" } }
+        ]
+      },
+      {
+        id: `data-handling-${grade}`,
+        title: { en: "Data Handling", te: "దత్తాంశ నిర్వహణ" },
+        description: { en: "Learn to collect, organize and represent data", te: "దత్తాంశాన్ని సేకరించడం, వ్యవస్థీకరించడం మరియు ప్రాతినిధ్యం చేయడం నేర్చుకోండి" },
+        notes: { en: "## Data Handling\n\n### What is Data?\nData is a collection of facts, numbers, or information.\n\n### Types of Data\n- **Raw Data**: Unorganized data\n- **Organized Data**: Arranged in order or groups\n\n### Data Representation\n1. **Tally Marks**: Using lines (||||)\n2. **Pictograph**: Using pictures/symbols\n3. **Bar Graph**: Using rectangular bars\n4. **Pie Chart**: Using sectors of a circle\n\n### Measures of Central Tendency\n- **Mean (Average)**: Sum of all values ÷ Number of values\n- **Median**: Middle value when arranged in order\n- **Mode**: Most frequently occurring value\n\n### Frequency Table\nShows how often each value occurs.", te: "## దత్తాంశ నిర్వహణ\n\n### దత్తాంశం అంటే ఏమిటి?\nదత్తాంశం అనేది వాస్తవాలు, సంఖ్యలు లేదా సమాచారం యొక్క సముదాయం.\n\n### దత్తాంశ రకాలు\n- **ముడి దత్తాంశం**: అసంఘటిత దత్తాంశం\n- **సంఘటిత దత్తాంశం**: క్రమంలో లేదా సమూహాలలో అమర్చబడింది\n\n### దత్తాంశ ప్రాతినిధ్యం\n1. **టాలీ గుర్తులు**: రేఖలు ఉపయోగించడం (||||)\n2. **చిత్రగ్రాఫ్**: చిత్రాలు/గుర్తులు ఉపయోగించడం\n3. **కడ్డీ గ్రాఫ్**: దీర్ఘచతురస్రాకార కడ్డీలు ఉపయోగించడం" },
+        videoUrls: ["https://youtube.com/playlist?list=PLErI5R6nze_QN48ahRbLIR-CyKah3QwPV&si=N_M6yXxFEP2ZuJhx"],
+        quiz: [
+          { question: { en: "Mean of 5, 10, 15, 20 is?", te: "5, 10, 15, 20 యొక్క సగటు?" }, options: [{ en: "12.5", te: "12.5" }, { en: "10", te: "10" }, { en: "15", te: "15" }, { en: "50", te: "50" }], correctIndex: 0 },
+          { question: { en: "Mode of 2, 3, 3, 4, 5, 3 is?", te: "2, 3, 3, 4, 5, 3 యొక్క బాహుళకం?" }, options: [{ en: "3", te: "3" }, { en: "2", te: "2" }, { en: "4", te: "4" }, { en: "5", te: "5" }], correctIndex: 0 },
+          { question: { en: "Tally marks |||| represent?", te: "టాలీ గుర్తులు |||| దేన్ని సూచిస్తాయి?" }, options: [{ en: "4", te: "4" }, { en: "5", te: "5" }, { en: "3", te: "3" }, { en: "6", te: "6" }], correctIndex: 0 },
+          { question: { en: "Median of 3, 7, 1, 5, 9 (when arranged)?", te: "3, 7, 1, 5, 9 (అమర్చినప్పుడు) యొక్క మధ్యగతం?" }, options: [{ en: "5", te: "5" }, { en: "3", te: "3" }, { en: "7", te: "7" }, { en: "1", te: "1" }], correctIndex: 0 },
+          { question: { en: "Which uses rectangular bars?", te: "ఏది దీర్ఘచతురస్రాకార కడ్డీలను ఉపయోగిస్తుంది?" }, options: [{ en: "Bar graph", te: "కడ్డీ గ్రాఫ్" }, { en: "Pie chart", te: "పై చార్ట్" }, { en: "Line graph", te: "రేఖా గ్రాఫ్" }, { en: "Pictograph", te: "చిత్రగ్రాఫ్" }], correctIndex: 0 },
+          { question: { en: "Pictograph uses?", te: "చిత్రగ్రాఫ్ దేన్ని ఉపయోగిస్తుంది?" }, options: [{ en: "Pictures/symbols", te: "చిత్రాలు/గుర్తులు" }, { en: "Bars", te: "కడ్డీలు" }, { en: "Lines", te: "రేఖలు" }, { en: "Circles", te: "వృత్తాలు" }], correctIndex: 0 },
+          { question: { en: "Sum of 4, 8, 12 is 24. Mean is?", te: "4, 8, 12 మొత్తం 24. సగటు?" }, options: [{ en: "8", te: "8" }, { en: "12", te: "12" }, { en: "24", te: "24" }, { en: "4", te: "4" }], correctIndex: 0 },
+          { question: { en: "Pie chart uses which shape?", te: "పై చార్ట్ ఏ ఆకారాన్ని ఉపయోగిస్తుంది?" }, options: [{ en: "Circle", te: "వృత్తం" }, { en: "Rectangle", te: "దీర్ఘచతురస్రం" }, { en: "Square", te: "చతురస్రం" }, { en: "Triangle", te: "త్రిభుజం" }], correctIndex: 0 },
+          { question: { en: "Raw data means?", te: "ముడి దత్తాంశం అంటే?" }, options: [{ en: "Unorganized data", te: "అసంఘటిత దత్తాంశం" }, { en: "Organized data", te: "సంఘటిత దత్తాంశం" }, { en: "Pictograph", te: "చిత్రగ్రాఫ్" }, { en: "Bar graph", te: "కడ్డీ గ్రాఫ్" }], correctIndex: 0 },
+          { question: { en: "Range of 5, 8, 12, 3, 10 is?", te: "5, 8, 12, 3, 10 యొక్క పరిధి?" }, options: [{ en: "9", te: "9" }, { en: "12", te: "12" }, { en: "3", te: "3" }, { en: "8", te: "8" }], correctIndex: 0 }
+        ],
+        practice: [
+          { question: { en: "Find mean of 12, 15, 18, 21, 24", te: "12, 15, 18, 21, 24 యొక్క సగటు కనుగొనండి" }, answer: { en: "Mean = (12+15+18+21+24)/5 = 90/5 = 18", te: "సగటు = (12+15+18+21+24)/5 = 90/5 = 18" } },
+          { question: { en: "Find median of 7, 2, 9, 4, 6", te: "7, 2, 9, 4, 6 యొక్క మధ్యగతం కనుగొనండి" }, answer: { en: "Arranged: 2, 4, 6, 7, 9. Median = 6", te: "అమర్చబడింది: 2, 4, 6, 7, 9. మధ్యగతం = 6" } },
+          { question: { en: "Find mode of 5, 7, 5, 8, 5, 9, 7", te: "5, 7, 5, 8, 5, 9, 7 యొక్క బాహుళకం కనుగొనండి" }, answer: { en: "5 appears 3 times (most frequent). Mode = 5", te: "5 మూడుసార్లు కనిపిస్తుంది (అత్యధిక పౌనఃపున్యం). బాహుళకం = 5" } },
+          { question: { en: "Represent 5 apples, 3 oranges, 7 bananas in tally marks", te: "5 ఆపిల్స్, 3 నారింజలు, 7 అరటిపండ్లు టాలీ గుర్తులలో ప్రాతినిధ్యం చేయండి" }, answer: { en: "Apples: ||||  Oranges: ||| Bananas: |||| ||", te: "ఆపిల్స్: ||||  నారింజలు: ||| అరటిపండ్లు: |||| ||" } },
+          { question: { en: "Calculate range of 23, 45, 12, 67, 34", te: "23, 45, 12, 67, 34 యొక్క పరిధి లెక్కించండి" }, answer: { en: "Range = Maximum - Minimum = 67 - 12 = 55", te: "పరిధి = గరిష్టం - కనిష్టం = 67 - 12 = 55" } },
+          { question: { en: "When is mean not a good measure?", te: "సగటు మంచి కొలత కానప్పుడు?" }, answer: { en: "When data has extreme values (outliers) that skew the average.", te: "డేటాలో సగటును వక్రీకరించే విపరీత విలువలు (ఔట్‌లైయర్లు) ఉన్నప్పుడు." } },
+          { question: { en: "Draw bar graph for: Maths-80, Science-70, English-90", te: "కడ్డీ గ్రాఫ్ గీయండి: గణితం-80, సైన్స్-70, ఆంగ్లం-90" }, answer: { en: "Draw 3 bars with heights proportional to 80, 70, 90. Label x-axis with subjects, y-axis with marks.", te: "80, 70, 90 కు అనుపాతంలో ఎత్తుతో 3 కడ్డీలు గీయండి. x-అక్షంపై సబ్జెక్టులు, y-అక్షంపై మార్కులు లేబుల్ చేయండి." } },
+          { question: { en: "Find mean if sum of 6 numbers is 72", te: "6 సంఖ్యల మొత్తం 72 అయితే సగటు కనుగొనండి" }, answer: { en: "Mean = Sum/Count = 72/6 = 12", te: "సగటు = మొత్తం/సంఖ్య = 72/6 = 12" } },
+          { question: { en: "What is frequency table?", te: "పౌనఃపున్య పట్టిక అంటే ఏమిటి?" }, answer: { en: "A table showing how often each value occurs in a data set.", te: "డేటా సెట్‌లో ప్రతి విలువ ఎన్నిసార్లు సంభవిస్తుందో చూపించే పట్టిక." } },
+          { question: { en: "Mean of 5 numbers is 20. If one number is removed, mean becomes 18. Find removed number.", te: "5 సంఖ్యల సగటు 20. ఒక సంఖ్య తొలగిస్తే సగటు 18 అవుతుంది. తొలగించిన సంఖ్య కనుగొనండి." }, answer: { en: "Sum of 5 = 100. Sum of 4 = 72. Removed = 100 - 72 = 28", te: "5 మొత్తం = 100. 4 మొత్తం = 72. తొలగించిన = 100 - 72 = 28" } }
+        ]
       }
     ] : [
       {
@@ -1400,6 +1684,78 @@ const createSubjects6_7 = (grade: number): Subject[] => [
         notes: { en: "## Basic Geometry\n\n### Basic Shapes\n- Triangle: 3 sides\n- Square: 4 equal sides\n- Rectangle: 4 sides (opposite equal)\n- Circle: No sides, curved\n\n### Angles\n- Acute: Less than 90°\n- Right: Exactly 90°\n- Obtuse: More than 90°", te: "## ప్రాథమిక రేఖాగణితం\n\n### ప్రాథమిక ఆకారాలు\n- త్రిభుజం: 3 భుజాలు\n- చతురస్రం: 4 సమాన భుజాలు\n- దీర్ఘచతురస్రం: 4 భుజాలు" },
         quiz: generateMathQuiz('geometry', grade),
         practice: generateMathPractice('geometry', grade)
+      },
+      {
+        id: `early-life-settled-${grade}`,
+        title: { en: "Early Life to Settled Life", te: "ప్రారంభ జీవితం నుండి స్థిర జీవితం" },
+        description: { en: "Learn about human transition from nomadic to settled life", te: "సంచార జీవితం నుండి స్థిర జీవితానికి మానవ పరివర్తన గురించి తెలుసుకోండి" },
+        notes: { en: "## Early Life to Settled Life\n\n### Nomadic Life\n- Early humans were hunters and gatherers\n- Moved from place to place for food\n- Lived in caves and temporary shelters\n\n### Agricultural Revolution\n- Discovery of farming changed human life\n- People started settling near water sources\n- Domestication of animals began\n\n### Settled Life\n- Permanent houses and villages formed\n- Development of tools and pottery\n- Beginning of trade and communities", te: "## ప్రారంభ జీవితం నుండి స్థిర జీవితం\n\n### సంచార జీవితం\n- ప్రారంభ మానవులు వేటగాళ్ళు మరియు సేకరించేవారు\n- ఆహారం కోసం ఒక ప్రదేశం నుండి మరొక ప్రదేశానికి తిరిగారు\n\n### వ్యవసాయ విప్లవం\n- వ్యవసాయం కనుగొన్నది మానవ జీవితాన్ని మార్చింది\n- ప్రజలు నీటి వనరుల సమీపంలో స్థిరపడటం ప్రారంభించారు" },
+        videoUrls: ["https://youtu.be/i400x4gljEg?si=WmLy8aP3Fx3TLfkk"],
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `early-civilisations-${grade}`,
+        title: { en: "Early Civilisations", te: "ప్రారంభ నాగరికతలు" },
+        description: { en: "Learn about ancient civilizations", te: "ప్రాచీన నాగరికతల గురించి తెలుసుకోండి" },
+        notes: { en: "## Early Civilisations\n\n### Major Civilizations\n- Indus Valley (Harappan)\n- Mesopotamia\n- Egyptian\n- Chinese\n\n### Features\n- Planned cities\n- Writing systems\n- Trade networks\n- Art and architecture", te: "## ప్రారంభ నాగరికతలు\n\n### ప్రధాన నాగరికతలు\n- సింధు లోయ (హరప్పా)\n- మెసొపొటేమియా\n- ఈజిప్టు\n- చైనా\n\n### లక్షణాలు\n- ప్రణాళికాబద్ధ నగరాలు\n- రాత వ్యవస్థలు" },
+        videoUrls: ["https://youtu.be/kchEQMzmPFo?si=XEBF-VlgG1IAwLgs"],
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `kingdoms-republics-${grade}`,
+        title: { en: "Emergence of Kingdoms and Republics", te: "రాజ్యాలు మరియు గణతంత్రాల ఆవిర్భావం" },
+        description: { en: "Learn about early kingdoms and republics", te: "ప్రారంభ రాజ్యాలు మరియు గణతంత్రాల గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/P0aj4QOQWHY?si=g0_j-Vunk4tRaV50"],
+        notes: { en: "## Emergence of Kingdoms and Republics\n\n### Mahajanapadas\n- 16 large kingdoms emerged\n- Magadha became most powerful\n\n### Republics (Ganas)\n- Ruled by assemblies\n- Vajji and Malla were examples", te: "## రాజ్యాలు మరియు గణతంత్రాల ఆవిర్భావం\n\n### మహాజనపదాలు\n- 16 పెద్ద రాజ్యాలు ఆవిర్భవించాయి\n- మగధ అత్యంత శక్తివంతమైనది" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `kingdoms-empires-${grade}`,
+        title: { en: "Kingdoms and Empires", te: "రాజ్యాలు మరియు సామ్రాజ్యాలు" },
+        description: { en: "Learn about ancient kingdoms and empires", te: "ప్రాచీన రాజ్యాలు మరియు సామ్రాజ్యాల గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/TtKpt74nTiQ?si=ET-KKROl0Br1rn6o"],
+        notes: { en: "## Kingdoms and Empires\n\n### Maurya Empire\n- Founded by Chandragupta Maurya\n- Ashoka was the greatest ruler\n\n### Gupta Empire\n- Golden Age of India\n- Advances in science and arts", te: "## రాజ్యాలు మరియు సామ్రాజ్యాలు\n\n### మౌర్య సామ్రాజ్యం\n- చంద్రగుప్త మౌర్య స్థాపించారు\n- అశోకుడు గొప్ప పాలకుడు" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `government-${grade}`,
+        title: { en: "Government", te: "ప్రభుత్వం" },
+        description: { en: "Learn about government and democracy", te: "ప్రభుత్వం మరియు ప్రజాస్వామ్యం గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/imXZWZGr_Xo?si=ZiCQJnkrH1S-XoC1"],
+        notes: { en: "## Government\n\n### Types of Government\n- Democracy, Monarchy, Dictatorship\n\n### Indian Democracy\n- World's largest democracy\n- Three branches: Legislature, Executive, Judiciary", te: "## ప్రభుత్వం\n\n### ప్రభుత్వ రకాలు\n- ప్రజాస్వామ్యం, రాచరికం, నియంతృత్వం\n\n### భారత ప్రజాస్వామ్యం\n- ప్రపంచంలో అతిపెద్ద ప్రజాస్వామ్యం" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `local-self-govt-${grade}`,
+        title: { en: "Local Self Government", te: "స్థానిక స్వపరిపాలన" },
+        description: { en: "Learn about panchayats and municipalities", te: "పంచాయతీలు మరియు మున్సిపాలిటీల గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/B7cIUKXgGxY?si=T38Jo6E99nzGcb6I"],
+        notes: { en: "## Local Self Government\n\n### Panchayati Raj\n- Three tiers: Village, Block, District\n- 73rd Amendment gave constitutional status\n\n### Urban Local Bodies\n- Municipal Corporations\n- Municipalities and Nagar Panchayats", te: "## స్థానిక స్వపరిపాలన\n\n### పంచాయతీ రాజ్\n- మూడు స్థాయిలు: గ్రామ, బ్లాక్, జిల్లా\n- 73వ సవరణ రాజ్యాంగ హోదా ఇచ్చింది" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `indian-culture-${grade}`,
+        title: { en: "Indian Culture, Languages and Religions", te: "భారతీయ సంస్కృతి, భాషలు మరియు మతాలు" },
+        description: { en: "Learn about India's cultural diversity", te: "భారతదేశ సాంస్కృతిక వైవిధ్యం గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/FVsAetqD3jw?si=N8AdcvmYQoGzLNYg"],
+        notes: { en: "## Indian Culture, Languages and Religions\n\n### Unity in Diversity\n- 22 official languages\n- Multiple religions coexist\n- Rich art and cultural traditions\n\n### Major Religions\n- Hinduism, Islam, Christianity, Sikhism, Buddhism, Jainism", te: "## భారతీయ సంస్కృతి, భాషలు మరియు మతాలు\n\n### వైవిధ్యంలో ఏకత్వం\n- 22 అధికారిక భాషలు\n- బహుళ మతాలు సహజీవనం" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
+      },
+      {
+        id: `towards-equality-${grade}`,
+        title: { en: "Towards Equality", te: "సమానత్వం వైపు" },
+        description: { en: "Learn about equality and social justice", te: "సమానత్వం మరియు సామాజిక న్యాయం గురించి తెలుసుకోండి" },
+        videoUrls: ["https://youtu.be/4KSST79n5jM?si=peURS91wpIMEsCeP"],
+        notes: { en: "## Towards Equality\n\n### Constitutional Provisions\n- Right to Equality (Article 14-18)\n- No discrimination based on caste, religion, gender\n\n### Social Justice\n- Reservation policies\n- Empowerment of marginalized groups", te: "## సమానత్వం వైపు\n\n### రాజ్యాంగ నిబంధనలు\n- సమానత్వ హక్కు (ఆర్టికల్ 14-18)\n- కులం, మతం, లింగం ఆధారంగా వివక్ష లేదు" },
+        quiz: generateSocialQuiz(),
+        practice: generateSocialPractice()
       }
     ]
   },
